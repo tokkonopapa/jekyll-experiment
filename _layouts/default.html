@@ -1,6 +1,6 @@
 ---
 layout: nil
-type: page
+type: blog
 ---
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
@@ -16,9 +16,18 @@ type: page
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span12">
+		<div class="span9">
 {{ content }}
 		</div>
+
+		<aside id="sidebar" class="span3">
+{% include asides/about.html %}
+{% include asides/search.html %}
+{% include asides/styles.html %}
+{% include asides/recent_posts.html %}
+{% include asides/tag_clouds.html %}
+{% include asides/tweets.html %}
+		</aside><!--/span-->
 	</div><!--/row-->
 
 	<hr>
@@ -28,5 +37,6 @@ type: page
 	</footer>
 </div> <!-- /container -->
 {% if site.js_bottom %}{% include script.html %}{% endif %}
+{% include bottom.html %}
 </body>
 </html>
