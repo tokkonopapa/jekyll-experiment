@@ -1,0 +1,9 @@
+			<section id="sidebar-search" class="well input-append">
+				<form class="form-search form-horizontal" action="http://google.com/search" method="get">
+					<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+					<input type="text" name="q" class="input-medium search-query" placeholder="Search">
+					<button class="btn btn-inverse" type="submit">
+						<span class="icon-search icon-white"></span>
+					</button>
+				</form>
+			</section>

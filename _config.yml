@@ -1,0 +1,72 @@
+# standard jekyll configuration
+source: .
+destination: ./_site
+plugins: ./_plugins
+pygments: true
+markdown: rdiscount
+exclude: ['Rakefile', 'README.md']
+
+# global configuration
+lang: ja
+url: http://USERNAME.github.com
+
+# configuration required for some pages
+baseurl: /
+title: My Site Title
+description: Jekyll Responsive Bootstrap
+author: USERNAME
+email: USERNAME@example.com
+
+# configuration for blog
+blog_base: /blog/
+blog_title: My Blog Title
+blog_description: This is my blog
+permalink: /blog/:year/:month/:title/
+
+# configuration for project
+project_base: /project/
+project_title: My Project Title
+project_description: This is my project
+
+paginate: 10
+page_columns: 3
+asides: [asides/about.html, asides/search.html, asides/styles.html, asides/recent_posts.html, asides/tag_clouds.html, asides/tweets.html]
+
+# configuration for asides/recent_posts.html
+recent_posts: 5
+
+# configration for color theme
+# Default, Amelia, United, Superhero, Spruce, Spacelab, Slate, Simplex, Readable, Journal, Cyborg, Cerulean
+color_theme: Default
+
+# configuration for JavaScript
+# if you use 'asides/styles.html' then set it as 'false'
+js_bottom: false
+
+# configuration for ehancements, uncomment to enable
+
+disqus:
+    shortname: tokkonopapa
+    comment_count: false
+
+google_analytics:
+    account: UA-XXXXX-X
+
+google_plus_one:
+    size: medium
+
+# feedburner:
+#   id: feedburnerid
+
+twitter:
+    username: tokkonopapa
+    count: 5
+    show_replies: false
+    show_follower_count: false
+    follow_button: true
+    tweet_button: true
+
+hatena: true
+
+# github:
+#   username: ghusername

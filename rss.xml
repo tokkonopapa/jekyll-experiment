@@ -1,0 +1,25 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+ 
+<channel>
+  <title>{{ site.title }}</title>
+  <link>{{ site.url }}</link>
+  <description>{{ site.title }}{% if site.slogan %} - {{ site.slogan }}{% endif %}</description>
+  <lastBuildDate>{{ site.date | date: "%a, %d %b %Y %H:%M:%S +0100" }}</lastBuildDate>
+  <copyright>{{ site.owner_name }}</copyright>
+ 
+  {% for post in site.posts %}
+  <item>
+    <title><![CDATA[{{ post.title }}]]></title>
+    <link>{{ site.baseurl }}{{ post.url }}</link>
+    <author>{{ site.owner_name }} ({{ site.owner_mail }})</author>
+    <guid>{{ post.id }}</guid>
+    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S +0100" }}</pubDate>
+  </item>
+  {% endfor %}
+  </channel>
+ 
+</rss>

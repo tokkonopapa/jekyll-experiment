@@ -1,0 +1,53 @@
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+/* navbar */
+form {
+	margin: 0;
+}
+.navbar input[type="text"] {
+	border-radius: 14px;
+	margin-bottom: 0;
+}
+.navbar-search {
+	margin-top: 0;
+}
+
+/* sidebar */
+aside h1, aside h2, aside h3 {
+	font-size: 160%;
+	line-height: 1.0em;
+	margin-bottom: 0.25em;
+}
+aside p {
+	margin: 0;
+}
+#sidebar i {
+	vertical-align: baseline;
+	margin-right: 0.25em;
+}
+/* asides/search.html */
+#sidebar-search input {
+	width: 70%;
+}
+/* asides/tweets.html, asides/recent_post.html */
+#sidebar-tweets p,
+#sidebar-recent-posts p {
+	margin: 0.25em 0;
+}
+#sidebar-tweets .nav-list,
+#sidebar-recent-posts .nav-list {
+	padding-left: 0;
+	padding-right: 0;
+}
+/* asides/recent_post.html */
+#sidebar-recent-posts .disqus-comment_count {
+	font-size: 85%;
+}
+/* asides/styles.html */
+#sidebar-styles .controls {
+	margin-left: 0;
+}
+#sidebar-styles select {
+	width: 100%;
+}

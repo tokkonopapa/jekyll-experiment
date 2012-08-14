@@ -1,0 +1,32 @@
+---
+layout: nil
+type: single
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+{% include setenv %}{% include head.html %}
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div class="navbar navbar-fixed-top">
+{% include navbar.html %}
+</div>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+{{ content }}
+		</div>
+	</div><!--/row-->
+
+	<hr>
+
+	<footer>
+		<p>Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}</p>
+	</footer>
+</div> <!-- /container -->
+{% if site.js_bottom %}{% include script.html %}{% endif %}
+</body>
+</html>

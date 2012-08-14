@@ -1,0 +1,12 @@
+			<aside class="pagination">
+				<header class="invisible">
+					<h1>Pagination</h1>
+				</header>
+{% if paginator.previous_page == 1 %}
+					<span id="newer"><a href="/">Newer Entries</a></span>
+{% elsif paginator.previous_page %}
+					<span id="newer"><a href="/page{{ paginator.previous_page }}">Newer Entries</a></span>
+{% endif %}{% if paginator.next_page %}
+					<span id="older"><a href="/page{{ paginator.next_page }}">Older Entries</a></span>
+{% endif %}
+			</aside>

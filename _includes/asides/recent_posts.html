@@ -1,0 +1,13 @@
+			<section id="sidebar-recent-posts" class="well">
+				<h1><i class="icon-file"></i>Recent Posts</h1>
+				<ul id="recent_posts" class="nav nav-list">
+{% for post in site.posts limit: site.recent_posts %}
+					<li class="post"><p>
+						<a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+{% if site.disqus.shortname and site.disqus.comment_count %}<br /><a href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}" class="disqus-comment_count">Comments</a>{% endif %}
+					</p></li>
+{% unless forloop.last %}
+					<li class="divider"></li>
+{% endunless %}{% endfor %}
+				</ul>
+			</section>
