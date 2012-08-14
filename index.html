@@ -1,12 +1,11 @@
 ---
 layout: default
-title: Wellcome to my blog!
 ---
 {% for post in paginator.posts limit: site.paginate %}{% if forloop.first %}
 			<article class="hero-unit">
 				<header><hgroup>
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
-					<h5><time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time></h5>
+					<h5><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h5>
 				</hgroup></header>
 				<section>
 {{ post.content | postmorefilter }}
@@ -21,7 +20,7 @@ title: Wellcome to my blog!
 				<article class="span{{ 12 | divided_by: site.page_columns }}">
 					<header><hgroup>
 						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
-						<h6><time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time></h6>
+						<h6><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h6>
 					</hgroup></header>
 					<section>
 {{ post.content | postmorefilter }}
