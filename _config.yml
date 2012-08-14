@@ -53,7 +53,7 @@ js_bottom: false
 
 disqus:
     shortname: tokkonopapa
-    comment_count: false
+    comment_count: true
 
 google_analytics:
     account: UA-XXXXX-X

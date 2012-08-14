@@ -1,6 +1,8 @@
 Jekyll Responsive Bootstrap
 ===========================
 
+Still under construction...
+
 Information
 -----------
 ### jekyll ###
@@ -10,6 +12,7 @@ Information
 ### Liquid ###
 * [Liquid Templating language](http://liquidmarkup.org/)
 * [shopify](https://github.com/shopify/liquid/wiki)
+* [Liquid::StandardFilters](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html)
 
 ### jekyll bootstrap ###
 * [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap)
