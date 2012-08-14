@@ -1,6 +1,6 @@
 ---
 layout: nil
-type: blog
+type: page
 ---
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
@@ -16,13 +16,9 @@ type: blog
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span9">
+		<div class="span12">
 {{ content }}
 		</div>
-
-		<aside id="sidebar" class="span3">
-{% include_array asides %}
-		</aside><!--/span-->
 	</div><!--/row-->
 
 	<hr>
@@ -32,6 +28,5 @@ type: blog
 	</footer>
 </div> <!-- /container -->
 {% if site.js_bottom %}{% include script.html %}{% endif %}
-{% include bottom.html %}
 </body>
 </html>
