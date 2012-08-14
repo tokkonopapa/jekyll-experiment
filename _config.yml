@@ -11,20 +11,20 @@ lang: ja
 url: http://USERNAME.github.com
 
 # configuration required for some pages
-baseurl: /
+baseurl: /jekyll-responsive-bootstrap/
 title: My Site Title
 description: Jekyll Responsive Bootstrap
 author: USERNAME
 email: USERNAME@example.com
 
 # configuration for blog
-blog_base: /blog/
+blog_base: blog/
 blog_title: My Blog Title
 blog_description: This is my blog
 permalink: /blog/:year/:month/:title/
 
 # configuration for project
-project_base: /project/
+project_base: project/
 project_title: My Project Title
 project_description: This is my project
 

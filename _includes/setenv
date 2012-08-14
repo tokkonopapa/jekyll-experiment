@@ -1,11 +1,11 @@
 {% capture tmp %}
 	{% case page.type %}
 		{% when 'blog' %}
-			{% capture ENV_INDEX %}{{ site.blog_base }}{% endcapture %}
+			{% capture ENV_INDEX %}{{ site.baseurl }}{{ site.blog_base }}{% endcapture %}
 			{% capture ENV_TITLE %}{{ site.blog_title }}{% endcapture %}
 			{% capture ENV_DESCRIPTION %}{{ site.blog_description }}{% endcapture %}
 		{% when 'project' %}
-			{% capture ENV_INDEX %}{{ site.project_base }}{% endcapture %}
+			{% capture ENV_INDEX %}{{ site.baseurl }}{{ site.project_base }}{% endcapture %}
 			{% capture ENV_TITLE %}{{ site.project_title }}{% endcapture %}
 			{% capture ENV_DESCRIPTION %}{{ site.project_description }}{% endcapture %}
 		{% else %}
