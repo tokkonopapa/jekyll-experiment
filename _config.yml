@@ -1,33 +1,38 @@
 # standard jekyll configuration
+safe: false
 source: .
 destination: ./_site
 plugins: ./_plugins
+lsi: false
 pygments: true
 markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
-# global configuration
+# configuration required for some pages
 lang: ja
 url: http://USERNAME.github.com
 
-# configuration required for some pages
-baseurl: /jekyll-responsive-bootstrap/
+# configuration for blog
+baseurl: /
 title: My Site Title
 description: Jekyll Responsive Bootstrap
 author: USERNAME
 email: USERNAME@example.com
-
-# configuration for blog
-blog_base: blog/
-blog_title: My Blog Title
-blog_description: This is my blog
 permalink: /blog/:year/:month/:title/
 
-# configuration for project
-project_base: project/
-project_title: My Project Title
-project_description: This is my project
+# configuration for navbar.html
+navigation:
+- text: Blog
+  url: index.html
+  layout: default
+- text: Project
+  url: project.html
+- text: About
+  url: about.html
 
+#---------------------------------------
+# configuration for default (type: blog)
+#---------------------------------------
 paginate: 10
 page_columns: 3
 asides: [asides/about.html, asides/search.html, asides/styles.html, asides/recent_posts.html, asides/tag_clouds.html, asides/tweets.html]

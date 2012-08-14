@@ -3,6 +3,13 @@ Jekyll Responsive Bootstrap
 
 Information
 -----------
+### jekyll ###
+* [jekyll](http://jekyllrb.com/)
+* [mojombo](https://github.com/mojombo/jekyll/wiki)
+
+### Liquid ###
+* [Liquid Templating language](http://liquidmarkup.org/)
+* [shopify](https://github.com/shopify/liquid/wiki)
 
 ### jekyll bootstrap ###
 * [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap)
@@ -13,15 +20,14 @@ Information
 * [Jekyll-Bootstrap-Template](https://github.com/jgritman/Jekyll-Bootstrap-Template)
 * [html5-jekyll-template](https://bitbucket.org/bobschi/html5-jekyll-template)
 
-### Liquid ###
-* [shopify](https://github.com/shopify/liquid/wiki)
-* [mojombo](https://github.com/mojombo/jekyll/wiki)
-
 ### Related Posts ###
 * [Migrating from Wordpress to Jekyll - Part 2: **Everything** you need to know about Jekyll](http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/)
 
 ### Pagenation ###
 * [blackwinter / jekyll-pagination](https://github.com/blackwinter/jekyll-pagination)
+
+### Tag Could ###
+* [Generating a Tag Cloud in Jekyll](http://www.justkez.com/generating-a-tag-cloud-in-jekyll/)
 
 ### jquery-cookie ###
 * [A simple, lightweight jQuery plugin for reading, writing and deleting cookies](https://github.com/carhartl/jquery-cookie)
