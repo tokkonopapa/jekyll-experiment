@@ -4,7 +4,7 @@ auto: true
 source: .
 destination: ./_site
 plugins: ./_plugins
-lsi: false
+#lsi: false
 pygments: true
 markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
