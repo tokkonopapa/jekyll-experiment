@@ -24,7 +24,7 @@ permalink: /blog/:year/:month/:title/
 navigation:
 - text: Blog
   url: index.html
-  layout: default
+  type: blog
 - text: Project
   url: project.html
 - text: About

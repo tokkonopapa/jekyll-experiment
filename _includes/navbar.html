@@ -13,7 +13,7 @@
 				</form>
 			</div>
 			<nav class="nav-collapse collapse">
-				<ul class="nav">{% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}{% for link in site.navigation %}{% assign current = nil %}{% if url == link.url or page.layout == link.layout %}{% assign current = 'active' %}{% endif %}
+				<ul class="nav">{% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}{% for link in site.navigation %}{% assign current = nil %}{% if url == link.url or page.type == link.type %}{% assign current = 'active' %}{% endif %}
 					<li class="{{ current }}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>{% endfor %}
 				</ul>
 			</nav><!--/.nav-collapse -->
