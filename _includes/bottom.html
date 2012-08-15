@@ -13,7 +13,7 @@
 			dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 		}
-{% if page.comments %}		add('embed.js');{% endif %}
+{% if page.comments or page.comment %}		add('embed.js');{% endif %}
 {% if site.disqus.comment_count %}		add('count.js');{% endif %}
 	})();
 </script>

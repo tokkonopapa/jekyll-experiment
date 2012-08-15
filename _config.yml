@@ -1,25 +1,24 @@
 # standard jekyll configuration
 safe: false
-auto: true
 source: .
 destination: ./_site
 plugins: ./_plugins
-#lsi: false
+lsi: false
 pygments: true
 markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
-# configuration required for some pages
-lang: ja
+# configuration for url/path
 url: http://USERNAME.github.com
+baseurl: /
+permalink: /blog/:year/:month/:title/
 
 # configuration for blog
-baseurl: /
+lang: ja
 title: My Site Title
 description: Jekyll Responsive Bootstrap
 author: USERNAME
 email: USERNAME@example.com
-permalink: /blog/:year/:month/:title/
 
 # configuration for navbar.html
 navigation:
@@ -53,7 +52,7 @@ js_bottom: false
 
 disqus:
     shortname: tokkonopapa
-    comment_count: true
+    comment_count: false
 
 google_analytics:
     account: UA-XXXXX-X

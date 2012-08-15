@@ -38,6 +38,11 @@ Information
 ### Twitter Bootstrap ###
 * [超便利！Twitter BootstrapでさくさくWeb開発 : アシアルブログ](http://blog.asial.co.jp/887)
 
+### Twitter Bootstrap のカスタマイズ／カラーテーマ ###
+* [Download - Twitter Bootstrap](http://twitter.github.com/bootstrap/download.html)
+* [Bootswatch: Free themes for Twitter Bootstrap](http://bootswatch.com/)
+* [StyleBootstrap.info](http://stylebootstrap.info/)
+
 Structure
 ---------
 
@@ -233,3 +238,7 @@ Disqus
 
 ### Quick Start Guide ###
 * [Quick Start Guide](http://help.disqus.com/customer/portal/articles/466182-quick-start-guide)
+
+Prose
+-----
+* [Prose - A Content Editor for GitHub](http://prose.io/)

@@ -1,4 +1,4 @@
-{% if page.comments == true %}{% if site.disqus.shortname %}
+{% if page.comments or page.comment %}{% if site.disqus.shortname %}
 			<section>
 					<h2>Comments</h2>
 					<div id="disqus_thread"></div>
