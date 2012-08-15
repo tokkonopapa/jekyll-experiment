@@ -22,7 +22,7 @@ author: USERNAME
 email: USERNAME@example.com
 
 # configuration for navbar.html
-navigation:
+navbar_list:
 - text: Blog
   type: blog
   url: index.html

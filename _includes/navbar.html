@@ -17,7 +17,7 @@
 {% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
-{% for link in site.navigation %}
+{% for link in site.navbar_list %}
 	{% assign active = nil %}
 	{% if link.url == url or link.type == page.type %}{% assign active = 'active' %}{% endif %}
 					<li class="{{ active }}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>
