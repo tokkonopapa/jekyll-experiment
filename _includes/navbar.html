@@ -6,6 +6,14 @@
 				<span class="icon-bar"></span>
 			</a>
 			<h1 id="title"><a class="brand" href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+<!--
+			<div class="btn-group pull-right">
+				<form class="form-search" action="http://google.com/search" method="get">
+					<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
+					<input type="text" name="q" class="input-medium search-query" placeholder="Search">
+				</form>
+			</div>
+-->
 			<nav class="nav-collapse collapse">
 				<ul class="nav">{% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}{% for link in site.navigation %}{% assign current = nil %}{% if url == link.url or page.type == link.type %}{% assign current = 'active' %}{% endif %}
 					<li class="{{ current }}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>{% endfor %}
