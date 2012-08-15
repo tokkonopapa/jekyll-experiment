@@ -24,8 +24,8 @@ email: USERNAME@example.com
 # configuration for navbar.html
 navigation:
 - text: Blog
-  url: index.html
   type: blog
+  url: index.html
 - text: Project
   url: project.html
 - text: About
