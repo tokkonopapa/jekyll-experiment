@@ -35,7 +35,7 @@ navigation:
 #---------------------------------------
 paginate: 10
 page_columns: 3
-asides: [asides/about.html, asides/search.html, asides/styles.html, asides/recent_posts.html, asides/tag_clouds.html, asides/tweets.html]
+asides_html: [asides/about.html, asides/search.html, asides/styles.html, asides/recent_posts.html, asides/tag_clouds.html, asides/tweets.html]
 
 # configuration for asides/recent_posts.html
 recent_posts: 5

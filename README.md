@@ -15,7 +15,7 @@ Information
 * [Liquid::StandardFilters](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html)
 
 ### jekyll bootstrap ###
-* [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap)
+* [plusjade/jekyll-bootstrap - GitHub](https://github.com/plusjade/jekyll-bootstrap)
 * [jekyllbootstrap.com](http://jekyllbootstrap.com/)
 * [ruby と jekyll と jekyll-bootstrap で静的サイトを作る](http://krakenbeal.blogspot.jp/2012/05/ruby-jekyll-jekyll-bootstrap.html)
 
