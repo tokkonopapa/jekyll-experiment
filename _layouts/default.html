@@ -21,15 +21,13 @@ type: blog
 		</div>
 
 		<aside id="sidebar" class="span3">
-{% include_array asides_html %}
-{% comment %}
+{% comment %}{% include_array asides_html %}{% endcomment %}
 {% include asides/about.html %}
 {% include asides/search.html %}
 {% include asides/styles.html %}
 {% include asides/recent_posts.html %}
 {% include asides/tag_clouds.html %}
 {% include asides/tweets.html %}
-{% endcomment %}
 		</aside><!--/span-->
 	</div><!--/row-->
 
