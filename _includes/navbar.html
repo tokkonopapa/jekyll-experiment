@@ -19,8 +19,8 @@
 				<ul class="nav">
 {% for link in site.navbar_list %}
 	{% assign active = nil %}
-	{% if link.url == url or link.type == page.type %}{% assign active = 'active' %}{% endif %}
-					<li class="{{ active }}"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>
+	{% if link.url == url or link.type == page.type %}{% assign active = ' class="active"' %}{% endif %}
+					<li{{ active }}><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>
 {% endfor %}
 					<li><form class="navbar-search" action="http://google.com/search" method="get">
 						<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
