@@ -10,18 +10,16 @@
 /*
  * Apply stylesheet specified through cookie
  */
-var baseurl = '{{ site.baseurl }}';
-
 function jstyle (type){
-	$.cookie('style', type, {expires: 3, path: '/'});
-	$('#jstyle').attr({href: baseurl + 'assets/css/' + type + '/bootstrap.min.css'});
+	$.cookie('style', type, {expires: 3, path: '{{ site.baseurl }}'});
+	$('#jstyle').attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
 }
 
 (function () {
 	var type = $.cookie('style');
 	if (type) {
 		$('#style-select').val(type);
-		$("#jstyle").attr({href: baseurl + 'assets/css/' + type + '/bootstrap.min.css'});
+		$("#jstyle").attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
 	}
 })();
 
