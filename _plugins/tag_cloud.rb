@@ -1,5 +1,5 @@
 module Jekyll
-  class TagClouds < Liquid::Tag
+  class TagCloud < Liquid::Tag
     safe = true
     
     def render(context)
@@ -25,4 +25,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('tag_clouds', Jekyll::TagClouds)
+Liquid::Template.register_tag('tag_clouds', Jekyll::TagCloud)

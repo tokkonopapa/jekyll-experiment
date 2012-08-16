@@ -10,7 +10,7 @@ markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
-url: http://USERNAME.github.com
+url: http://USERNAME.github.com/
 baseurl: /
 permalink: /blog/:year/:month/:title/
 
@@ -34,8 +34,8 @@ navbar_list:
 #---------------------------------------
 # configuration for default (type: blog)
 #---------------------------------------
-paginate: 3
-page_columns: 2
+paginate: 10
+page_columns: 3
 asides: [asides/about.html, asides/search.html, asides/themes.html, asides/recent_posts.html, asides/tag_cloud.html, asides/tweets.html]
 
 # configuration for asides/recent_posts.html

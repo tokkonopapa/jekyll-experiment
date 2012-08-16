@@ -242,3 +242,10 @@ Disqus
 Prose
 -----
 * [Prose - A Content Editor for GitHub](http://prose.io/)
+
+Plugins
+-------
+
+	https://github.com/LawrenceWoodman/domain_name-liquid_filter
+	https://github.com/recurser/jekyll-plugins
+	http://recursive-design.com/projects/jekyll-plugins/

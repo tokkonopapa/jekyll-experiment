@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Hello World!
+excerpt:
+image:
+category:
+tags: []
+comments: true
 ---
 
 Well, congratulations, if you can see this, jekyll is up and running, 

@@ -1,6 +1,10 @@
 /* Author:
-
+ tokkonopapa@yahoo.com
 */
+
+/*
+ * Twitter widget
+ */
 (function ($) {
 	$.fn.showTweets = function (username, options) {
 		var $this = this;
@@ -75,30 +79,3 @@
 		return this;
 	};
 })(jQuery);
-
-function jstyle (type){
-	$.cookie('style', type, {expires: 30, path: '/'});
-	$('#jstyle').attr({href: '/assets/css/' + type + '/bootstrap.min.css'});
-}
-
-var type = $.cookie('style');
-if (type) {
-	$('#style-select').val(type);
-	$("#jstyle").attr({href: '/assets/css/' + type + '/bootstrap.min.css'});
-}
-
-$(function (){
-	$('#tweets').showTweets('tokkonopapa', {
-		count: 5,
-		exclude_replies: false
-	});
-
-	$('#style-select').change(function () {
-		jstyle($(this).val());
-	});
-
-	var type = $.cookie('style');
-	if (type) {
-		$('#style-select').val(type);
-	}
-});

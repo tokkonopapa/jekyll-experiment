@@ -1,3 +1,35 @@
+<script src="{{ site.baseurl }}assets/js/script.js"></script>
+<script>
+(function(win, doc, script) {
+	var js,
+		fjs = doc.getElementsByTagName(script)[0],
+		add = function(url, id) {
+			if (doc.getElementById(id)) {return;}
+			js = doc.createElement(script);
+			js.src = url;
+			if (id) {js.id = id;}
+			fjs.parentNode.insertBefore(js, fjs);
+		};
+{% if site.google_analytics %}
+	// Google Analytics
+	win._gaq=[["_setAccount",'{{ site.google_analytics.account }}'],["_trackPageview"]];
+	add(('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js', 'ga');
+{% endif %}{% if site.google_plus_one %}
+	// Google+ button
+	win.___gcfg={lang:"{{ site.lang }}"};
+	add('https://apis.google.com/js/plusone.js');
+{% endif %}{% if site.facebook %}
+	// Facebook SDK
+	add('//connect.facebook.net/' + navigator.language.replace('-', '_') + '/all.js', 'facebook-jssdk');
+{% endif %}{% if site.twitter %}
+	// Twitter SDK
+	add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+{% endif %}{% if site.hatena %}
+	// Hatena
+	add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
+{% endif %}
+}(window, document, 'script'));
+</script>
 {% if site.disqus.shortname %}{% if page.comments or site.disqus.comment_count %}
 <script>
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
