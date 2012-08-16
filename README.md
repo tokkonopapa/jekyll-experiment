@@ -11,7 +11,7 @@ Information
 
 ### Liquid ###
 * [Liquid Templating language](http://liquidmarkup.org/)
-* [shopify](https://github.com/shopify/liquid/wiki)
+* [Shopify/liquid - GitHub](https://github.com/shopify/liquid/wiki)
 * [Liquid::StandardFilters](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html)
 
 ### jekyll bootstrap ###

@@ -6,15 +6,15 @@ layout: nil
 
   <!--  Homepage -->
   <url>
-    <loc>http://{{ site.domain }}/</loc>
+    <loc>{{ site.url }}/</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>daily</changefreq>
 		<priority>1.0</priority>
   </url>
-
+  <!-- Posts pages -->
   {% for page in site.posts %}
   <url>
-    <loc>http://{{ site.domain }}{{ page.url }}</loc>
+    <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.last_updated %}
     <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
     {% elsif page.date %}
@@ -24,10 +24,10 @@ layout: nil
     {% endif %}
   </url>
   {% endfor %}
-
+  <!-- Static pages -->
   {% for page in site.html_pages %}
   <url>
-    <loc>http://{{ site.domain }}{{ page.url }}</loc>
+    <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.last_updated %}
     <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
     {% elsif page.date %}
