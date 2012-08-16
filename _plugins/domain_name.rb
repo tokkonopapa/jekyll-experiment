@@ -4,13 +4,7 @@ module DomainNameFilter
 
   # Return the url's domain name
   def domain_name(input)
-    return input.sub(%r{(http://){0,1}([^/]*)(/.*$){0,1}}i, '\\2')
-  end
-
-  def shorthand_url(input)
-    input.gsub /(https?:\/\/)(\S+)/ do
-	  $2
-	end
+    return input.sub(%r{(https?://){0,1}([^/]*)(/.*$){0,1}}i, '\\2')
   end
 
 end
