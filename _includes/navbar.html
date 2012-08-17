@@ -18,9 +18,30 @@
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
 {% for link in site.navbar_list %}
-	{% assign active = nil %}
-	{% if link.url == url or link.type == page.type %}{% assign active = ' class="active"' %}{% endif %}
-					<li{{ active }}><a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>
+	{% if link.dropdown %}
+		{% assign dropdown = 'dropdown' %}
+		{% assign toggle = 'class="dropdown-toggle" data-toggle="dropdown"' %}
+		{% assign caret = '&nbsp;<b class="caret"></b>' %}
+	{% else %}
+		{% assign dropdown = nil %}
+		{% assign toggle = nil %}
+		{% assign caret = nil %}
+	{% endif %}
+	{% if link.url == url or link.type == page.type %}
+		{% assign active = 'active' %}
+	{% else %}
+		{% assign active = nil %}
+	{% endif %}
+					<li class="{{ dropdown }} {{ active }}">
+						<a {{ toggle }} href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}{{ caret }}</a>
+	{% if link.dropdown %}
+						<ul class="dropdown-menu">
+		{% for sub in link.dropdown %}
+							<li><a href="{{ site.baseurl }}{{ sub.url }}">{{ sub.text }}</a></li>
+		{% endfor %}
+						</ul>
+	{% endif %}
+					</li>
 {% endfor %}
 					<li><form class="navbar-search" action="http://google.com/search" method="get">
 						<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">

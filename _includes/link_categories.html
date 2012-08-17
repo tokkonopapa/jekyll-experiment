@@ -1,0 +1,15 @@
+{% if site.categories.first[0] == null %}
+	{% for cat in site.categories %}
+					<li>
+						<a class="btn btn-small" href="{{ site.baseurl }}categories.html#{{ cat }}-ref">{{ cat }}
+						<span class="badge badge-info">{{ site.categories[cat].size }}</span></a>
+					</li>
+	{% endfor %}
+{% else %}
+	{% for cat in site.categories %}
+					<li>
+						<a class="btn btn-small" href="{{ site.baseurl }}categories.html#{{ cat[0] }}-ref">{{ cat[0] }}
+						<span class="badge badge-info">{{ cat[1].size }}</span></a>
+					</li>
+	{% endfor %}
+{% endif %}

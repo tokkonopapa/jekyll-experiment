@@ -1,0 +1,21 @@
+---
+layout: default
+title: Categories
+---
+			<section id="categories" class="archive">
+				<h1>{{ page.title }}</h1>
+				<ul class="btn-toolbar clearfix">
+{% include link_categories.html %}
+				</ul>
+{% for cat in site.categories %}
+				<h2 id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
+				<ul>
+	{% for node in cat[1] %}
+					<li>
+						<time datetime="{{ node.date | date_to_xmlschema }}">{{ node.date | date: "%B %d, %Y" }}</time>
+						<a href="{{ node.url }}">{{ node.title }}</a>
+					</li>
+	{% endfor %}
+				</ul>
+{% endfor %}
+			</section>

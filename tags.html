@@ -1,0 +1,21 @@
+---
+layout: default
+title: Tags
+---
+			<section id="tags" class="archive">
+				<h1>{{ page.title }}</h1>
+				<ul class="btn-toolbar clearfix">
+{% include link_tags.html %}
+				</ul>
+{% for tag in site.tags %}
+				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+				<ul>
+	{% for node in tag[1] %}
+					<li>
+						<time datetime="{{ node.date | date_to_xmlschema }}">{{ node.date | date: "%B %d, %Y" }}</time>
+						<a href="{{ node.url }}">{{ node.title }}</a>
+					</li>
+	{% endfor %}
+				</ul>
+{% endfor %}
+			</section>

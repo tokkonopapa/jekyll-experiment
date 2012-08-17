@@ -1,0 +1,15 @@
+{% if site.tags.first[0] == null %}
+	{% for tag in site.tags %}
+					<li>
+						<a class="btn" href="{{ site.baseurl }}tags.html#{{ tag }}-ref">{{ tag }}
+						<span class="badge badge-info">{{ site.tags[tag].size }}</span></a>
+					</li>
+	{% endfor %}
+{% else %}
+	{% for tag in site.tags %}
+					<li>
+						<a class="btn" href="{{ site.baseurl }}tags.html#{{ tag[0] }}-ref">{{ tag[0] }}
+						<span class="badge badge-info">{{ tag[1].size }}</span></a>
+					</li>
+	{% endfor %}
+{% endif %}

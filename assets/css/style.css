@@ -5,6 +5,9 @@
 	.hero-unit {
 		padding: 9px 19px;
 	}
+	.hero-unit header h1 {
+		font-size: 45px;
+	}
 }
 
 /* navbar */
@@ -29,10 +32,15 @@ aside p {
 	vertical-align: baseline;
 	margin-right: 0.25em;
 }
+
 /* asides/search.html */
 #sidebar-search input {
 	width: 70%;
 }
+#sidebar-search button {
+	width: 20%;
+}
+
 /* asides/tweets.html, asides/recent_post.html */
 #sidebar-tweets p,
 #sidebar-recent-posts p {
@@ -43,10 +51,12 @@ aside p {
 	padding-left: 0;
 	padding-right: 0;
 }
+
 /* asides/recent_post.html */
 #sidebar-recent-posts .disqus-comment_count {
 	font-size: 85%;
 }
+
 /* asides/styles.html */
 #sidebar-styles .controls {
 	margin-left: 0;
@@ -70,4 +80,24 @@ aside p {
 /* Archives */
 #sidebar-archives a {
 	outline: none;
+}
+
+.archive .tab-content ul {
+	margin-left: 0;
+}
+.archive .btn-toolbar li,
+.archive .tab-content li {
+	float: left;
+	list-style-type: none;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+.archive .btn-toolbar a,
+.archive .tab-content a {
+	font-size: 100%;
+}
+.archive .btn-toolbar span,
+.archive .tab-content span {
+	font-size: 70%;
+	vertical-align: super;
 }

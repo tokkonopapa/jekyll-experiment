@@ -26,17 +26,23 @@ navbar_list:
 - text: Blog
   type: blog
   url: index.html
+  dropdown: &dropdown
+  - text: Archives
+    url: archives.html
+  - text: Categories
+    url: categories.html
+  - text: Tags
+    url: tags.html
 - text: Project
   url: project.html
 - text: About
   url: about.html
 
-#---------------------------------------
-# configuration for default (type: blog)
-#---------------------------------------
+#--------------------------------------------
+# configuration for default.html (type: blog)
+#--------------------------------------------
 paginate: 3
 page_columns: 2
-asides: [asides/about.html, asides/search.html, asides/themes.html, asides/recent_posts.html, asides/tag_cloud.html, asides/tweets.html]
 
 # configuration for asides/recent_posts.html
 recent_posts: 5
@@ -49,8 +55,7 @@ color_theme: Default
 # if you use 'asides/styles.html' then set it as 'false'
 js_bottom: false
 
-# configuration for ehancements, uncomment to enable
-
+# configuration for socials, uncomment to enable
 disqus:
     shortname: tokkonopapa
     comment_count: false
