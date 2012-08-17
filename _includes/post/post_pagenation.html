@@ -1,0 +1,13 @@
+			<section id="post_pagenation" class="pagination">
+				<ul class="pull-left">
+{% if page.next.url %}
+					<li class="next">
+						<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">&laquo;&nbsp;{{ page.next.title | truncatewords: 15 }}</a>
+					</li>
+{% endif %}{% if page.previous.url %}
+					<li class="previous">
+						<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}&nbsp;&raquo;</a>
+					</li>
+{% endif %}
+				</ul>
+			</section>

@@ -1,6 +1,12 @@
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
+@media (max-width: 480px) {
+	.hero-unit {
+		padding 9px 19px;
+	}
+}
+
 /* navbar */
 form {
 	margin: 0;
@@ -8,9 +14,6 @@ form {
 .navbar input[type="text"] {
 	border-radius: 14px;
 	margin-bottom: 0;
-}
-.navbar-search {
-	margin-top: 0;
 }
 
 /* sidebar */
@@ -50,4 +53,21 @@ aside p {
 }
 #sidebar-styles select {
 	width: 100%;
+}
+
+/* pager, pagenation */
+#main_pagenation ul,
+#post_pagenation ul {
+	margin-left: 0;
+}
+
+/* post page */
+#related-posts {
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+/* Archives */
+#sidebar-archives a {
+	outline: none;
 }
