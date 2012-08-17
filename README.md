@@ -249,3 +249,7 @@ Plugins
 	https://github.com/LawrenceWoodman/domain_name-liquid_filter
 	https://github.com/recurser/jekyll-plugins
 	http://recursive-design.com/projects/jekyll-plugins/
+
+GitHub の Jekyll では、`_plugin` 内のカスタム・プラグインは使えないので、ローカル生成した静的サイトを送るしかない。
+
+* [Plugins are disabled during deployment to github pages](https://github.com/mojombo/jekyll/issues/325)

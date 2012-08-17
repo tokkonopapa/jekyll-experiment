@@ -50,3 +50,11 @@
 	})();
 </script>
 {% endif %}{% endif %}
+<script>
+$(function (){
+	$('#tweets').showTweets('{{ site.twitter.username }}', {
+		count: {{ site.twitter.count }},
+		exclude_replies: {{ site.twitter.show_replies }}
+	});
+});
+</script>

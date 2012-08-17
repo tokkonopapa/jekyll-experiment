@@ -24,11 +24,6 @@ function jstyle (type){
 })();
 
 $(function (){
-	$('#tweets').showTweets('tokkonopapa', {
-		count: 5,
-		exclude_replies: false
-	});
-
 	$('#style-select').change(function () {
 		jstyle($(this).val());
 	});

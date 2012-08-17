@@ -34,8 +34,8 @@ navbar_list:
 #---------------------------------------
 # configuration for default (type: blog)
 #---------------------------------------
-paginate: 10
-page_columns: 3
+paginate: 3
+page_columns: 2
 asides: [asides/about.html, asides/search.html, asides/themes.html, asides/recent_posts.html, asides/tag_cloud.html, asides/tweets.html]
 
 # configuration for asides/recent_posts.html
