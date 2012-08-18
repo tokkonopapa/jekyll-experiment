@@ -11,15 +11,15 @@ exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
 # To test locally, `baseurl` being set as the path from root is recommended.
-url: http://YOUR_NAME.github.com
+url: http://USERNAME.github.com
 baseurl: /
 permalink: /blog/:year/:month/:title/
 
 # configuration for blog
 title: My Site Title
 description: Jekyll Responsive Bootstrap
-author: YOUR_NAME
-email: YOUR_NAME@example.com
+author: USERNAME
+email: USERNAME@example.com
 
 #--------------------------------------------
 # configuration for default.html (type: blog)
@@ -64,7 +64,7 @@ color_theme: Default
 
 # configuration for socials, uncomment to enable
 disqus:
-    short_name: YOUR_NAME
+    short_name: USERNAME
     comment_count: true
 
 google_analytics:
@@ -85,6 +85,6 @@ twitter:
     tweet_button: true
 
 # github:
-#   username: YOUR_NAME
+#   username: USERNAME
 
 # hatena: true
