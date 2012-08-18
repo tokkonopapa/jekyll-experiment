@@ -22,28 +22,19 @@
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
 {% for link in site.navbar_list %}
+	{% if link.url == url or link.type == page.type %}{% assign active = 'active' %}
+	{% else %}{% assign active = nil %}{% endif %}
 	{% if link.dropdown %}
-		{% assign dropdown = 'dropdown' %}
-		{% assign toggle = 'class="dropdown-toggle" data-toggle="dropdown"' %}
-		{% assign caret = '&nbsp;<b class="caret"></b>' %}
-	{% else %}
-		{% assign dropdown = nil %}
-		{% assign toggle = nil %}
-		{% assign caret = nil %}
-	{% endif %}
-	{% if link.url == url or link.type == page.type %}
-		{% assign active = 'active' %}
-	{% else %}
-		{% assign active = nil %}
-	{% endif %}
-					<li class="{{ dropdown }} {{ active }}">
-						<a {{ toggle }} href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}{{ caret }}</a>
-	{% if link.dropdown %}
+					<li class="dropdown {{ active }}">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}&nbsp;<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 		{% for sub in link.dropdown %}
 							<li><a href="{{ site.baseurl }}{{ sub.url }}">{{ sub.text }}</a></li>
 		{% endfor %}
 						</ul>
+	{% else %}
+					<li class="{{ active }}">
+						<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
 	{% endif %}
 					</li>
 {% endfor %}
