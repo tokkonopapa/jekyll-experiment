@@ -42,7 +42,7 @@ navbar_list:
 # configuration for default.html (type: blog)
 #--------------------------------------------
 lang: ja
-paginate: 3
+paginate: 4
 page_columns: 1
 
 # configuration for asides/recent_posts.html

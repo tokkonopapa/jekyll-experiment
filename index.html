@@ -40,7 +40,16 @@ title: Wellcome to my blog!
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
 				</article><!--/span-->
-{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}{% if n == '0' or forloop.last %}
+{% comment %}{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}{% endcomment %}
+{% case site.page_columns %}
+	{% when 3 %}
+		{% capture n %}{{ forloop.index0 | modulo:3 }}{% endcapture %}
+	{% when 2 %}
+		{% capture n %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
+	{% else %}
+		{% capture n %}{{ 0 }}{% endcapture %}
+{% endcase %}
+{% if n == '0' or forloop.last %}
 			</div><!--/row-fluid-->
 {% unless forloop.last %}
 			<div class="row-fluid">
