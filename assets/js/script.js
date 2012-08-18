@@ -82,6 +82,7 @@
 
 $(function (){
 	$('.excerpt p').each(function() {
-		this.innerHTML = $.trim(this.innerHTML);
+		var p = this.innerHTML;
+		this.innerHTML = p.slice(0, p.length-4) + '...';
 	});
 });
