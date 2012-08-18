@@ -10,7 +10,7 @@ title: Wellcome to my blog!
 				</hgroup></header>
 				<section>
 {% comment %}{{ post.content | postmorefilter }}{% endcomment %}
-{{ post.content | truncate:9 }}
+{{ post.content | strip_html | truncate:9 | prepend:'<p>' | append:'</p>' }}
 				</section>
 				<footer>
 					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
@@ -26,7 +26,7 @@ title: Wellcome to my blog!
 					</hgroup></header>
 					<section>
 {% comment %}{{ post.content | postmorefilter }}{% endcomment %}
-{{ post.content | truncate:9 }}
+{{ post.content | strip_html | truncate:9 | prepend:'<p>' | append:'</p>' }}
 					</section>
 					<footer>
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
