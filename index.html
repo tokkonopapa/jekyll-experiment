@@ -11,7 +11,7 @@ title: Wellcome to my blog!
 				<section>
 {% comment %}{{ post.content | postmorefilter }}{% endcomment %}
 {% unless post.excerpt %}
-{{ post.content | strip_html | truncate:200 | prepend:'<p>' | append:'</p>' }}
+{{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
 {% else %}
 {{ post.excerpt }}
 {% endunless %}
@@ -31,7 +31,7 @@ title: Wellcome to my blog!
 					<section>
 {% comment %}{{ post.content | postmorefilter }}{% endcomment %}
 {% unless post.excerpt %}
-{{ post.content | strip_html | truncate:200 | prepend:'<p>' | append:'</p>' }}
+{{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
 {% else %}
 {{ post.excerpt }}
 {% endunless %}

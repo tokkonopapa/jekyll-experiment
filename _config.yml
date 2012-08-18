@@ -43,7 +43,7 @@ navbar_list:
 #--------------------------------------------
 lang: ja
 paginate: 3
-page_columns: 2
+page_columns: 1
 
 # configuration for asides/recent_posts.html
 recent_posts: 5
