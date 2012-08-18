@@ -11,15 +11,23 @@ exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
 # To test locally, `baseurl` being set as the path from root is recommended.
-url: http://USERNAME.github.com
+url: http://YOUR_NAME.github.com
 baseurl: /
 permalink: /blog/:year/:month/:title/
 
 # configuration for blog
 title: My Site Title
 description: Jekyll Responsive Bootstrap
-author: USERNAME
-email: USERNAME@example.com
+author: YOUR_NAME
+email: YOUR_NAME@example.com
+
+#--------------------------------------------
+# configuration for default.html (type: blog)
+# notice: `page_columns` should be 3, 2 or 1.
+#--------------------------------------------
+lang: ja
+paginate: 4
+page_columns: 3
 
 # configuration for navbar.html
 navbar_list:
@@ -37,14 +45,6 @@ navbar_list:
   url: project.html
 - text: About
   url: about.html
-
-#--------------------------------------------
-# configuration for default.html (type: blog)
-# notice: `page_columns` should be 3, 2 or 1.
-#--------------------------------------------
-lang: ja
-paginate: 4
-page_columns: 3
 
 # configuration for asides.html
 asides:
@@ -64,8 +64,8 @@ color_theme: Default
 
 # configuration for socials, uncomment to enable
 disqus:
-    shortname: tokkonopapa
-    comment_count: false
+    short_name: YOUR_NAME
+    comment_count: true
 
 google_analytics:
     account: UA-XXXXX-X
@@ -74,7 +74,7 @@ google_plus_one:
     size: medium
 
 # feedburner:
-#   id: feedburnerid
+#   id: YOUR_SITE_ID
 
 twitter:
     username: twitter
@@ -84,7 +84,7 @@ twitter:
     follow_button: true
     tweet_button: true
 
-hatena: true
-
 # github:
-#   username: ghusername
+#   username: YOUR_NAME
+
+# hatena: true

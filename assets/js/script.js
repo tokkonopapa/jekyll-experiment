@@ -1,6 +1,5 @@
-/* Author:
- tokkonopapa@yahoo.com
-*/
+/* Author: tokkonopapa@yahoo.com
+ */
 
 /*
  * Twitter widget
@@ -21,8 +20,8 @@
 
 		var getTweets = function (username) {
 			return $.ajax({
-				url: 'http://api.twitter.com/1/statuses/user_timeline/' + username + '.json',
 //				url: 'https://api.twitter.com/1/statuses/user_timeline.json',
+				url: 'http://api.twitter.com/1/statuses/user_timeline/' + username + '.json',
 				data: options,
 				dataType: 'jsonp'
 			});
@@ -80,6 +79,10 @@
 	};
 })(jQuery);
 
+/* Truncate excerpt string
+ * The filter `truncate` of Liquid 2.2.2 on GitHub 
+ * would truncate multi-byte character incorrectly.
+ */
 $(function (){
 	$('.excerpt p').each(function() {
 		var p = this.innerHTML;
