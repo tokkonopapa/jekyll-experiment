@@ -1,6 +1,5 @@
 # standard jekyll configuration
 safe: true
-auto: true
 source: .
 destination: ./_site
 plugins: ./_plugins

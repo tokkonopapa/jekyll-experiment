@@ -1,6 +1,13 @@
-task :default => :server
-deploy_branch  = "master"
-deploy_dir     = "_heroku" 
+require "rubygems"
+#require 'rake'
+#require 'yaml'
+#require 'time'
+
+SOURCE = "."
+CONFIG = {
+  'posts' => File.join(SOURCE, "_posts"),
+  'post_ext' => "md",
+}
 
 desc 'Clean up generated site'
 task :clean do
@@ -9,49 +16,7 @@ end
 
 desc 'Build site with Jekyll'
 task :build => :clean do
-  less
-  jekyll
-end
-
-desc 'Start server with --auto'
-task :server => :clean do
-  less
-  jekyll('--server --auto')
-end
-
-desc 'Build and deploy'
-task :deploy => :build do
-  sh 'rsync -rtzh --progress --delete _site/ username@servername:/var/www/websitename/'
-end
-
-desc 'Check links for site already running on localhost:4000'
-task :check_links do
-  begin
-    require 'anemone'
-    root = 'http://localhost:4000/'
-    Anemone.crawl(root, :discard_page_bodies => true) do |anemone|
-      anemone.after_crawl do |pagestore|
-        broken_links = Hash.new { |h, k| h[k] = [] }
-        pagestore.each_value do |page|
-          if page.code != 200
-            referrers = pagestore.pages_linking_to(page.url)
-            referrers.each do |referrer|
-              broken_links[referrer] << page
-            end
-          end
-        end
-        broken_links.each do |referrer, pages|
-          puts "#{referrer.url} contains the following broken links:"
-          pages.each do |page|
-            puts "  HTTP #{page.code} #{page.url}"
-          end
-        end
-      end
-    end
-
-  rescue LoadError
-    abort 'Install anemone gem: gem install anemone'
-  end
+  jekyll('--pygments')
 end
 
 def cleanup
@@ -62,36 +27,67 @@ def jekyll(opts = '')
   sh 'jekyll ' + opts
 end
 
-def less(opts = '')
-  Dir::mkdir('stylesheets') unless File.directory?('stylesheets')
-  sh 'lessc -x _less/styles.less > stylesheets/styles.css'
+desc 'preview on http://localhost:4000/'
+task :preview do
+  system("jekyll --pygments --auto --server")
 end
 
-desc "deploy basic rack app to heroku"
-multitask :heroku do
-  puts "## Deploying to Heroku "
-  (Dir["#{deploy_dir}/public/*"]).each { |f| rm_rf(f) }
-  system "cp -R _site/* #{deploy_dir}/public"
-  puts "\n## copying _site to #{deploy_dir}/public"
-  cd "#{deploy_dir}" do
-    system "git add ."
-    system "git add -u"
-    puts "\n## Committing: Site updated at #{Time.now.utc}"
-    message = "Site updated at #{Time.now.utc}"
-    system "git commit -m '#{message}'"
-    puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push heroku #{deploy_branch}"
-    puts "\n## Heroku deploy complete"
+# Usage: rake post title="A Title" [date="2012-02-09"]
+desc "Begin a new post in #{CONFIG['posts']}"
+task :post do
+  abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
+  title = ENV["title"] || "new-post"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+  rescue Exception => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "title: \"#{title.gsub(/-/,' ').gsub(/&/,'&amp;')}\""
+    post.puts "description: \"\""
+    post.puts "excerpt: \"\""
+    post.puts "image: \"\""
+    post.puts "category: "
+    post.puts "tags: []"
+    post.puts "comments: true"
+    post.puts "published: true"
+    post.puts "---"
   end
 end
 
-# http://localhost:4000/
-desc 'preview'
-task :preview do
-system("jekyll --pygments --auto --server")
-end
-
-desc 'Build site with Jekyll'
-task :build => :clean do
-  jekyll
+# Usage: rake page name="about.html"
+# You can also specify a sub-directory path.
+# If you don't specify a file extention we create an index.html at the path specified
+desc "Create a new page."
+task :page do
+  name = ENV["name"] || "new-page.md"
+  filename = File.join(SOURCE, "#{name}")
+  filename = File.join(filename, "index.html") if File.extname(filename) == ""
+  title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  
+  mkdir_p File.dirname(filename)
+  puts "Creating new page: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: page"
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "title: \"#{title}\""
+    post.puts "description: \"\""
+    post.puts "published: true"
+    post.puts "---"
+  end
 end
