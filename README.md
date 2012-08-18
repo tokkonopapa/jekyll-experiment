@@ -3,6 +3,8 @@ Jekyll Responsive Bootstrap
 
 Still under construction...
 
+This software will work out of the box, without any fancy installation.
+
 Information
 -----------
 ### jekyll ###
@@ -12,6 +14,12 @@ Information
 ### Liquid ###
 * [Liquid Templating language](http://liquidmarkup.org/)
 * [Shopify/liquid - GitHub](https://github.com/shopify/liquid/wiki)
+
+### Liquid on GitHub ###
+* [Using Jekyll with Pages - github:help](https://help.github.com/articles/using-jekyll-with-pages)
+* [Configuration - mojombo/jekyll Wiki](https://github.com/mojombo/jekyll/wiki/Configuration)
+* [Liquid for Designers - Shopify/liquid Wiki](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
+* [Module: Liquid::StandardFilters — Documentation for liquid (2.2.2)](http://rubydoc.info/gems/liquid/2.2.2/Liquid/StandardFilters)
 * [Liquid::StandardFilters](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html)
 
 ### jekyll bootstrap ###
@@ -98,8 +106,8 @@ Structure
 
 + more ... done
 + _config.yml ... almost done
-	+ ブログページ ... done
-* セマンティック HTML ... almost done
+	+ ブログページ設定 ... done
++ セマンティック HTML ... almost done
 * サイドバーパーツ
 	+ 検索機能 ... done
 	+ テーマカラー変更スクリプト ... done
@@ -108,34 +116,35 @@ Structure
 	* Twitter ボタン
 	* Google+ ボタン
 	* GitHub リポジトリ
-	* タグクラウド
-	* カテゴリーリスト
-* メニュー機能
-	* サブカテゴリ化 (Archives, Categories, Tags)
-	* メニューボタン移動
+	+ タグクラウド ... almost done (not cloud)
+	+ カテゴリーリスト ... done
++ ナビゲーションバー機能
+	+ サブカテゴリ化 (Archives, Categories, Tags) ... done
+	+ 定義のテンプレート化 ... done
 * サイドバー機能
 	* 配置 (left, right, bottom)
 	* スマホ対応
-* ページ作成
++ ページ作成
 	+ Top ページ ... done
 	+ Blog ページ ... done
-	* Project ページ
-	* About ページ
+	+ Project ページ ... done
+	+ About ページ ... done
 * ブログ機能
 	+ DISQUS ... done
 	* ソーシャルボタン
-	* ページナビ
-	* ページネーション
-	* Archives ページ
-	* Categories ページ
-	* Tags ページ
-	* About ページ
+	+ ページナビ ... done
+	+ ページネーション ... done
+	+ Archives ページ ... done except design
+	+ Categories ページ ... done except design
+	+ Tags ページ ... done except design
+	+ About ページ ... done except design
 	* シンタックスハイライト
 + page_columns ... done
 	+ n記事ずつレイアウト ... done
-+ サイト構成 ... done
+* サイト構成
+	* ブロク、プロジェクトのサブディレクトリ化
 * サイト構築
-	* Rakefile
+	+ Rakefile ... almost done
 	* .gitignore
 * 画像機能
 	* フィーチャー画像、サムネイル画像

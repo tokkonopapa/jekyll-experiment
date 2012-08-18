@@ -61,9 +61,14 @@ recent_posts: 5
 # Default, Amelia, United, Superhero, Spruce, Spacelab, Slate, Simplex, Readable, Journal, Cyborg, Cerulean
 color_theme: Default
 
+#-----------------------------------------------
 # configuration for socials, uncomment to enable
+#-----------------------------------------------
+# feedburner:
+#   id: YOUR_SITE_ID
+
 disqus:
-    short_name: USERNAME
+    short_name: tokkonopapa
     comment_count: true
 
 google_analytics:
@@ -72,8 +77,7 @@ google_analytics:
 google_plus_one:
     size: medium
 
-# feedburner:
-#   id: YOUR_SITE_ID
+facebook: true
 
 twitter:
     username: twitter

@@ -99,7 +99,7 @@
  * would truncate multi-byte character incorrectly.
  */
 $(function () {
-	$('.excerpt p').each(function() {
+	$('.excerpt').each(function() {
 		var p = this.innerHTML;
 		this.innerHTML = p.slice(0, p.length-4) + '...';
 		$(this).css('visibility', 'visible');

@@ -8,10 +8,10 @@ title:
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
 					<h5><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></h5>
 				</hgroup></header>
-				<section class="excerpt">
+				<section>
 {% if site.safe %}
 	{% unless post.excerpt %}
-{{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
+{{ post.content | strip_html | truncate:150 | prepend:'<p class="excerpt">' | append:'</p>' }}
 	{% else %}
 {{ post.excerpt }}
 	{% endunless %}
@@ -29,10 +29,10 @@ title:
 						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
 						<h6><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></h6>
 					</hgroup></header>
-					<section class="excerpt">
+					<section>
 {% if site.safe %}
 	{% unless post.excerpt %}
-{{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
+{{ post.content | strip_html | truncate:150 | prepend:'<p class="excerpt">' | append:'</p>' }}
 	{% else %}
 {{ post.excerpt }}
 	{% endunless %}

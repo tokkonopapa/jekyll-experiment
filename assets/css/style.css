@@ -110,6 +110,6 @@ aside p {
 }
 
 /* Excerpt for index.html */
-.excerpt p {
+.excerpt {
 	visibility: hidden;
 }
