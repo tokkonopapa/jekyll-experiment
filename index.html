@@ -8,7 +8,7 @@ title: Wellcome to my blog!
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
 					<h5><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h5>
 				</hgroup></header>
-				<section>
+				<section class="excerpt">
 {% if site.safe %}
 	{% unless post.excerpt %}
 {{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
@@ -29,7 +29,7 @@ title: Wellcome to my blog!
 						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
 						<h6><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h6>
 					</hgroup></header>
-					<section>
+					<section class="excerpt">
 {% if site.safe %}
 	{% unless post.excerpt %}
 {{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}

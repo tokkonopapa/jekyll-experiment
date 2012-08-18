@@ -79,3 +79,9 @@
 		return this;
 	};
 })(jQuery);
+
+$(function (){
+	$('.excerpt p').each(function() {
+		this.innerHTML = $.trim(this.innerHTML);
+	});
+});
