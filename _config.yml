@@ -10,13 +10,12 @@ markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
-domain: USERNAME.github.com
+# To test locally, `baseurl` being set as the path from root is recommended.
 url: http://USERNAME.github.com
-path: /
+baseurl: /
 permalink: /blog/:year/:month/:title/
 
 # configuration for blog
-lang: ja
 title: My Site Title
 description: Jekyll Responsive Bootstrap
 author: USERNAME
@@ -42,6 +41,7 @@ navbar_list:
 #--------------------------------------------
 # configuration for default.html (type: blog)
 #--------------------------------------------
+lang: ja
 paginate: 3
 page_columns: 2
 

@@ -9,23 +9,23 @@
 {% if site.feedburner %}
 <link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml">
 {% else %}
-<link href="{{ site.path }}atom.xml" type="application/atom+xml" title="{{ site.title }}">
-<link href="{{ site.path }}rss.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }}">
+<link href="{{ site.baseurl }}atom.xml" type="application/atom+xml" title="{{ site.title }}">
+<link href="{{ site.baseurl }}rss.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }}">
 {% endif %}
 <!-- Le styles -->
-<link rel="stylesheet" href="{{ site.path }}assets/css/{{ site.color_theme }}/bootstrap.min.css" id="jstyle">
+<link rel="stylesheet" href="{{ site.baseurl }}assets/css/{{ site.color_theme }}/bootstrap.min.css" id="jstyle">
 <style>body { padding-top: 60px; padding-bottom: 40px; }</style>
-<link rel="stylesheet" href="{{ site.path }}assets/css/bootstrap-responsive.min.css">
-<link rel="stylesheet" href="{{ site.path }}assets/css/style.css">
+<link rel="stylesheet" href="{{ site.baseurl }}assets/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
 {% unless site.js_bottom %}{% include script.html %}{% endunless %}
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-<script src="{{ site.path }}assets/js/libs/html5shiv.js"></script>
+<script src="{{ site.baseurl }}assets/js/libs/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="{{ site.path }}assets/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.path }}assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.path }}assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.path }}assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="{{ site.path }}assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="{{ site.baseurl }}assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}assets/ico/apple-touch-icon-57-precomposed.png">

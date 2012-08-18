@@ -6,7 +6,7 @@ layout: nil
 
 <channel>
   <title>{{ site.title }}</title>
-  <link>{{ site.url }}</link>
+  <link>{{ site.url }}/</link>
   <description>{{ site.title }}{% if site.description %} - {{ site.description }}{% endif %}</description>
   <lastBuildDate>{{ site.date | date: "%a, %d %b %Y %H:%M:%S +0100" }}</lastBuildDate>
   <copyright>{{ site.author }}</copyright>
