@@ -1,6 +1,6 @@
-{% include asides/about.html %}
-{% include asides/search.html %}
-{% include asides/themes.html %}
-{% include asides/recent_posts.html %}
-{% include asides/archives.html %}
-{% include asides/tweets.html %}
+{% if site.asides.about        %}{% include asides/about.html        %}{% endif %}
+{% if site.asides.search       %}{% include asides/search.html       %}{% endif %}
+{% if site.asides.themes       %}{% include asides/themes.html       %}{% endif %}
+{% if site.asides.recent_posts %}{% include asides/recent_posts.html %}{% endif %}
+{% if site.asides.archives     %}{% include asides/archives.html     %}{% endif %}
+{% if site.asides.tweets       %}{% include asides/tweets.html       %}{% endif %}

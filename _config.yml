@@ -40,10 +40,20 @@ navbar_list:
 
 #--------------------------------------------
 # configuration for default.html (type: blog)
+# notice: `page_columns` should be 3, 2 or 1.
 #--------------------------------------------
 lang: ja
 paginate: 4
-page_columns: 1
+page_columns: 3
+
+# configuration for asides.html
+asides:
+    about: true
+    search: true
+    themes: true
+    recent_posts: true
+    archives: true
+    tweets: true
 
 # configuration for asides/recent_posts.html
 recent_posts: 5
@@ -51,10 +61,6 @@ recent_posts: 5
 # configration for color theme
 # Default, Amelia, United, Superhero, Spruce, Spacelab, Slate, Simplex, Readable, Journal, Cyborg, Cerulean
 color_theme: Default
-
-# configuration for JavaScript
-# if you use 'asides/styles.html' then set it as 'false'
-js_bottom: false
 
 # configuration for socials, uncomment to enable
 disqus:
