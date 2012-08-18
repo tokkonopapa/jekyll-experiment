@@ -10,8 +10,9 @@ markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
-url: http://USERNAME.github.com/
-baseurl: /
+domain: USERNAME.github.com
+url: http://USERNAME.github.com
+path: /
 permalink: /blog/:year/:month/:title/
 
 # configuration for blog
