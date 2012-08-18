@@ -77,6 +77,14 @@ aside p {
 	padding-bottom: 9px;
 }
 
+/* twitter status link */
+#tweets li a:last-child:hover {
+	text-decoration: none;
+}
+#tweets li a:last-child span {
+	font-size: 75%;
+}
+
 /* Archives */
 #sidebar-archives a {
 	outline: none;
@@ -99,4 +107,9 @@ aside p {
 .archive .btn-toolbar span {
 	font-size: 70%;
 	vertical-align: super;
+}
+
+/* Excerpt for index.html */
+.excerpt p {
+	visibility: hidden;
 }
