@@ -65,16 +65,20 @@ aside p {
 	width: 100%;
 }
 
+/* post page */
+#related-posts {
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
 /* pager, pagenation */
 #main_pagenation ul,
 #post_pagenation ul {
 	margin-left: 0;
 }
-
-/* post page */
-#related-posts {
-	padding-top: 9px;
-	padding-bottom: 9px;
+#main_pagenation li,
+#post_pagenation li {
+	margin-bottom: 0.5em;
 }
 
 /* twitter status link */

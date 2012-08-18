@@ -68,7 +68,7 @@ color_theme: Default
 #   id: YOUR_SITE_ID
 
 disqus:
-    short_name: tokkonopapa
+    short_name: USERNAME
     comment_count: true
 
 google_analytics:
