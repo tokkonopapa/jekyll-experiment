@@ -1,5 +1,5 @@
 # standard jekyll configuration
-safe: false
+safe: true
 auto: true
 source: .
 destination: ./_site
@@ -77,7 +77,7 @@ google_plus_one:
 #   id: feedburnerid
 
 twitter:
-    username: tokkonopapa
+    username: twitter
     count: 5
     show_replies: false
     show_follower_count: false

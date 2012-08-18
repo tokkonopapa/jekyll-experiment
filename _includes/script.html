@@ -1,31 +1,31 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ site.baseurl }}assets/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ site.baseurl }}assets/js/libs/jquery-1.8.0.min.js"><\/script>')</script>
 <script src="{{ site.baseurl }}assets/js/libs/bootstrap/bootstrap.min.js"></script>
-{% unless site.js_bottom %}
+{% if site.asides.themes %}
 <script src="{{ site.baseurl }}assets/js/libs/jquery.cookie.js"></script>
 <script>
 /*
  * Apply stylesheet specified through cookie
  */
-function jstyle (type){
+function chgstyle (type){
 	$.cookie('style', type, {expires: 3, path: '{{ site.baseurl }}'});
-	$('#jstyle').attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
+	$('#chgstyle').attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
 }
 
 (function () {
 	var type = $.cookie('style');
 	if (type) {
 		$('#style-select').val(type);
-		$("#jstyle").attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
+		$("#chgstyle").attr({href: '{{ site.baseurl }}assets/css/' + type + '/bootstrap.min.css'});
 	}
 })();
 
 $(function (){
 	$('#style-select').change(function () {
-		jstyle($(this).val());
+		chgstyle($(this).val());
 	});
 
 	var type = $.cookie('style');
@@ -34,4 +34,4 @@ $(function (){
 	}
 });
 </script>
-{% endunless %}
+{% endif %}

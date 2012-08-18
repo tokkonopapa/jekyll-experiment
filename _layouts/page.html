@@ -8,8 +8,6 @@ type: page
 {% include head.html %}
 </head>
 <body>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
 <div class="navbar navbar-fixed-top">
 {% include navbar.html %}
 </div>
@@ -24,9 +22,9 @@ type: page
 	<hr>
 
 	<footer>
-		<p>Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}</p>
+{% include footer.html %}
 	</footer>
 </div> <!-- /container -->
-{% if site.js_bottom %}{% include script.html %}{% endif %}
+{% unless site.asides.themes %}{% include script.html %}{% endunless %}
 </body>
 </html>

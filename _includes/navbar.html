@@ -9,7 +9,11 @@
 <!--
 			<div class="btn-group pull-right">
 				<form class="form-search" action="http://google.com/search" method="get">
+{% if site.safe %}
+					<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
+{% else %}
 					<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
+{% endif %}
 					<input type="text" name="q" class="input-medium search-query" placeholder="Search">
 				</form>
 			</div>
@@ -44,7 +48,11 @@
 					</li>
 {% endfor %}
 					<li><form class="navbar-search" action="http://google.com/search" method="get">
+{% if site.safe %}
+						<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
+{% else %}
 						<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
+{% endif %}
 						<input type="text" name="q" class="input-medium search-query" placeholder="Search">
 					</form></li>
 				</ul>

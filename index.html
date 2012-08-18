@@ -9,12 +9,13 @@ title: Wellcome to my blog!
 					<h5><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h5>
 				</hgroup></header>
 				<section>
-{% comment %}{{ post.content | postmorefilter }}{% endcomment %}
-{% unless post.excerpt %}
+{% if site.safe %}
+	{% unless post.excerpt %}
 {{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
-{% else %}
+	{% else %}
 {{ post.excerpt }}
-{% endunless %}
+	{% endunless %}
+{% else %}{{ post.content | postmorefilter }}{% endif %}
 				</section>
 				<footer>
 					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
@@ -29,26 +30,27 @@ title: Wellcome to my blog!
 						<h6><time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S' }}">{{ post.date | date: '%B %d, %Y' }}</time></h6>
 					</hgroup></header>
 					<section>
-{% comment %}{{ post.content | postmorefilter }}{% endcomment %}
-{% unless post.excerpt %}
+{% if site.safe %}
+	{% unless post.excerpt %}
 {{ post.content | strip_html | truncate:150 | prepend:'<p>' | append:'</p>' }}
-{% else %}
+	{% else %}
 {{ post.excerpt }}
-{% endunless %}
+	{% endunless %}
+{% else %}{{ post.content | postmorefilter }}{% endif %}
 					</section>
 					<footer>
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
 				</article><!--/span-->
-{% comment %}{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}{% endcomment %}
-{% case site.page_columns %}
-	{% when 3 %}
-		{% capture n %}{{ forloop.index0 | modulo:3 }}{% endcapture %}
-	{% when 2 %}
-		{% capture n %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
-	{% else %}
-		{% capture n %}{{ 0 }}{% endcapture %}
-{% endcase %}
+{% if site.safe %}
+	{% case site.page_columns %}
+		{% when 3 %}{% capture n %}{{ forloop.index0 | modulo:3 }}{% endcapture %}
+		{% when 2 %}{% capture n %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
+		{% else   %}{% capture n %}{{ 0 }}{% endcapture %}
+	{% endcase %}
+{% else %}
+	{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}
+{% endif %}
 {% if n == '0' or forloop.last %}
 			</div><!--/row-fluid-->
 {% unless forloop.last %}

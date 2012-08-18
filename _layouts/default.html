@@ -8,7 +8,6 @@ type: blog
 {% include head.html %}
 </head>
 <body>
-
 <div class="navbar navbar-fixed-top">
 {% include navbar.html %}
 </div>
@@ -27,10 +26,10 @@ type: blog
 	<hr>
 
 	<footer>
-		<p>Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}</p>
+{% include footer.html %}
 	</footer>
 </div> <!-- /container -->
-{% if site.js_bottom %}{% include script.html %}{% endif %}
+{% unless site.asides.themes %}{% include script.html %}{% endunless %}
 {% include bottom.html %}
 </body>
 </html>

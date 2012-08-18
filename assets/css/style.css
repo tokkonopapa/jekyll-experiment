@@ -81,23 +81,22 @@ aside p {
 #sidebar-archives a {
 	outline: none;
 }
-
 .archive .tab-content ul {
 	margin-left: 0;
 }
-.archive .btn-toolbar li,
-.archive .tab-content li {
+.archive .tab-content li,
+.archive .btn-toolbar li {
 	float: left;
 	list-style-type: none;
 	margin-right: 0.5em;
 	margin-bottom: 0.5em;
 }
-.archive .btn-toolbar a,
-.archive .tab-content a {
+.archive .tab-content a,
+.archive .btn-toolbar a {
 	font-size: 100%;
 }
-.archive .btn-toolbar span,
-.archive .tab-content span {
+.archive .tab-content span,
+.archive .btn-toolbar span {
 	font-size: 70%;
 	vertical-align: super;
 }
