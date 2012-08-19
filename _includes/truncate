@@ -1,0 +1,27 @@
+{% capture tmp %}
+{% comment %}
+{% endcomment %}
+
+{% capture x %}
+{{ post.content | strip_html | truncate:150 }}
+{% endcapture %}
+
+{% capture y %}
+{{ post.content | strip_html | truncate:149 }}
+{% endcapture %}
+
+{% capture z %}
+{{ x | replace: y, '' }}
+{% endcapture %}
+
+{% if z < ' ' or '~' < z %}
+	{% capture truncate %}{{ y }}{% endcapture %}
+{% else %}
+	{% capture truncate %}{{ x }}{% endcapture %}
+{% endif %}
+
+{% assign x = nil %}
+{% assign y = nil %}
+{% assign z = nil %}
+
+{% endcapture %}{% assign tmp = nil %}
