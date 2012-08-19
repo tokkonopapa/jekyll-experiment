@@ -41,7 +41,7 @@ below so the `truncate` can accept only hard coded number.
 {% endcapture %}
 
 {% capture truncate %}
-{{ x_ }} / {{ y_ }} / {{ z_ }} / {{ w_ }}
+{{ a_ }}:{{ x_ }} / {{ b_ }}:{{ y_ }} / {{ c_ }}:{{ z_ }} / {{ d_ }}:{{ w_ }}
 {% endcapture %}
 
 {% comment %}
