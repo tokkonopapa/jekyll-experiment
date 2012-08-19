@@ -6,7 +6,7 @@ title:
 			<article class="hero-unit">
 				<header><hgroup>
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
-					<h5><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></h5>
+					<h4><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h4>
 				</hgroup></header>
 				<section>
 {% if site.safe %}
@@ -27,7 +27,7 @@ title:
 				<article class="span{{ 12 | divided_by: site.page_columns }}">
 					<header><hgroup>
 						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
-						<h6><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></h6>
+						<h5><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h5>
 					</hgroup></header>
 					<section>
 {% if site.safe %}

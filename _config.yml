@@ -27,6 +27,7 @@ email: USERNAME@example.com
 lang: ja
 paginate: 4
 page_columns: 3
+date_format: "%B %d, %Y"
 
 # configuration for navbar.html
 navbar_list:

@@ -12,7 +12,7 @@ title: Categories
 				<ul>
 	{% for node in cat[1] %}
 					<li>
-						<time datetime="{{ node.date | date_to_xmlschema }}">{{ node.date | date: "%B %d, %Y" }}</time>
+						<time datetime="{{ node.date | date_to_xmlschema }}">{{ node.date | date: site.date_format }}</time>
 						<a href="{{ node.url }}">{{ node.title }}</a>
 					</li>
 	{% endfor %}

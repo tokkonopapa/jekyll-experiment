@@ -9,6 +9,9 @@
 		font-size: 45px;
 	}
 }
+.hero-unit header h1 {
+	margin-bottom: 0.25em;
+}
 
 /* navbar */
 form {
@@ -23,7 +26,7 @@ form {
 aside h1, aside h2, aside h3 {
 	font-size: 160%;
 	line-height: 1.0em;
-	margin-bottom: 0.25em;
+	margin-bottom: 0.5em;
 }
 aside p {
 	margin: 0;
