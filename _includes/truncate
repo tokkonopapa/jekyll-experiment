@@ -11,20 +11,6 @@ invisible ascii character, then adjust length of truncate.
 If you prefer to change the length of truncate, edit the number directly 
 below so the `truncate` can accept only hard coded number.
 -->
-{% assign a_ = site.truncate_len %}
-{% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
-{% capture c_ %}{{ b_ | minus:1 }}{% endcapture %}
-{% capture d_ %}{{ c_ | minus:1 }}{% endcapture %}
-
-{% capture x_ %}{{ post.content | strip_html | truncate: a_, "" }}{% endcapture %}
-{% capture y_ %}{{ post.content | strip_html | truncate: b_, "" }}{% endcapture %}
-{% capture z_ %}{{ post.content | strip_html | truncate: c_, "" }}{% endcapture %}
-{% capture w_ %}{{ post.content | strip_html | truncate: d_, "" }}{% endcapture %}
-
-{% capture i_ %}{{ x_ | replace: y_, "" }}{% endcapture %}
-{% capture j_ %}{{ y_ | replace: z_, "" }}{% endcapture %}
-{% capture k_ %}{{ z_ | replace: w_, "" }}{% endcapture %}
-
 {% capture _C2 %}{{ "±" | truncate:1, "" }}{% endcapture %}
 {% capture _CF %}{{ "ρ" | truncate:1, "" }}{% endcapture %}
 {% capture _D0 %}{{ "ж" | truncate:1, "" }}{% endcapture %}
@@ -32,7 +18,31 @@ below so the `truncate` can accept only hard coded number.
 {% capture _E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
 {% capture _EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
 
-{% capture truncate %}{{ _C2 }}/{{ _CF }}/{{ _D0 }}/{{ _D1 }}/{{ _E2 }}/{{ _EF }}{% endcapture %}
+{% assign  _a = site.truncate_len %}
+{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
+{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
+
+{% capture _x %}{{ post.content | strip_html | truncate: _a, "" }}{% endcapture %}
+{% capture _y %}{{ post.content | strip_html | truncate: _b, "" }}{% endcapture %}
+{% capture _z %}{{ post.content | strip_html | truncate: _c, "" }}{% endcapture %}
+
+{% capture _i %}{{ _x | replace: _y, "" }}{% endcapture %}
+{% capture _j %}{{ _y | replace: _z, "" }}{% endcapture %}
+
+{% if    _i <= _C2 and _CF <= _i %}{% capture truncate %}{{ _y }}{% endcapture %}
+{% elsif _i <= _D0 and _D1 <= _i %}{% capture truncate %}{{ _y }}{% endcapture %}
+{% elsif _j <= _E2 and _EF <= _j %}{% capture truncate %}{{ _z }}{% endcapture %}
+{% else %}                         {% capture truncate %}{{ _x }}{% endcapture %}
+{% endif %}
+
+{% assign _a = nil %}
+{% assign _b = nil %}
+{% assign _c = nil %}
+{% assign _i = nil %}
+{% assign _j = nil %}
+{% assign _x = nil %}
+{% assign _y = nil %}
+{% assign _z = nil %}
 
 {% assign _C2 = nil %}
 {% assign _CF = nil %}
@@ -40,32 +50,4 @@ below so the `truncate` can accept only hard coded number.
 {% assign _D1 = nil %}
 {% assign _E2 = nil %}
 {% assign _EF = nil %}
-
-{% comment %}
-{% if "\xe0" <= j_ and j_ <= "\xef" %}{{ yes }}{% endif %}
-{{ i_ }}/{{ j_ }}/{{ k_ }}
-
-{% capture truncate %}
-{{ a_ }}:{{ x_ }} / {{ b_ }}:{{ y_ }} / {{ c_ }}:{{ z_ }} / {{ d_ }}:{{ w_ }}
-{% endcapture %}
-
-{% if z_ < ' ' or '~' < z_ %}
-	{% capture truncate %}{{ a_ }}:{{ b_ }}{{ x_ }} / {{ y_ }}{% endcapture %}
-{% else %}
-	{% capture truncate %}{{ a_ }}:{{ b_ }}{{ y_ }} / {{ x_ }}{% endcapture %}
-{% endif %}
-{% endcomment %}
-
-{% assign a_ = nil %}
-{% assign b_ = nil %}
-{% assign c_ = nil %}
-{% assign d_ = nil %}
-{% assign i_ = nil %}
-{% assign j_ = nil %}
-{% assign k_ = nil %}
-{% assign w_ = nil %}
-{% assign x_ = nil %}
-{% assign y_ = nil %}
-{% assign z_ = nil %}
-
 {% endcapture %}{% assign tmp = nil %}
