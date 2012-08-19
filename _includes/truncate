@@ -37,11 +37,11 @@ below so the `truncate` can accept only hard coded number.
 {% endcapture %}
 
 {% capture j_ %}
-	{{ y_ | replace: z_, "" }}
+	{{ x_ | replace: z_, "" }}
 {% endcapture %}
 
 {% capture k_ %}
-	{{ z_ | replace: w_, "" }}
+	{{ x_ | replace: w_, "" }}
 {% endcapture %}
 
 {% capture truncate %}
@@ -59,12 +59,14 @@ below so the `truncate` can accept only hard coded number.
 	{% capture truncate %}{{ a_ }}:{{ b_ }}{{ y_ }} / {{ x_ }}{% endcapture %}
 {% endif %}
 {% endcomment %}
+
 {% assign a_ = nil %}
 {% assign b_ = nil %}
 {% assign c_ = nil %}
 {% assign d_ = nil %}
 {% assign i_ = nil %}
 {% assign j_ = nil %}
+{% assign k_ = nil %}
 {% assign w_ = nil %}
 {% assign x_ = nil %}
 {% assign y_ = nil %}
