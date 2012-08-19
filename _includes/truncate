@@ -32,7 +32,14 @@ below so the `truncate` can accept only hard coded number.
 {% capture _E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
 {% capture _EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
 
-{% capture truncate %}{{ C2 }}/{{ CF }}/{{ D0 }}/{{ D1 }}/{{ E2 }}/{{ EF }}{% endcapture %}
+{% capture truncate %}{{ _C2 }}/{{ _CF }}/{{ _D0 }}/{{ _D1 }}/{{ _E2 }}/{{ _EF }}{% endcapture %}
+
+{% assign _C2 = nil %}
+{% assign _CF = nil %}
+{% assign _D0 = nil %}
+{% assign _D1 = nil %}
+{% assign _E2 = nil %}
+{% assign _EF = nil %}
 
 {% comment %}
 {% if "\xe0" <= j_ and j_ <= "\xef" %}{{ yes }}{% endif %}
