@@ -44,9 +44,19 @@ Information
 * [A simple, lightweight jQuery plugin for reading, writing and deleting cookies](https://github.com/carhartl/jquery-cookie)
 
 ### Twitter Bootstrap ###
-* [超便利！Twitter BootstrapでさくさくWeb開発 : アシアルブログ](http://blog.asial.co.jp/887)
+#### bootstrap-responsive.css の定義順 ####
+
+	@media (max-width: 767px) {...}
+	@media (min-width: 768px) and (max-width: 979px) {...}
+	@media (max-width: 480px) {...}
+	@media (max-width: 767px) {...}
+	@media (min-width: 768px) and (max-width: 979px) {...}
+	@media (min-width: 1200px) {...}
+	@media (max-width: 979px) {...}
+	@media (min-width: 980px) {...}
 
 ### Twitter Bootstrap のカスタマイズ／カラーテーマ ###
+* [超便利！Twitter BootstrapでさくさくWeb開発 : アシアルブログ](http://blog.asial.co.jp/887)
 * [Download - Twitter Bootstrap](http://twitter.github.com/bootstrap/download.html)
 * [Bootswatch: Free themes for Twitter Bootstrap](http://bootswatch.com/)
 * [StyleBootstrap.info](http://stylebootstrap.info/)
@@ -104,7 +114,7 @@ Structure
 
 ### Functions ###
 
-+ more ... done
++ more ... almost done
 + _config.yml ... almost done
 	+ ブログページ設定 ... done
 + セマンティック HTML ... almost done
@@ -121,11 +131,12 @@ Structure
 + ナビゲーションバー機能
 	+ サブカテゴリ化 (Archives, Categories, Tags) ... done
 	+ 定義のテンプレート化 ... done
+	* 折り畳み機能の On/Off
 * サイドバー機能
 	* 配置 (left, right, bottom)
 	* スマホ対応
 + ページ作成
-	+ Top ページ ... done
+	* Home ページ
 	+ Blog ページ ... done
 	+ Project ページ ... done
 	+ About ページ ... done
@@ -138,11 +149,12 @@ Structure
 	+ Categories ページ ... done except design
 	+ Tags ページ ... done except design
 	+ About ページ ... done except design
+	+ 日付のフォーマット化 ... done
 	* シンタックスハイライト
 + page_columns ... done
 	+ n記事ずつレイアウト ... done
 * サイト構成
-	* ブロク、プロジェクトのサブディレクトリ化
+	* ブロク、プロジェクトのサブディレクトリ化 ... done
 * サイト構築
 	+ Rakefile ... almost done
 	* .gitignore

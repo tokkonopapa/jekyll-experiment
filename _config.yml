@@ -36,13 +36,13 @@ navbar_list:
   url: index.html
   dropdown: &dropdown
   - text: Archives
-    url: archives.html
+    url: blog/archives.html
   - text: Categories
-    url: categories.html
+    url: blog/categories.html
   - text: Tags
-    url: tags.html
+    url: blog/tags.html
 - text: Project
-  url: project.html
+  url: project/index.html
 - text: About
   url: about.html
 
