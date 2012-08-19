@@ -82,8 +82,8 @@ task :page do
     post.puts "---"
     post.puts "layout: page"
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "title: \"#{title}\""
-    post.puts "description: \"\""
+    post.puts "title: #{title}"
+    post.puts "description: "
     post.puts "published: true"
     post.puts "---"
   end

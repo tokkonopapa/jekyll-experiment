@@ -156,7 +156,11 @@ Structure
 * サイト構成
 	* ブロク、プロジェクトのサブディレクトリ化 ... done
 * サイト構築
-	+ Rakefile ... almost done
+	+ Rakefile
+		+ 新規投稿、新規ページ ... done
+		* _site のデプロイ
+	* LESS
+		* CSS のダイエット
 	* .gitignore
 * 画像機能
 	* フィーチャー画像、サムネイル画像
