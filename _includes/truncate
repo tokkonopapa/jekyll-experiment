@@ -25,11 +25,19 @@ below so the `truncate` can accept only hard coded number.
 {% capture j_ %}{{ y_ | replace: z_, "" }}{% endcapture %}
 {% capture k_ %}{{ z_ | replace: w_, "" }}{% endcapture %}
 
-{% capture truncate %}
-{{ i_ }}/{{ j_ }}/{{ k_ }}
-{% endcapture %}
+{% capture C2 %}{{ "±" | truncate:1, "" }}{% endcapture %}
+{% capture CF %}{{ "ρ" | truncate:1, "" }}{% endcapture %}
+{% capture D0 %}{{ "ж" | truncate:1, "" }}{% endcapture %}
+{% capture D1 %}{{ "ё" | truncate:1, "" }}{% endcapture %}
+{% capture E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
+{% capture EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
+
+{% capture truncate %}{{ C2 }}/{{ CF }}/{{ D0 }}/{{ D1 }}/{{ E2 }}/{{ EF }}{% endcapture %}
 
 {% comment %}
+{% if "\xe0" <= j_ and j_ <= "\xef" %}{{ yes }}{% endif %}
+{{ i_ }}/{{ j_ }}/{{ k_ }}
+
 {% capture truncate %}
 {{ a_ }}:{{ x_ }} / {{ b_ }}:{{ y_ }} / {{ c_ }}:{{ z_ }} / {{ d_ }}:{{ w_ }}
 {% endcapture %}
