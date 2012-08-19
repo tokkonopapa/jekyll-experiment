@@ -11,12 +11,15 @@ invisible ascii character, then adjust length of truncate.
 If you prefer to change the length of truncate, edit the number directly 
 below so the `truncate` can accept only hard coded number.
 -->
+{% assign a = site.truncate_len %}
+{% capture b %}{{ a | minus:1 }}{% endcapture %}
+
 {% capture x %}
-	{{ post.content | strip_html | truncate:150 }}
+	{{ post.content | strip_html | truncate:a }}
 {% endcapture %}
 
 {% capture y %}
-	{{ post.content | strip_html | truncate:149 }}
+	{{ post.content | strip_html | truncate:b }}
 {% endcapture %}
 
 {% capture z %}
