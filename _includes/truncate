@@ -14,7 +14,7 @@ below so the `truncate` can accept only hard coded number.
 {% assign a_ = site.truncate_len %}
 {% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
 {% capture c_ %}{{ b_ | minus:1 }}{% endcapture %}
-{% capture c_ %}{{ c_ | minus:1 }}{% endcapture %}
+{% capture d_ %}{{ c_ | minus:1 }}{% endcapture %}
 
 {% capture x_ %}
 	{{ post.content | strip_html | truncate: a_, '' }}
