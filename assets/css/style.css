@@ -32,6 +32,9 @@ aside p {
 	vertical-align: baseline;
 	margin-right: 0.25em;
 }
+#sidebar .nav-list .divider {
+	margin: 0.5em 1px;
+}
 
 /* asides/search.html */
 #sidebar-search input {
