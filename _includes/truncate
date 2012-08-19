@@ -25,12 +25,12 @@ below so the `truncate` can accept only hard coded number.
 {% capture j_ %}{{ y_ | replace: z_, "" }}{% endcapture %}
 {% capture k_ %}{{ z_ | replace: w_, "" }}{% endcapture %}
 
-{% capture C2 %}{{ "±" | truncate:1, "" }}{% endcapture %}
-{% capture CF %}{{ "ρ" | truncate:1, "" }}{% endcapture %}
-{% capture D0 %}{{ "ж" | truncate:1, "" }}{% endcapture %}
-{% capture D1 %}{{ "ё" | truncate:1, "" }}{% endcapture %}
-{% capture E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
-{% capture EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
+{% capture _C2 %}{{ "±" | truncate:1, "" }}{% endcapture %}
+{% capture _CF %}{{ "ρ" | truncate:1, "" }}{% endcapture %}
+{% capture _D0 %}{{ "ж" | truncate:1, "" }}{% endcapture %}
+{% capture _D1 %}{{ "ё" | truncate:1, "" }}{% endcapture %}
+{% capture _E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
+{% capture _EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
 
 {% capture truncate %}{{ C2 }}/{{ CF }}/{{ D0 }}/{{ D1 }}/{{ E2 }}/{{ EF }}{% endcapture %}
 
