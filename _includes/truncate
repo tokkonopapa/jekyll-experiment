@@ -29,11 +29,7 @@ below so the `truncate` can accept only hard coded number.
 {% capture _i %}{{ _x | replace: _y, "" }}{% endcapture %}
 {% capture _j %}{{ _y | replace: _z, "" }}{% endcapture %}
 
-{% if    _i <= _C2 and _CF <= _i %}{% capture truncate %}{{ _y }}{% endcapture %}
-{% elsif _i <= _D0 and _D1 <= _i %}{% capture truncate %}{{ _y }}{% endcapture %}
-{% elsif _j <= _E2 and _EF <= _j %}{% capture truncate %}{{ _z }}{% endcapture %}
-{% else %}                         {% capture truncate %}{{ _x }}{% endcapture %}
-{% endif %}
+{% capture truncate %}{{ _x }}{% endcapture %}
 
 {% assign _a = nil %}
 {% assign _b = nil %}
