@@ -2,7 +2,7 @@
 layout: default
 title:
 ---
-{% for post in paginator.posts limit: site.paginate %}{% if forloop.first %}
+{% include truncate_start %}{% for post in paginator.posts limit: site.paginate %}{% if forloop.first %}
 			<article class="hero-unit">
 				<header><hgroup>
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
@@ -55,5 +55,5 @@ title:
 			</div><!--/row-fluid-->
 {% unless forloop.last %}
 			<div class="row-fluid">
-{% endunless %}{% endif %}{% endif %}{% endfor %}
+{% endunless %}{% endif %}{% endif %}{% endfor %}{% include truncate_end %}
 {% include pagenation.html %}

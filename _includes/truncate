@@ -7,17 +7,7 @@ multibyte character incorrectly.
 
 So this function checks the last letter of truncated content and if it is
 invisible ascii character, then adjust length of truncate.
-
-If you prefer to change the length of truncate, edit the number directly 
-below so the `truncate` can accept only hard coded number.
 -->
-{% capture _C2 %}{{ "±" | truncate:1, "" }}{% endcapture %}
-{% capture _CF %}{{ "ρ" | truncate:1, "" }}{% endcapture %}
-{% capture _D0 %}{{ "ж" | truncate:1, "" }}{% endcapture %}
-{% capture _D1 %}{{ "ё" | truncate:1, "" }}{% endcapture %}
-{% capture _E2 %}{{ "…" | truncate:1, "" }}{% endcapture %}
-{% capture _EF %}{{ "ａ" | truncate:1, "" }}{% endcapture %}
-
 {% assign  _a = site.truncate_len %}
 {% capture _b %}{{ _a | minus:1 }}{% endcapture %}
 {% capture _c %}{{ _b | minus:1 }}{% endcapture %}
@@ -34,20 +24,4 @@ below so the `truncate` can accept only hard coded number.
 {% if _D0 <= _i and _i <= _D1 %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
 {% if _E2 <= _j and _j <= _EF %}{% capture truncate %}{{ _z }}...{% endcapture %}{% endif %}
 {% if truncate == nil %}        {% capture truncate %}{{ _x }}...{% endcapture %}{% endif %}
-
-{% assign _a = nil %}
-{% assign _b = nil %}
-{% assign _c = nil %}
-{% assign _i = nil %}
-{% assign _j = nil %}
-{% assign _x = nil %}
-{% assign _y = nil %}
-{% assign _z = nil %}
-
-{% assign _C2 = nil %}
-{% assign _CF = nil %}
-{% assign _D0 = nil %}
-{% assign _D1 = nil %}
-{% assign _E2 = nil %}
-{% assign _EF = nil %}
 {% endcapture %}{% assign tmp = nil %}
