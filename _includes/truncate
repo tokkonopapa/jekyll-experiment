@@ -1,17 +1,26 @@
 {% capture tmp %}
-{% comment %}
-{% endcomment %}
+<!--
+Truncate multibyte post.content
+-------------------------------
+The original filter `truncate` of Liquid 2.2.2 on GitHub would truncate 
+multibyte character incorrectly.
 
+So this function checks the last letter of truncated content and if it is
+invisible ascii character, then adjust length of truncate.
+
+If you prefer to change the length of truncate, edit the number directly 
+below so the `truncate` can accept only hard coded number.
+-->
 {% capture x %}
-{{ post.content | strip_html | truncate:150 }}
+	{{ post.content | strip_html | truncate:150 }}
 {% endcapture %}
 
 {% capture y %}
-{{ post.content | strip_html | truncate:149 }}
+	{{ post.content | strip_html | truncate:149 }}
 {% endcapture %}
 
 {% capture z %}
-{{ x | replace: y, '' }}
+	{{ x | replace: y, '' }}
 {% endcapture %}
 
 {% if z < ' ' or '~' < z %}
