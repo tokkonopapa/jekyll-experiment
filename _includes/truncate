@@ -30,13 +30,13 @@ below so the `truncate` can accept only hard coded number.
 {% capture _j %}{{ _y | replace: _z, "" }}{% endcapture %}
 
 {% assign truncate = nil %}
-{% if _i <= _C2 and _CF <= _i %}
+{% if _C2 <= _i and i <= _CF %}
 	{% capture truncate %}{{ _y }}1...{% endcapture %}
 {% endif %}
-{% if _i <= _D0 and _D1 <= _i %}
+{% if _D0 <= _i and _i <= _D1 %}
 	{% capture truncate %}{{ _y }}2...{% endcapture %}
 {% endif %}
-{% if _j <= _E2 and _EF <= _j %}
+{% if _E2 <= _j and _j <= _EF %}
 	{% capture truncate %}{{ _z }}3...{% endcapture %}
 {% endif %}
 {% if truncate == nil %}
