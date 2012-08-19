@@ -11,29 +11,31 @@ invisible ascii character, then adjust length of truncate.
 If you prefer to change the length of truncate, edit the number directly 
 below so the `truncate` can accept only hard coded number.
 -->
-{% assign a = site.truncate_len %}
-{% capture b %}{{ a | minus:1 }}{% endcapture %}
+{% assign a_ = site.truncate_len %}
+{% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
 
-{% capture x %}
-	{{ post.content | strip_html | truncate:a }}
+{% capture x_ %}
+	{{ post.content | strip_html | truncate:200 }}
 {% endcapture %}
 
-{% capture y %}
-	{{ post.content | strip_html | truncate:b }}
+{% capture y_ %}
+	{{ post.content | strip_html | truncate:199 }}
 {% endcapture %}
 
-{% capture z %}
-	{{ x | replace: y, '' }}
+{% capture z_ %}
+	{{ x_ | replace:y_, '' }}
 {% endcapture %}
 
-{% if z < ' ' or '~' < z %}
-	{% capture truncate %}{{ y }}{% endcapture %}
+{% if z_ < ' ' or '~' < z_ %}
+	{% capture truncate %}{{ y_ }}{% endcapture %}
 {% else %}
-	{% capture truncate %}{{ x }}{% endcapture %}
+	{% capture truncate %}{{ x_ }}{% endcapture %}
 {% endif %}
 
-{% assign x = nil %}
-{% assign y = nil %}
-{% assign z = nil %}
+{% assign a_ = nil %}
+{% assign b_ = nil %}
+{% assign x_ = nil %}
+{% assign y_ = nil %}
+{% assign z_ = nil %}
 
 {% endcapture %}{% assign tmp = nil %}
