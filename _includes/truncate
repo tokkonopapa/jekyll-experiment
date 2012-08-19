@@ -13,6 +13,7 @@ below so the `truncate` can accept only hard coded number.
 -->
 {% assign a_ = site.truncate_len %}
 {% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
+{% capture c_ %}{{ b_ | minus:1 }}{% endcapture %}
 
 {% capture x_ %}
 	{{ post.content | strip_html | truncate: a_, '' }}
@@ -23,17 +24,31 @@ below so the `truncate` can accept only hard coded number.
 {% endcapture %}
 
 {% capture z_ %}
+	{{ post.content | strip_html | truncate: c_, '' }}
+{% endcapture %}
+
+{% capture i_ %}
 	{{ x_ | replace: y_, '' }}
 {% endcapture %}
 
+{% capture j_ %}
+	{{ y_ | replace: z_, '' }}
+{% endcapture %}
+
+{{ x_ }} / {{ y_ }} / {{ z_ }}
+
+{% comment %}
 {% if z_ < ' ' or '~' < z_ %}
 	{% capture truncate %}{{ a_ }}:{{ b_ }}{{ x_ }} / {{ y_ }}{% endcapture %}
 {% else %}
 	{% capture truncate %}{{ a_ }}:{{ b_ }}{{ y_ }} / {{ x_ }}{% endcapture %}
 {% endif %}
-
+{% endcomment %}
 {% assign a_ = nil %}
 {% assign b_ = nil %}
+{% assign c_ = nil %}
+{% assign i_ = nil %}
+{% assign j_ = nil %}
 {% assign x_ = nil %}
 {% assign y_ = nil %}
 {% assign z_ = nil %}
