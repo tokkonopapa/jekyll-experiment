@@ -51,7 +51,7 @@ asides:
     search: true
     themes: true
     recent_posts: true
-    archives: true
+    archive_tabs: true
     tweets: true
 
 # configuration for asides/recent_posts.html

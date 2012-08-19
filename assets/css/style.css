@@ -90,26 +90,24 @@ aside p {
 }
 
 /* Archives */
-#sidebar-archives a {
+#sidebar-archives .nav-tabs a {
 	outline: none;
 }
-.archive .tab-content ul {
-	margin-left: 0;
+
+/* Tags */
+.tag-list a {
+	color: inherit;
 }
-.archive .tab-content li,
-.archive .btn-toolbar li {
+.tag-list li {
 	float: left;
-	list-style-type: none;
 	margin-right: 0.5em;
 	margin-bottom: 0.5em;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
 }
-.archive .tab-content a,
-.archive .btn-toolbar a {
-	font-size: 100%;
-}
-.archive .tab-content span,
-.archive .btn-toolbar span {
-	font-size: 70%;
+.tag-list span {
+	font-size: 75%;
 	vertical-align: super;
 }
 

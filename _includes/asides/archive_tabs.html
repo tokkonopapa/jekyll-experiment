@@ -1,14 +1,14 @@
-			<section id="sidebar-archives" class="well tabbable archive">
+			<section id="sidebar-archives" class="well tabbable">
 				<h1><i class="icon-tags"></i><a href="{{ site.baseurl }}archives.html">Archives</a></h1>
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab1" data-toggle="tab">Categoies</a></li>
 					<li><a href="#tab2" data-toggle="tab">Tags</a></li>
 				</ul>
 				<div class="tab-content">
-					<ul class="tab-pane unstyled active" id="tab1">
+					<ul class="tag-list tab-pane unstyled active" id="tab1">
 {% include link_categories.html %}
 					</ul>
-					<ul class="tab-pane unstyled" id="tab2">
+					<ul class="tag-list tab-pane unstyled" id="tab2">
 {% include link_tags.html %}
 					</ul>
 				</div>

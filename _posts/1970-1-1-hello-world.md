@@ -3,7 +3,7 @@ layout: post
 title: Hello World!
 excerpt:
 image:
-category:
+category: lesson
 tags: []
 comments: true
 ---

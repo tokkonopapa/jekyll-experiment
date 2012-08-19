@@ -2,8 +2,8 @@
 layout: default
 title: Archives
 ---
-			<section id="archives" class="archive">
-				<h1>{{ page.title }}</h1>
+			<section id="archives">
+				<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 {% for post in site.posts  %}
 	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 	{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
