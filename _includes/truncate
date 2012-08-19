@@ -15,21 +15,21 @@ below so the `truncate` can accept only hard coded number.
 {% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
 
 {% capture x_ %}
-	{{ post.content | strip_html | truncate:200 }}
+	{{ post.content | strip_html | truncate: a_ }}
 {% endcapture %}
 
 {% capture y_ %}
-	{{ post.content | strip_html | truncate:199 }}
+	{{ post.content | strip_html | truncate: b_ }}
 {% endcapture %}
 
 {% capture z_ %}
-	{{ x_ | replace:y_, '' }}
+	{{ x_ | replace: y_, '' }}
 {% endcapture %}
 
 {% if z_ < ' ' or '~' < z_ %}
-	{% capture truncate %}{{ y_ }}{% endcapture %}
+	{% capture truncate %}{{ b_ }}{{ y_ }}{% endcapture %}
 {% else %}
-	{% capture truncate %}{{ x_ }}{% endcapture %}
+	{% capture truncate %}{{ a_ }}{{ x_ }}{% endcapture %}
 {% endif %}
 
 {% assign a_ = nil %}
