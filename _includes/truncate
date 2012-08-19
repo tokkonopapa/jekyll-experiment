@@ -35,7 +35,9 @@ below so the `truncate` can accept only hard coded number.
 	{{ y_ | replace: z_, '' }}
 {% endcapture %}
 
+{% capture truncate %}
 {{ x_ }} / {{ y_ }} / {{ z_ }}
+{% endcapture %}
 
 {% comment %}
 {% if z_ < ' ' or '~' < z_ %}
