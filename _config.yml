@@ -28,7 +28,7 @@ lang: ja
 paginate: 4
 page_columns: 3
 date_format: "%B %d, %Y"
-truncate_len: 150
+truncate_len: 149
 
 # configuration for navbar.html
 navbar_list:
