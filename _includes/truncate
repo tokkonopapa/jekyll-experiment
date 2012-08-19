@@ -16,33 +16,14 @@ below so the `truncate` can accept only hard coded number.
 {% capture c_ %}{{ b_ | minus:1 }}{% endcapture %}
 {% capture d_ %}{{ c_ | minus:1 }}{% endcapture %}
 
-{% capture x_ %}
-	{{ post.content | strip_html | truncate: a_, "" }}
-{% endcapture %}
+{% capture x_ %}{{ post.content | strip_html | truncate: a_, "" }}{% endcapture %}
+{% capture y_ %}{{ post.content | strip_html | truncate: b_, "" }}{% endcapture %}
+{% capture z_ %}{{ post.content | strip_html | truncate: c_, "" }}{% endcapture %}
+{% capture w_ %}{{ post.content | strip_html | truncate: d_, "" }}{% endcapture %}
 
-{% capture y_ %}
-	{{ post.content | strip_html | truncate: b_, "" }}
-{% endcapture %}
-
-{% capture z_ %}
-	{{ post.content | strip_html | truncate: c_, "" }}
-{% endcapture %}
-
-{% capture w_ %}
-	{{ post.content | strip_html | truncate: d_, "" }}
-{% endcapture %}
-
-{% capture i_ %}
-	{{ x_ | replace: y_, "" }}
-{% endcapture %}
-
-{% capture j_ %}
-	{{ x_ | replace: z_, "" }}
-{% endcapture %}
-
-{% capture k_ %}
-	{{ x_ | replace: w_, "" }}
-{% endcapture %}
+{% capture i_ %}{{ x_ | replace: y_, "" }}{% endcapture %}
+{% capture j_ %}{{ y_ | replace: z_, "" }}{% endcapture %}
+{% capture k_ %}{{ z_ | replace: w_, "" }}{% endcapture %}
 
 {% capture truncate %}
 {{ i_ }}/{{ j_ }}/{{ k_ }}
