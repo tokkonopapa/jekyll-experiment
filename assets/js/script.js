@@ -97,11 +97,11 @@
 /* Truncate excerpt string
  * The filter `truncate` of Liquid 2.2.2 on GitHub 
  * would truncate multi-byte character incorrectly.
- */
+ *//*
 $(function () {
 	$('.excerpt').each(function() {
 		var p = this.innerHTML;
 		this.innerHTML = p.slice(0, p.length-4) + '...';
 		$(this).css('visibility', 'visible');
 	});
-});
+});*/
