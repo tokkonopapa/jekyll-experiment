@@ -15,11 +15,11 @@ below so the `truncate` can accept only hard coded number.
 {% capture b_ %}{{ a_ | minus:1 }}{% endcapture %}
 
 {% capture x_ %}
-	{{ post.content | strip_html | truncate: a_ }}
+	{{ post.content | strip_html | truncate: a_, '' }}
 {% endcapture %}
 
 {% capture y_ %}
-	{{ post.content | strip_html | truncate: b_ }}
+	{{ post.content | strip_html | truncate: b_, '' }}
 {% endcapture %}
 
 {% capture z_ %}
@@ -27,9 +27,9 @@ below so the `truncate` can accept only hard coded number.
 {% endcapture %}
 
 {% if z_ < ' ' or '~' < z_ %}
-	{% capture truncate %}{{ b_ }}{{ y_ }}{% endcapture %}
+	{% capture truncate %}{{ b_ }}{{ x_ }} / {{ y_ }}{% endcapture %}
 {% else %}
-	{% capture truncate %}{{ a_ }}{{ x_ }}{% endcapture %}
+	{% capture truncate %}{{ a_ }}{{ y_ }} / {{ x_ }}{% endcapture %}
 {% endif %}
 
 {% assign a_ = nil %}
