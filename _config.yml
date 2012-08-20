@@ -24,8 +24,8 @@ email: USERNAME@example.com
 # configuration for default.html (type: blog)
 #--------------------------------------------
 lang: ja
-paginate: 7
-page_columns: 2
+paginate: 4
+page_columns: 3
 date_format: "%B %d, %Y"
 truncate_len: 200
 
