@@ -44,6 +44,8 @@ Information
 * [A simple, lightweight jQuery plugin for reading, writing and deleting cookies](https://github.com/carhartl/jquery-cookie)
 
 ### Twitter Bootstrap ###
+* [Twitter Bootstrap - GitHub](http://twitter.github.com/bootstrap/)
+
 #### bootstrap-responsive.css の定義順 ####
 
 	@media (max-width: 767px) {...}
@@ -55,7 +57,7 @@ Information
 	@media (max-width: 979px) {...}
 	@media (min-width: 980px) {...}
 
-### Twitter Bootstrap のカスタマイズ／カラーテーマ ###
+#### Twitter Bootstrap のカスタマイズ／カラーテーマ ####
 * [超便利！Twitter BootstrapでさくさくWeb開発 : アシアルブログ](http://blog.asial.co.jp/887)
 * [Download - Twitter Bootstrap](http://twitter.github.com/bootstrap/download.html)
 * [Bootswatch: Free themes for Twitter Bootstrap](http://bootswatch.com/)

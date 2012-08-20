@@ -42,15 +42,8 @@ title:
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
 				</article><!--/span-->
-{% if site.safe %}
-	{% case site.page_columns %}
-		{% when 3 %}{% capture n %}{{ forloop.index0 | modulo:3 }}{% endcapture %}
-		{% when 2 %}{% capture n %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
-		{% else   %}{% capture n %}{{ 0 }}{% endcapture %}
-	{% endcase %}
-{% else %}
-	{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}
-{% endif %}
+{% if site.safe %}{% capture n %}{{ forloop.index0  | divided_by:site.page_columns | times:site.page_columns }}{% endcapture %}{% capture n %}{{ forloop.index0  | minus:n }}{% endcapture %}
+{% else %}{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}{% endif %}
 {% if n == '0' or forloop.last %}
 			</div><!--/row-fluid-->
 {% unless forloop.last %}

@@ -11,8 +11,6 @@ invisible ascii character, then adjust length of truncate.
 {% assign _a = nil %}
 {% assign _b = nil %}
 {% assign _c = nil %}
-{% assign _i = nil %}
-{% assign _j = nil %}
 {% assign _x = nil %}
 {% assign _y = nil %}
 {% assign _z = nil %}

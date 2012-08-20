@@ -22,11 +22,10 @@ email: USERNAME@example.com
 
 #--------------------------------------------
 # configuration for default.html (type: blog)
-# notice: `page_columns` should be 3, 2 or 1.
 #--------------------------------------------
 lang: ja
-paginate: 4
-page_columns: 3
+paginate: 7
+page_columns: 2
 date_format: "%B %d, %Y"
 truncate_len: 200
 

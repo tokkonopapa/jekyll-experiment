@@ -16,12 +16,12 @@ invisible ascii character, then adjust length of truncate.
 {% capture _y %}{{ post.content | strip_html | truncate: _b, "" }}{% endcapture %}
 {% capture _z %}{{ post.content | strip_html | truncate: _c, "" }}{% endcapture %}
 
-{% capture _i %}{{ _x | replace: _y, "" }}{% endcapture %}
-{% capture _j %}{{ _y | replace: _z, "" }}{% endcapture %}
+{% capture _a %}{{ _x | replace: _y, "" }}{% endcapture %}
+{% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
 
 {% assign truncate = nil %}
-{% if _C2 <= _i and _i <= _CF %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
-{% if _D0 <= _i and _i <= _D1 %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
-{% if _E2 <= _j and _j <= _EF %}{% capture truncate %}{{ _z }}...{% endcapture %}{% endif %}
+{% if _C2 <= _a and _a <= _CF %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
+{% if _D0 <= _a and _a <= _D1 %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
+{% if _E2 <= _b and _b <= _EF %}{% capture truncate %}{{ _z }}...{% endcapture %}{% endif %}
 {% if truncate == nil %}        {% capture truncate %}{{ _x }}...{% endcapture %}{% endif %}
 {% endcapture %}{% assign tmp = nil %}
