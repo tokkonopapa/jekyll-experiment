@@ -19,9 +19,9 @@ invisible ascii character, then adjust length of truncate.
 {% capture _a %}{{ _x | replace: _y, "" }}{% endcapture %}
 {% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
 
-{% assign truncate = nil %}
-{% if _C2 <= _a and _a <= _CF %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
-{% if _D0 <= _a and _a <= _D1 %}{% capture truncate %}{{ _y }}...{% endcapture %}{% endif %}
-{% if _E2 <= _b and _b <= _EF %}{% capture truncate %}{{ _z }}...{% endcapture %}{% endif %}
-{% if truncate == nil %}        {% capture truncate %}{{ _x }}...{% endcapture %}{% endif %}
+{% assign truncated = nil %}
+{% if _C2 <= _a and _a <= _CF %}{% capture truncated %}{{ _y }}...{% endcapture %}{% endif %}
+{% if _D0 <= _a and _a <= _D1 %}{% capture truncated %}{{ _y }}...{% endcapture %}{% endif %}
+{% if _E2 <= _b and _b <= _EF %}{% capture truncated %}{{ _z }}...{% endcapture %}{% endif %}
+{% if truncated == nil %}       {% capture truncated %}{{ _x }}...{% endcapture %}{% endif %}
 {% endcapture %}{% assign tmp = nil %}

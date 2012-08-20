@@ -61,26 +61,29 @@
 			weeks_ago:   "w"
 		};
 
-		var now = (new Date()).getTime();
+		var now = new Date();
 		var prettyDate = function (time) {
-			var date = new Date(time || ""),
-				diff = ((now - date.getTime()) / 1000),
-				day_diff = Math.floor(diff / 86400) + 1;
+			if (typeof now.getTime !== "function") {
+				return "&infin;"
+			}
+
+			var diff = (now.getTime() - (new Date(time || "")).getTime()) / 1000,
+				day_diff = Math.round(diff / 86400);
 
 			if (isNaN(day_diff) || day_diff < 0 || day_diff >= 31) {
-				return;
+				return "&infin;";
 			}
 
 			return day_diff == 0 && (
-					diff < 60 && say.just_now ||
-					diff < 120 && say.minute_ago ||
-					diff < 3600 && Math.floor(diff / 60) + say.minutes_ago ||
-					diff < 7200 && say.hour_ago ||
+					diff <    60 && say.just_now ||
+					diff <   120 && say.minute_ago ||
+					diff <  3600 && Math.floor(diff / 60) + say.minutes_ago ||
+					diff <  7200 && say.hour_ago ||
 					diff < 86400 && Math.floor(diff / 3600) + say.hours_ago) ||
-				day_diff === 1 && say.yesterday ||
-				day_diff < 7 && day_diff + say.days_ago ||
-				day_diff === 7 && say.last_week ||
-				day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
+				day_diff ===   1 && say.yesterday ||
+				day_diff <     7 && day_diff + say.days_ago ||
+				day_diff ===   7 && say.last_week ||
+				day_diff >     7 && Math.ceil(day_diff / 7) + say.weeks_ago;
 		}
 
 		var n = options.count;

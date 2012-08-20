@@ -2,51 +2,69 @@
 layout: default
 title:
 ---
-{% include truncate_start %}{% for post in paginator.posts limit: site.paginate %}{% if forloop.first %}
+{% include truncate_start %}
+{% for post in paginator.posts limit: 1 %}
+			<!-- Featured Article -->
 			<article class="hero-unit">
 				<header><hgroup>
 					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
 					<h4><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h4>
 				</hgroup></header>
 				<section>
-{% if site.safe %}
-	{% unless post.excerpt %}
-{% include truncate_exec %}{{ truncate | prepend:'<p class="excerpt">' | append:'</p>' }}
+	{% if site.safe %}
+		{% unless post.excerpt %}
+			{% include truncate_exec %}
+					<p>{{ truncated }}</p>
+		{% else %}
+					<p>{{ post.excerpt }}</p>
+		{% endunless %}
 	{% else %}
-{{ post.excerpt }}
-	{% endunless %}
-{% else %}{{ post.content | postmorefilter }}{% endif %}
+					{{ post.content | postmorefilter }}
+	{% endif %}
 				</section>
 				<footer>
 					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
 				</footer>
 			</article>
-{% unless forloop.last %}
+{% endfor %}
+{% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
+{% capture p %}{{ site.page_columns }}{% endcapture %}
+{% capture M %}{{ p | minus: 1 }}{% endcapture %}
+{% for post in paginator.posts limit: n offset: 1 %}
+	{% if site.safe %}
+		{% capture m %}{{ forloop.index0 | divided_by: p | times: p }}{% endcapture %}
+		{% capture m %}{{ forloop.index0 | minus: m }}{% endcapture %}
+	{% else %}
+		{% capture m %}{{ forloop.index0 | modulofilter: p }}{% endcapture %}
+	{% endif %}
+	{% if m == '0' %}
+			<!-- Followed Articles -->
 			<div class="row-fluid">
-{% endunless %}{% else %}
+	{% endif %}
 				<article class="span{{ 12 | divided_by: site.page_columns }}">
 					<header><hgroup>
 						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
 						<h5><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h5>
 					</hgroup></header>
 					<section>
-{% if site.safe %}
-	{% unless post.excerpt %}
-{% include truncate_exec %}{{ truncate | prepend:'<p class="excerpt">' | append:'</p>' }}
+	{% if site.safe %}
+		{% unless post.excerpt %}
+			{% include truncate_exec %}
+						<p>{{ truncated }}</p>
+		{% else %}
+						<p>{{ post.excerpt }}</p>
+		{% endunless %}
 	{% else %}
-{{ post.excerpt }}
-	{% endunless %}
-{% else %}{{ post.content | postmorefilter }}{% endif %}
+						{{ post.content | postmorefilter }}
+	{% endif %}
 					</section>
 					<footer>
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
 				</article><!--/span-->
-{% if site.safe %}{% capture n %}{{ forloop.index0  | divided_by:site.page_columns | times:site.page_columns }}{% endcapture %}{% capture n %}{{ forloop.index0  | minus:n }}{% endcapture %}
-{% else %}{% capture n %}{{ forloop.index0 | modulofilter: site.page_columns }}{% endcapture %}{% endif %}
-{% if n == '0' or forloop.last %}
+	{% if m == M or forloop.last %}
 			</div><!--/row-fluid-->
-{% unless forloop.last %}
-			<div class="row-fluid">
-{% endunless %}{% endif %}{% endif %}{% endfor %}{% include truncate_end %}
+	{% endif %}
+{% endfor %}
+{% include truncate_end %}
 {% include pagenation.html %}

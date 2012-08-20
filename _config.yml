@@ -1,4 +1,4 @@
-# standard jekyll configuration
+# standard jekyll configuration on GitHub
 safe: true
 source: .
 destination: ./_site
@@ -9,7 +9,7 @@ markdown: rdiscount
 exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
-# To test locally, `baseurl` being set as the path from root is recommended.
+# `baseurl` being set as a path from the root is recommended.
 url: http://USERNAME.github.com
 baseurl: /
 permalink: /blog/:year/:month/:title/
@@ -58,8 +58,10 @@ asides:
 # configuration for asides/recent_posts.html
 recent_posts: 5
 
-# configration for color theme
-# Default, Amelia, United, Superhero, Spruce, Spacelab, Slate, Simplex, Readable, Journal, Cyborg, Cerulean
+# configration for bootstrap and color theme
+# Default, Amelia, United, Superhero, Spruce, Spacelab, 
+# Slate, Simplex, Readable, Journal, Cyborg, Cerulean
+bootstrap: bootstrap-2.0.4
 color_theme: Default
 
 #-----------------------------------------------
