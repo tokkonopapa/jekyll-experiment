@@ -13,8 +13,8 @@ invisible ascii character, then adjust length of truncate.
 {% capture _c %}{{ _b | minus:1 }}{% endcapture %}
 
 {% capture _x %}{{ post.content | strip_html | truncate: _a, "" }}{% endcapture %}
-{% capture _y %}{{ post.content | strip_html | truncate: _b, "" }}{% endcapture %}
-{% capture _z %}{{ post.content | strip_html | truncate: _c, "" }}{% endcapture %}
+{% capture _y %}{{ _x | truncate: _b, "" }}{% endcapture %}
+{% capture _z %}{{ _y | truncate: _c, "" }}{% endcapture %}
 
 {% capture _a %}{{ _x | replace: _y, "" }}{% endcapture %}
 {% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
