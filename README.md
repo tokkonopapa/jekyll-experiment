@@ -21,6 +21,7 @@ Information
 * [Liquid for Designers - Shopify/liquid Wiki](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 * [Module: Liquid::StandardFilters — Documentation for liquid (2.2.2)](http://rubydoc.info/gems/liquid/2.2.2/Liquid/StandardFilters)
 * [Liquid::StandardFilters](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html)
+* [Jekyll hacks - HTML excerpts](http://kaspa.rs/2011/04/jekyll-hacks-html-excerpts/)
 
 ### jekyll bootstrap ###
 * [plusjade/jekyll-bootstrap - GitHub](https://github.com/plusjade/jekyll-bootstrap)

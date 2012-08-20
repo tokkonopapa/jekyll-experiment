@@ -55,11 +55,16 @@ task :post do
     post.puts "description: "
     post.puts "excerpt: "
     post.puts "image: "
+    post.puts "thumbnail: "
     post.puts "category: uncategorized"
     post.puts "tags: []"
     post.puts "comments: true"
     post.puts "published: true"
     post.puts "---"
+    post.puts ""
+    post.puts "<!-- more start -->"
+    post.puts ""
+    post.puts "<!-- more end -->"
   end
 end
 
