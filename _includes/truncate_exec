@@ -10,9 +10,9 @@ invisible ascii character, then adjust length of truncate.
 -->
 {% if site.excerpt %}
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
-{% else %}{% if post.content contains '<!-- more start -->' and post.content contains '<!-- more end -->'%}
+{% elsif post.content contains '<!-- more start -->' and post.content contains '<!-- more end -->'%}
 		{% capture truncated %}{{ post.content | replace:'more start -->','' | replace:'<!-- more end','' }}{% endcapture %}
-{% else %}{% if site.safe %}
+{% elsif site.safe %}
 	{% assign  _a = site.truncate_len %}
 	{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
 	{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
@@ -31,5 +31,4 @@ invisible ascii character, then adjust length of truncate.
 	{% if truncated == nil %}       {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}{% endif %}
 {% else %}
 	{% capture truncated %}{{ post.content | postmorefilter }}{% endcapture %}
-{% endif %}{% endif %}{% endif %}
-{% endcapture %}{% assign tmp = nil %}{{ truncated }}
+{% endif %}{% endcapture %}{% assign tmp = nil %}{{ truncated }}
