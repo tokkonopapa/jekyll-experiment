@@ -7,8 +7,6 @@ multibyte character incorrectly.
 
 So this function checks the last letter of truncated content and if it is
 invisible ascii character, then adjust length of truncate.
-
-{{ post.content | replace:'more start -->','' | replace:'<!-- more end','' }}
 -->
 {% if site.excerpt %}
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
