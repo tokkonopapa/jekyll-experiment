@@ -25,7 +25,7 @@ email: USERNAME@example.com
 #--------------------------------------------
 lang: ja
 paginate: 4
-page_columns: 3
+columns: 3
 date_format: "%B %d, %Y"
 truncate_len: 200
 
@@ -77,10 +77,12 @@ disqus:
 google_analytics:
     account: UA-XXXXX-X
 
-google_plus_one:
-    size: medium
+#google_plus_one:
+#    size: medium
 
-facebook: true
+# `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
+#facebook:
+#    locale: ja_JP
 
 twitter:
     username: twitter
@@ -91,6 +93,6 @@ twitter:
     tweet_button: true
 
 # github:
-#   username: USERNAME
+#    username: USERNAME
 
 # hatena: true

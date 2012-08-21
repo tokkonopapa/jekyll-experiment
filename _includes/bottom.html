@@ -20,7 +20,7 @@
 	add('https://apis.google.com/js/plusone.js');
 {% endif %}{% if site.facebook %}
 	// Facebook SDK
-	add('//connect.facebook.net/' + navigator.language.replace('-', '_') + '/all.js', 'facebook-jssdk');
+	add('//connect.facebook.net/' + '{{ site.facebook.locale }}' + '/all.js#xfbml=1', 'facebook-jssdk');
 {% endif %}{% if site.twitter %}
 	// Twitter SDK
 	add('//platform.twitter.com/widgets.js', 'twitter-wjs');

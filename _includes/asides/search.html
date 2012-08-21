@@ -1,13 +1,20 @@
 			<section id="sidebar-search" class="well input-append">
 				<form class="form-search form-horizontal" action="http://google.com/search" method="get">
+					<div class="row" style="margin:0">
+						<div class="span9">
 {% if site.safe %}
-					<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
+							<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
 {% else %}
-					<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
+							<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
 {% endif %}
-					<input type="text" name="q" class="input-medium search-query" placeholder="Search">
-					<button class="btn btn-inverse" type="submit">
-						<span class="icon-search icon-white"></span>
-					</button>
+							<input type="text" name="q" class="input-medium search-query"
+							placeholder="Search" style="width: 92%">
+						</div>
+						<div class="span3 offset9">
+							<button class="btn btn-inverse" type="submit" style="width: 100%">
+								<span class="icon-search icon-white"></span>
+							</button>
+						</div>
+					</div>
 				</form>
 			</section>

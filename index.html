@@ -7,56 +7,37 @@ title:
 			<!-- Featured Article -->
 			<article class="hero-unit">
 				<header><hgroup>
-					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h1>
-					<h4><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h4>
+					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">
+					{{ post.title }}</a></h1>
+					<h4><time datetime="{{ post.date | date_to_xmlschema }}">
+					{{ post.date | date: site.date_format }}</time></h4>
 				</hgroup></header>
 				<section>
-	{% if site.safe %}
-		{% unless post.excerpt %}
-			{% include truncate_exec %}
-					<p>{{ truncated }}</p>
-		{% else %}
-					<p>{{ post.excerpt }}</p>
-		{% endunless %}
-	{% else %}
-					{{ post.content | postmorefilter }}
-	{% endif %}
+					{% include truncate_exec %}
 				</section>
 				<footer>
-					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
+					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">
+					Read this &raquo;</a></p>
 				</footer>
 			</article>
 {% endfor %}
 {% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
-{% capture p %}{{ site.page_columns }}{% endcapture %}
-{% capture M %}{{ p | minus: 1 }}{% endcapture %}
+{% capture M %}{{ site.columns  | minus: 1 }}{% endcapture %}
 {% for post in paginator.posts limit: n offset: 1 %}
-	{% if site.safe %}
-		{% capture m %}{{ forloop.index0 | divided_by: p | times: p }}{% endcapture %}
-		{% capture m %}{{ forloop.index0 | minus: m }}{% endcapture %}
-	{% else %}
-		{% capture m %}{{ forloop.index0 | modulofilter: p }}{% endcapture %}
-	{% endif %}
+	{% capture m %}{% include modulo %}{% endcapture %}
 	{% if m == '0' %}
 			<!-- Followed Articles -->
 			<div class="row-fluid">
 	{% endif %}
-				<article class="span{{ 12 | divided_by: site.page_columns }}">
+				<article class="span{{ 12 | divided_by: site.columns }}">
 					<header><hgroup>
-						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">{{ post.title }}</a></h2>
-						<h5><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time></h5>
+						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">
+						{{ post.title }}</a></h2>
+						<h5><time datetime="{{ post.date | date_to_xmlschema }}">
+						{{ post.date | date: site.date_format }}</time></h5>
 					</hgroup></header>
 					<section>
-	{% if site.safe %}
-		{% unless post.excerpt %}
-			{% include truncate_exec %}
-						<p>{{ truncated }}</p>
-		{% else %}
-						<p>{{ post.excerpt }}</p>
-		{% endunless %}
-	{% else %}
-						{{ post.content | postmorefilter }}
-	{% endif %}
+						{% include truncate_exec %}
 					</section>
 					<footer>
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>

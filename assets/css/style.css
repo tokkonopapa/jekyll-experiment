@@ -22,29 +22,41 @@ form {
 	margin-bottom: 0;
 }
 
+/* dropdown container */
+.nav-collapse .nav > .dropdown-container {
+	position: relative;
+}
+.nav-collapse .nav > .dropdown-container .dropdown-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.nav-collapse .nav > .dropdown-container .caret {
+	margin-left: 1.25em;
+}
+.in .nav > .dropdown-container .dropdown-link {
+	width: 100%;
+}
+
 /* sidebar */
 aside h1, aside h2, aside h3 {
-	font-size: 160%;
+	font-size: 125%;
 	line-height: 1.0em;
 	margin-bottom: 0.5em;
 }
 aside p {
 	margin: 0;
 }
+
+/* mini-icon */
 #sidebar i {
 	vertical-align: baseline;
 	margin-right: 0.25em;
 }
+
+/* divider */
 #sidebar .nav-list .divider {
 	margin: 0.5em 1px;
-}
-
-/* asides/search.html */
-#sidebar-search input {
-	width: 70%;
-}
-#sidebar-search button {
-	width: 20%;
 }
 
 /* asides/tweets.html, asides/recent_post.html */

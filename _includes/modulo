@@ -1,0 +1,8 @@
+{% capture tmp %}
+{% if site.safe %}
+	{% capture _m %}{{ forloop.index0 | divided_by: site.columns | times: site.columns }}{% endcapture %}
+	{% capture _m %}{{ forloop.index0 | minus: _m }}{% endcapture %}
+{% else %}
+	{% capture _m %}{{ forloop.index0 | modulofilter: site.columns }}{% endcapture %}
+{% endif %}
+{% endcapture %}{% assign tmp = nil %}{{ _m }}

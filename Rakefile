@@ -53,6 +53,7 @@ task :post do
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "title: #{title.gsub(/-/,' ').gsub(/&/,'&amp;')}"
     post.puts "description: "
+    post.puts "keywords: "
     post.puts "excerpt: "
     post.puts "image: "
     post.puts "thumbnail: "
@@ -89,6 +90,7 @@ task :page do
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "title: #{title}"
     post.puts "description: "
+    post.puts "keywords: "
     post.puts "published: true"
     post.puts "---"
   end
