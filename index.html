@@ -24,7 +24,12 @@ title:
 {% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
 {% capture M %}{{ site.columns  | minus: 1 }}{% endcapture %}
 {% for post in paginator.posts limit: n offset: 1 %}
-	{% capture m %}{% include modulo %}{% endcapture %}
+	{% if site.safe %}
+		{% capture m %}{{ forloop.index0 | divided_by: site.columns | times: site.columns }}{% endcapture %}
+		{% capture m %}{{ forloop.index0 | minus: m }}{% endcapture %}
+	{% else %}
+		{% capture m %}{{ forloop.index0 | modulofilter: site.columns }}{% endcapture %}
+	{% endif %}
 	{% if m == '0' %}
 			<!-- Followed Articles -->
 			<div class="row-fluid">
