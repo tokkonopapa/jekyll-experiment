@@ -25,10 +25,12 @@ invisible ascii character, then adjust length of truncate.
 	{% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
 
 	{% assign truncated = nil %}
-	{% if _C2 <= _a and _a <= _CF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}{% endif %}
-	{% if _D0 <= _a and _a <= _D1 %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}{% endif %}
-	{% if _E2 <= _b and _b <= _EF %}{% capture truncated %}<p>{{ _z }}...</p>{% endcapture %}{% endif %}
-	{% if truncated == nil %}       {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}{% endif %}
+	{% if    _C2 <= _a and _a <= _CF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+	{% elsif _D0 <= _a and _a <= _D1 %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+	{% elsif _E2 <= _a and _a <= _EF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+	{% elsif _E2 <= _b and _b <= _EF %}{% capture truncated %}<p>{{ _z }}...</p>{% endcapture %}
+	{% elsif truncated == nil %}       {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}
+	{% endif %}
 {% else %}
 	{% capture truncated %}{{ post.content | postmorefilter }}{% endcapture %}
 {% endif %}{% endcapture %}{% assign tmp = nil %}{{ truncated }}

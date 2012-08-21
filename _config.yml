@@ -25,7 +25,7 @@ email: USERNAME@example.com
 #--------------------------------------------
 lang: ja
 paginate: 4
-columns: 3
+columns: 1
 date_format: "%B %d, %Y"
 truncate_len: 200
 
