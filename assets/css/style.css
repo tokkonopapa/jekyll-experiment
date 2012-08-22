@@ -27,18 +27,18 @@ form {
 }
 
 /* dropdown container */
-.navbar .nav > li.dropdown {
+.navbar .nav > li.dropdown-container {
 	position: relative !important;
 }
-.navbar .nav > li.dropdown a.dropdown-link {
+.navbar .nav > li.dropdown-container a.dropdown-link {
 	position: absolute !important;
 	top: 0;
 	left: 0;
 }
-.navbar .nav > li.dropdown a .caret {
+.navbar .nav > li.dropdown-container a .caret {
 	margin-left: 1.25em;
 }
-.navbar .in .nav > li.dropdown a.dropdown-link {
+.navbar .in .nav > li.dropdown-container a.dropdown-link {
 	width: 100%;
 }
 
