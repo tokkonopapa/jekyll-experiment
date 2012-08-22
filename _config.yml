@@ -49,7 +49,7 @@ navbar_list:
 # configuration for asides.html
 asides:
     about: true
-    search: true
+    search: false
     themes: true
     recent_posts: true
     archive_tabs: true
