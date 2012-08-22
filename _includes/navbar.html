@@ -19,7 +19,7 @@
 			</div>
 -->
 {% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}
-			<nav class="nav-collapse">
+			<nav class="nav-collapse collapse">
 				<ul class="nav">
 {% for link in site.navbar_list %}
 	{% if link.url == url or link.type == page.type %}{% assign active = 'active' %}
