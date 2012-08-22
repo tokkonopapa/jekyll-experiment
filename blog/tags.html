@@ -5,7 +5,7 @@ title: Tags
 			<section id="tags">
 				<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 				<ul class="tag-list btn-toolbar unstyled clearfix">
-{% include link_tags.html %}
+{% include list_tags.html %}
 				</ul>
 {% for tag in site.tags %}
 				<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>

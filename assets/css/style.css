@@ -17,24 +17,28 @@
 form {
 	margin: 0;
 }
+#title {
+	margin: 0;
+	line-height: 1;
+}
 .navbar input[type="text"] {
 	border-radius: 14px;
 	margin-bottom: 0;
 }
 
 /* dropdown container */
-.nav-collapse .nav > .dropdown-container {
-	position: relative;
+.navbar .nav > li.dropdown {
+	position: relative !important;
 }
-.nav-collapse .nav > .dropdown-container .dropdown-link {
-	position: absolute;
+.navbar .nav > li.dropdown a.dropdown-link {
+	position: absolute !important;
 	top: 0;
 	left: 0;
 }
-.nav-collapse .nav > .dropdown-container .caret {
+.navbar .nav > li.dropdown a .caret {
 	margin-left: 1.25em;
 }
-.in .nav > .dropdown-container .dropdown-link {
+.navbar .in .nav > li.dropdown a.dropdown-link {
 	width: 100%;
 }
 

@@ -5,7 +5,7 @@ title: Categories
 			<section id="categories">
 				<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 				<ul class="tag-list btn-toolbar unstyled clearfix">
-{% include link_categories.html %}
+{% include list_categories.html %}
 				</ul>
 {% for cat in site.categories %}
 				<h2 id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
