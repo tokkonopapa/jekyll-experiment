@@ -19,7 +19,7 @@ form {
 }
 #title {
 	margin: 0;
-/*	line-height: 1;*/
+	line-height: 1;
 }
 .navbar input[type="text"] {
 	border-radius: 14px;
