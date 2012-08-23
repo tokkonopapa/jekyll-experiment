@@ -48,12 +48,12 @@ navbar_list:
 
 # configuration for asides.html
 asides:
-    about: false
-    search: false
+    about: true
+    search: true
     themes: false
-    recent_posts: false
-    archive_tabs: false
-    tweets: false
+    recent_posts: true
+    archive_tabs: true
+    tweets: true
 
 # configuration for asides/recent_posts.html
 recent_posts: 5
