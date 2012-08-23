@@ -5,8 +5,8 @@ Still under construction...
 
 This software will work out of the box, without any fancy installation.
 
-Information
------------
+Development Reference
+---------------------
 ### jekyll ###
 * [jekyll](http://jekyllrb.com/)
 * [mojombo](https://github.com/mojombo/jekyll/wiki)
@@ -117,7 +117,7 @@ Structure
 
 ### Functions ###
 
-+ more ... almost done
++ more ... done
 + _config.yml ... almost done
 	+ ブログページ設定 ... done
 + セマンティック HTML ... almost done
@@ -129,7 +129,7 @@ Structure
 	* Twitter ボタン
 	* Google+ ボタン
 	* GitHub リポジトリ
-	+ タグクラウド ... almost done (not cloud)
+	+ タグクラウド ... done
 	+ カテゴリーリスト ... done
 + ナビゲーションバー機能
 	+ サブカテゴリ化 (Archives, Categories, Tags) ... done
@@ -145,7 +145,7 @@ Structure
 	+ About ページ ... done
 * ブログ機能
 	+ DISQUS ... done
-	* ソーシャルボタン
+	* ソーシャルボタン ... done
 	+ ページナビ ... done
 	+ ページネーション ... done
 	+ Archives ページ ... done except design

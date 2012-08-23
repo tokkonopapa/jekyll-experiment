@@ -96,3 +96,12 @@
 		return this;
 	};
 })(jQuery);
+
+/* Truncate on client side.
+$(function () {
+	$('.excerpt').each(function() {
+		var p = this.innerHTML;
+		this.innerHTML = p.slice(0, p.length-4) + '...';
+		$(this).css('visibility', 'visible');
+	});
+});*/
