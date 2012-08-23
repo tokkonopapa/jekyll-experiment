@@ -31,7 +31,7 @@
 }(window, document, 'script'));
 //]]></script>
 {% if site.disqus.short_name %}{% if page.comments or site.disqus.comment_count %}
-<!--<script>
+<!--<script>//<![CDATA[
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	var disqus_shortname = '{{ site.disqus.short_name }}';
 	var disqus_identifier = /* '{{ site.url }}' + */ '{{ page.url }}';
@@ -48,13 +48,13 @@
 {% if page.comments or page.comment %}		add('embed.js');{% endif %}
 {% if site.disqus.comment_count %}		add('count.js');{% endif %}
 	})();
-</script>
+//]]></script>
 {% endif %}{% endif %}
-<script>
+<script>//<![CDATA[
 $(function () {
 	$('#tweets').showTweets('{{ site.twitter.username }}', {
 		count: {{ site.twitter.count }},
 		exclude_replies: {{ site.twitter.show_replies }}
 	});
 });
-</script>-->
+//]]></script>-->
