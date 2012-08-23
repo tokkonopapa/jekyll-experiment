@@ -84,13 +84,13 @@ google_plus_one:
 facebook:
     locale: ja_JP
 
-twitter:
-    username: twitter
-    count: 5
-    show_replies: false
-    show_follower_count: false
-    follow_button: true
-    tweet_button: true
+#twitter:
+#    username: twitter
+#    count: 5
+#    show_replies: false
+#    show_follower_count: false
+#    follow_button: true
+#    tweet_button: true
 
 # github:
 #    username: USERNAME
