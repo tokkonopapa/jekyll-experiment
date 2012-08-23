@@ -81,18 +81,18 @@ google_plus_one:
     size: medium
 
 # `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
-#facebook:
-#    locale: ja_JP
+facebook:
+    locale: ja_JP
 
-#twitter:
-#    username: twitter
-#    count: 5
-#    show_replies: false
-#    show_follower_count: false
-#    follow_button: true
-#    tweet_button: true
+twitter:
+    username: twitter
+    count: 5
+    show_replies: false
+    show_follower_count: false
+    follow_button: true
+    tweet_button: true
 
 # github:
 #    username: USERNAME
 
-# hatena: true
+hatena: true

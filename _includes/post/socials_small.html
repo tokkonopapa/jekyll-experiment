@@ -1,0 +1,55 @@
+					<section id="socials" class="well clearfix" style="min-height: 20px">
+						<ul>
+{% if site.hatena %}
+							<!-- Hatena -->
+							<li class="social">
+								<a href="http://b.hatena.ne.jp/entry/"
+									class="hatena-bookmark-button"
+									data-hatena-bookmark-layout="standard"
+									data-hatena-bookmark-url="{{ site.url }}{{ page.url }}">
+									<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+										alt="Add this entry to Hatena"
+										width="20" height="20"
+										style="border: none">
+								</a>
+							</li>
+{% endif %}{% if site.google_plus_one %}
+							<!-- Google plusone -->
+							<li class="social">
+								<div class="g-plusone"
+									data-size="medium"
+									data-href="{{ site.url }}{{ page.url }}">
+								</div>
+							</li>
+{% endif %}{% if site.twitter %}
+							<!-- Twitter -->
+							<li class="social">
+								<a href="https://twitter.com/share"
+									class="twitter-share-button"
+									data-lang="{{ site.lang }}"
+									data-url="{{ site.url }}{{ page.url }}"
+									data-text="Tweet this entry"
+									data-via="{{ site.title }}"
+									data-width="80">
+								</a>
+							</li>
+{% endif %}{% if site.facebook %}
+							<!-- Facebook -->
+							<li class="social">
+								<div class="fb-like"
+									data-href="{{ site.url }}{{ page.url }}"
+									data-layout="button_count"
+									data-send="false"
+									data-width="120"
+									data-show-faces="false">
+								</div>
+								<!--
+									data-width="450"
+									data-action="recommend"
+									data-colorscheme="dark"
+									data-font="ariel"
+								-->
+							</li>
+{% endif %}
+						</ul>
+					</section>

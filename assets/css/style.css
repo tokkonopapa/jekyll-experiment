@@ -132,3 +132,9 @@ aside p {
 	font-size: 75%;
 	vertical-align: super;
 }
+
+.social {
+	width: 120px;
+	float: left;
+	list-style-type: none;
+}
