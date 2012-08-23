@@ -1,5 +1,5 @@
 <script src="{{ site.baseurl }}assets/js/script.js"></script>
-<!--<script>
+<script>
 (function(win, doc, script) {
 	var js,
 		fjs = doc.getElementsByTagName(script)[0],
@@ -31,7 +31,7 @@
 }(window, document, 'script'));
 </script>
 {% if site.disqus.short_name %}{% if page.comments or site.disqus.comment_count %}
-<script>
+<!--<script>
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	var disqus_shortname = '{{ site.disqus.short_name }}';
 	var disqus_identifier = /* '{{ site.url }}' + */ '{{ page.url }}';
