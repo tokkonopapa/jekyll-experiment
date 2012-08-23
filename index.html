@@ -22,7 +22,6 @@ title:
 			</article>
 {% endfor %}
 {% assign m = 0 %}
-{% capture M %}{{ site.columns  | minus: 1 }}{% endcapture %}
 {% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
 {% for post in paginator.posts limit: n offset: 1 %}
 	{% if m == 0 %}
@@ -43,11 +42,10 @@ title:
 						<p><a href="{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
 				</article><!--/span-->
-	{% if m == M or forloop.last %}
+	{% capture m %}{{ m | plus: 1 }}{% endcapture %}
+	{% if m == site.columns or forloop.last %}
 			</div><!--/row-fluid-->
 		{% assign m = 0 %}
-	{% else %}
-		{% capture m %}{{ m | plus: 1 }}{% endcapture %}
 	{% endif %}
 {% endfor %}
 {% include truncate_end %}
