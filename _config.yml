@@ -81,8 +81,8 @@ google_plus_one:
     size: medium
 
 # `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
-#facebook:
-#    locale: ja_JP
+facebook:
+    locale: ja_JP
 
 twitter:
     username: twitter

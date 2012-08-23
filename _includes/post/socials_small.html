@@ -36,13 +36,14 @@
 {% endif %}{% if site.facebook %}
 							<!-- Facebook -->
 							<li class="social">
-								<div class="fb-like"
+								<iframe src="//www.facebook.com/plugins/like.php?href={{ site.url }}{{ page.url }}&amp;send=false&amp;layout=button_count&amp;width=120&amp;height=21&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:21px;" allowTransparency="true"></iframe>
+								<!--<div class="fb-like"
 									data-href="{{ site.url }}{{ page.url }}"
 									data-layout="button_count"
 									data-send="false"
 									data-width="120"
 									data-show-faces="false">
-								</div>
+								</div>-->
 								<!--
 									data-width="450"
 									data-action="recommend"
