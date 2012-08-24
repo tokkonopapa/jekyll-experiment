@@ -6,6 +6,7 @@ type: blog
 <html lang="{{ site.lang }}">
 <head>
 {% include head.html %}
+{% if site.asides.themes %}{% include script.html %}{% endif %}
 </head>
 <body>
 <header class="navbar navbar-fixed-top">
@@ -14,7 +15,7 @@ type: blog
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span9">
+		<div id="main" class="span9">
 {{ content }}
 		</div>
 

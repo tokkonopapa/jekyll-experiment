@@ -13,6 +13,11 @@
 	margin-bottom: 0.125em;
 }
 
+footer {
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
 /* navbar */
 form {
 	margin: 0;
