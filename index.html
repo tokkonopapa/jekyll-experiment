@@ -7,17 +7,18 @@ title:
 			<!-- Featured Article -->
 			<article class="hero-unit">
 				<header><hgroup>
-					<h1><a href="{{ post.url }}" rel="bookmark" title="Permanent link">
-					{{ post.title }}</a></h1>
-					<h4><time datetime="{{ post.date | date_to_xmlschema }}">
-					{{ post.date | date: site.date_format }}</time></h4>
+					<h1>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+					</h1>
+					<h4>
+						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
+					</h4>
 				</hgroup></header>
 				<section>
 					{% include truncate_exec %}
 				</section>
 				<footer>
-					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">
-					Read this &raquo;</a></p>
+					<p><a href="{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
 				</footer>
 			</article>
 {% endfor %}
@@ -30,10 +31,12 @@ title:
 	{% endif %}
 				<article class="span{{ 12 | divided_by: site.columns }}">
 					<header><hgroup>
-						<h2><a href="{{ post.url }}" rel="bookmark" title="Permanent link">
-						{{ post.title }}</a></h2>
-						<h5><time datetime="{{ post.date | date_to_xmlschema }}">
-						{{ post.date | date: site.date_format }}</time></h5>
+						<h2>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+						</h2>
+						<h5>
+							<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
+						</h5>
 					</hgroup></header>
 					<section>
 						{% include truncate_exec %}
