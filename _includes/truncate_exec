@@ -10,27 +10,29 @@ invisible ascii character, then adjust length of truncate.
 -->{% endcomment %}
 {% if post.excerpt and post.excerpt != '' %}
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
-{% elsif site.safe %}{% if post.content contains '<!--more-->' %}
-	{% capture truncated %}{{ post.content | replace:'more-->','' }}-->{% endcapture %}
-{% else %}
-	{% assign  _a = site.truncate_len %}
-	{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
-	{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
+{% elsif site.safe %}
+	{% if post.content contains '<!--more-->' %}
+		{% capture truncated %}{{ post.content | replace:'more-->','' }}-->{% endcapture %}
+	{% else %}
+		{% assign  _a = site.truncate_len %}
+		{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
+		{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
 
-	{% capture _x %}{{ post.content | strip_html | truncate: _a, "" }}{% endcapture %}
-	{% capture _y %}{{ _x | truncate: _b, "" }}{% endcapture %}
-	{% capture _z %}{{ _y | truncate: _c, "" }}{% endcapture %}
+		{% capture _x %}{{ post.content | strip_html | truncate: _a, "" }}{% endcapture %}
+		{% capture _y %}{{ _x | truncate: _b, "" }}{% endcapture %}
+		{% capture _z %}{{ _y | truncate: _c, "" }}{% endcapture %}
 
-	{% capture _a %}{{ _x | replace: _y, "" }}{% endcapture %}
-	{% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
+		{% capture _a %}{{ _x | replace: _y, "" }}{% endcapture %}
+		{% capture _b %}{{ _y | replace: _z, "" }}{% endcapture %}
 
-	{% assign truncated = nil %}
-	{% if    _E2 <= _b and _b <= _EF %}{% capture truncated %}<p>{{ _z }}...</p>{% endcapture %}
-	{% elsif _E2 <= _a and _a <= _EF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
-	{% elsif _C2 <= _a and _a <= _CF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
-	{% elsif _D0 <= _a and _a <= _D1 %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
-	{% else %}                         {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}
+		{% assign truncated = nil %}
+		{% if    _E2 <= _b and _b <= _EF %}{% capture truncated %}<p>{{ _z }}...</p>{% endcapture %}
+		{% elsif _E2 <= _a and _a <= _EF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+		{% elsif _C2 <= _a and _a <= _CF %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+		{% elsif _D0 <= _a and _a <= _D1 %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
+		{% else %}                         {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}
+		{% endif %}
 	{% endif %}
-{% endif %}{% else %}
+{% else %}
 	{% capture truncated %}{{ post.content | postmorefilter }}{% endcapture %}
 {% endif %}{% endcapture %}{% assign tmp = nil %}{{ truncated }}
