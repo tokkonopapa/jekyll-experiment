@@ -10,9 +10,9 @@ invisible ascii character, then adjust length of truncate.
 -->{% endcomment %}
 {% if post.excerpt and post.excerpt != '' %}
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
-{% elsif post.content contains '<!--more-->' %}
+{% elsif site.safe %}{% if post.content contains '<!--more-->' %}
 	{% capture truncated %}{{ post.content | replace:'more-->','' }}-->{% endcapture %}
-{% elsif site.safe %}
+{% else %}
 	{% assign  _a = site.truncate_len %}
 	{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
 	{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
@@ -31,6 +31,6 @@ invisible ascii character, then adjust length of truncate.
 	{% elsif _D0 <= _a and _a <= _D1 %}{% capture truncated %}<p>{{ _y }}...</p>{% endcapture %}
 	{% else %}                         {% capture truncated %}<p>{{ _x }}...</p>{% endcapture %}
 	{% endif %}
-{% else %}
+{% endif %}{% else %}
 	{% capture truncated %}{{ post.content | postmorefilter }}{% endcapture %}
 {% endif %}{% endcapture %}{% assign tmp = nil %}{{ truncated }}
