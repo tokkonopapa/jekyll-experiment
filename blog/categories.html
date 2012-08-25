@@ -8,7 +8,7 @@ title: Categories
 {% include list_categories.html %}
 				</ul>
 {% for cat in site.categories %}
-				<h2 id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
+				<h2 id="ref-{{ cat[0] }}">{{ cat[0] }}</h2>
 				<ul>
 	{% for node in cat[1] %}
 					<li>

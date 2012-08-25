@@ -1,13 +1,13 @@
 {% if meta == true %}
 	{% for node in page.tags %}
 						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}blog/tags.html#{{ node }}-ref">{{ node }}</a>&nbsp;<span>({{ site.tags[node].size }})</span>
+							<a href="{{ site.baseurl }}blog/tags.html#ref-{{ node }}">{{ node }}</a>&nbsp;<span>({{ site.tags[node].size }})</span>
 						</li>
 	{% endfor %}
 {% else %}
 	{% for node in site.tags %}
 						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}blog/tags.html#{{ node[0] }}-ref">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
+							<a href="{{ site.baseurl }}blog/tags.html#ref-{{ node[0] }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
 						</li>
 	{% endfor %}
 {% endif %}
