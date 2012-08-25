@@ -17,7 +17,7 @@ task :build => :clean do
 end
 
 def cleanup
-  sh 'rm -rf _site'
+  sh 'rm -rf _site/*'
 end
 
 def jekyll(opts = '')
@@ -31,9 +31,9 @@ end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
-task :post do
+task :post, :title do |t, args|
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
+  title = ENV["title"] || args.with_defaults(:title => 'new-post') && args.title
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -51,13 +51,13 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "title: #{title.gsub(/-/,' ').gsub(/&/,'&amp;')}"
-    post.puts "description: "
-    post.puts "keywords: "
-    post.puts "excerpt: "
+    post.puts "title: \"#{title.gsub(/-/,' ').gsub(/&/,'&amp;')}\""
+    post.puts "description: \"\""
+    post.puts "keywords: \"\""
+    post.puts "excerpt: \"\""
     post.puts "image: "
     post.puts "thumbnail: "
-    post.puts "category: uncategorized"
+    post.puts "category: [uncategorized]"
     post.puts "tags: []"
     post.puts "comments: true"
     post.puts "published: true"
@@ -88,9 +88,9 @@ task :page do
     post.puts "---"
     post.puts "layout: page"
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "title: #{title}"
-    post.puts "description: "
-    post.puts "keywords: "
+    post.puts "title: \"#{title}\""
+    post.puts "description: \"\""
+    post.puts "keywords: \"\""
     post.puts "published: true"
     post.puts "---"
   end

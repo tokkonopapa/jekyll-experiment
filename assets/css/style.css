@@ -158,6 +158,7 @@ p.meta {
 li.meta i {
 	float: left;
 	width: 16px;
+	margin-top: 0.25em;
 	margin-right: 0.5em;
 }
 li.meta ul {
