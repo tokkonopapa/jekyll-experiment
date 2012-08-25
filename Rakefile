@@ -63,9 +63,7 @@ task :post, :title do |t, args|
     post.puts "published: true"
     post.puts "---"
     post.puts ""
-    post.puts "<!-- more start -->"
-    post.puts ""
-    post.puts "<!-- more end -->"
+    post.puts "<!--more-->"
   end
 end
 
