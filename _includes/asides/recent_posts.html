@@ -4,10 +4,15 @@
 {% for post in site.posts limit: site.recent_posts %}
 					<li class="post"><p>
 						<a href="{{ post.url }}">{{ post.title }}</a>
-{% if site.disqus.short_name and site.disqus.comment_count %}<br><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}" class="disqus-comment_count">Comments</a>{% endif %}
+	{% if site.disqus.short_name and site.disqus.comment_count %}
+						<br><a href="{{ post.url }}#disqus_thread"
+						data-disqus-identifier="{{ post.url }}"
+						class="disqus-comment_count">Comments</a>
+	{% endif %}
 					</p></li>
-{% unless forloop.last %}
+	{% unless forloop.last %}
 					<li class="divider"></li>
-{% endunless %}{% endfor %}
+	{% endunless %}
+{% endfor %}
 				</ul>
 			</section>

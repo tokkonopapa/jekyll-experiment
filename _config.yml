@@ -33,18 +33,18 @@ truncate_len: 200
 navbar_list:
 - text: Blog
   type: blog
-  url: index.html
+  link: /index.html
   dropdown: &dropdown
   - text: Archives
-    url: blog/archives.html
+    link: /blog/archives.html
   - text: Categories
-    url: blog/categories.html
+    link: /blog/categories.html
   - text: Tags
-    url: blog/tags.html
+    link: /blog/tags.html
 - text: Project
-  url: project/index.html
+  link: /project/index.html
 - text: About
-  url: about.html
+  link: /about.html
 
 # configuration for asides.html
 asides:

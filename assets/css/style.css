@@ -122,24 +122,48 @@ aside p {
 }
 
 /* Tags */
-.tag-list a {
-	color: inherit;
+.tag-list {
+	list-style: none;
+	margin-bottom: 0;
 }
 .tag-list li {
-	float: left;
 	margin-right: 0.5em;
-	margin-bottom: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+.tag-list li.label {
 	font-size: inherit;
 	font-weight: inherit;
 	line-height: inherit;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+.tag-list li.label a {
+	color: inherit;
 }
 .tag-list span {
 	font-size: 75%;
 	vertical-align: super;
 }
 
-.social {
-	width: 120px;
+/* Post meta data */
+li.meta i {
 	float: left;
-	list-style-type: none;
+	width: 16px;
+	margin-right: 0.5em;
+}
+li.meta ul {
+	float: left;
+	margin-left: 0;
+	margin-right: 1.25em;
+}
+li.meta li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Social button */
+li.social {
+	float: left;
+	margin: 4px 10px 4px 4px;
 }

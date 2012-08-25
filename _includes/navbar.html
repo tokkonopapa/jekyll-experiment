@@ -18,26 +18,26 @@
 				</form>
 			</div>
 -->
-{% capture url %}{{ page.url | remove_first: site.baseurl }}{% endcapture %}
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
-{% for link in site.navbar_list %}
-	{% if link.url == url or link.type == page.type %}{% assign active = 'active' %}
+{% for node in site.navbar_list %}
+	{% if node.link == page.url or node.type == page.type %}{% assign active = 'active' %}
 	{% else %}{% assign active = nil %}{% endif %}
-	{% if link.dropdown %}
+	{% if node.dropdown %}
 					<li class="dropdown dropdown-container {{ active }}">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ link.text }}<b class="caret"></b></a>
-						<a class="dropdown-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.text }}<b class="caret"></b></a>
+						<a class="dropdown-link" href="{{ node.link }}">{{ node.text }}</a>
 						<ul class="dropdown-menu">
-		{% for sub in link.dropdown %}
-							<li><a href="{{ site.baseurl }}{{ sub.url }}">{{ sub.text }}</a></li>
+		{% for sub in node.dropdown %}
+							<li><a href="{{ sub.link }}">{{ sub.text }}</a></li>
 		{% endfor %}
 						</ul>
+					</li>
 	{% else %}
 					<li class="{{ active }}">
-						<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
-	{% endif %}
+						<a href="{{ node.link }}">{{ node.text }}</a>
 					</li>
+	{% endif %}
 {% endfor %}
 					<li><form class="navbar-search" action="http://google.com/search" method="get">
 {% if site.safe %}

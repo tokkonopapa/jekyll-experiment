@@ -8,9 +8,9 @@ type: page
 {% include head.html %}
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+<header class="navbar navbar-fixed-top">
 {% include navbar.html %}
-</div>
+</header>
 
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -18,13 +18,13 @@ type: page
 {{ content }}
 		</div>
 	</div><!--/row-->
-
-	<hr>
-
-	<footer>
-{% include footer.html %}
-	</footer>
 </div> <!-- /container -->
-{% unless site.asides.themes %}{% include script.html %}{% endunless %}
+
+<hr>
+
+<footer>
+{% include footer.html %}
+</footer>
+{% include script.html %}
 </body>
 </html>

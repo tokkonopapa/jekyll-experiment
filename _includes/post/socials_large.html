@@ -1,21 +1,17 @@
-					<section id="socials" class="well clearfix" style="min-height: 60px">
-						<ul>
+					<section id="socials" class="well well-small clearfix">
+						<ul class="unstyled">
 {% if site.hatena %}
 							<!-- Hatena -->
-							<li class="social">
+							<li class="social" style="height: 60px">
 								<a href="http://b.hatena.ne.jp/entry/"
 									class="hatena-bookmark-button"
 									data-hatena-bookmark-layout="vertical"
 									data-hatena-bookmark-url="{{ site.url }}{{ page.url }}">
-									<img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
-										alt="Add this entry to Hatena"
-										width="20" height="20"
-										style="border: none">
 								</a>
 							</li>
 {% endif %}{% if site.google_plus_one %}
 							<!-- Google plusone -->
-							<li class="social">
+							<li class="social" style="height: 60px">
 								<div class="g-plusone"
 									data-size="tall"
 									data-href="{{ site.url }}{{ page.url }}">
@@ -23,7 +19,7 @@
 							</li>
 {% endif %}{% if site.twitter %}
 							<!-- Twitter -->
-							<li class="social">
+							<li class="social" style="height: 60px">
 								<a href="https://twitter.com/share"
 									class="twitter-share-button"
 									data-lang="{{ site.lang }}"
@@ -35,7 +31,7 @@
 							</li>
 {% endif %}{% if site.facebook %}
 							<!-- Facebook -->
-							<li class="social">
+							<li class="social" style="height: 60px">
 								<iframe src="//www.facebook.com/plugins/like.php?href={{ site.url }}{{ page.url }}&amp;send=false&amp;layout=box_count&amp;width=70&amp;height=62&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowTransparency="true"></iframe>
 								<!--<div class="fb-like"
 									data-href="{{ site.url }}{{ page.url }}"
