@@ -1,13 +1,4 @@
-{% capture tmp %}{% comment %}
-<!--
-Truncate multibyte post.content
--------------------------------
-The original filter `truncate` of Liquid 2.2.2 on GitHub would truncate 
-multibyte character incorrectly.
-
-So this function checks the last letter of truncated content and if it is
-invisible ascii character, then adjust length of truncate.
--->{% endcomment %}
+{% capture tmp %}
 {% if post.excerpt and post.excerpt != '' %}
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
 {% elsif site.safe %}
