@@ -6,6 +6,8 @@ CONFIG = {
   'post_ext' => "md",
 }
 
+task :default => :preview
+
 desc 'Clean up generated site'
 task :clean do
   cleanup
