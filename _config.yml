@@ -82,9 +82,10 @@ google_analytics:
 google_plus_one:
     size: medium
 
+# `xfbml` will break some styles on android 2.3 native browser (Optimus L-01D).
 # `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
 facebook:
-    xfbml: true
+    xfbml: false
     locale: ja_JP
 
 twitter:
