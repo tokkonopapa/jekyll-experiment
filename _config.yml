@@ -47,6 +47,7 @@ navbar_list:
   link: /about.html
 
 # configuration for asides.html
+# CAUTION: `themes` should be false to put the 'script.html` at the bottom.
 asides:
     about: true
     search: true
@@ -83,6 +84,7 @@ google_plus_one:
 
 # `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
 facebook:
+    xfbml: true
     locale: ja_JP
 
 twitter:

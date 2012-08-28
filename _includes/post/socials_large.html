@@ -32,14 +32,17 @@
 {% endif %}{% if site.facebook %}
 							<!-- Facebook -->
 							<li class="social" style="height: 60px">
-								<iframe src="//www.facebook.com/plugins/like.php?href={{ site.url }}{{ page.url }}&amp;send=false&amp;layout=box_count&amp;width=70&amp;height=62&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowTransparency="true"></iframe>
-								<!--<div class="fb-like"
+	{% if site.facebook.xfbml %}
+								<div class="fb-like"
 									data-href="{{ site.url }}{{ page.url }}"
 									data-layout="box_count"
 									data-send="false"
 									data-width="70"
 									data-show-faces="false">
-								</div>-->
+								</div>
+	{% else %}
+								<iframe src="//www.facebook.com/plugins/like.php?href={{ site.url }}{{ page.url }}&amp;send=false&amp;layout=box_count&amp;width=70&amp;height=62&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowTransparency="true"></iframe>
+	{% endif %}
 							</li>
 {% endif %}
 						</ul>

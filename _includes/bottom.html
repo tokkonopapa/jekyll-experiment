@@ -1,5 +1,5 @@
 <script src="{{ site.baseurl }}assets/js/script.js"></script>
-{% if site.facebook %}<div id="fb-root"></div>{% endif %}
+{% if site.facebook.xfbml %}<div id="fb-root"></div>{% endif %}
 <script>
 (function(win, doc, script) {
 	var js,
@@ -19,10 +19,10 @@
 	// Google+ button
 	win.___gcfg={lang:"{{ site.lang }}"};
 	add('https://apis.google.com/js/plusone.js');
-{% endif %}{% if site.facebook %}{% comment %}
+{% endif %}{% if site.facebook.xfbml %}
 	// Facebook SDK
 	add('//connect.facebook.net/' + '{{ site.facebook.locale }}' + '/all.js#xfbml=1', 'facebook-jssdk');
-{% endcomment %}{% endif %}{% if site.twitter %}
+{% endif %}{% if site.twitter %}
 	// Twitter SDK
 	add('//platform.twitter.com/widgets.js', 'twitter-wjs');
 {% endif %}{% if site.hatena %}
