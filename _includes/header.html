@@ -1,3 +1,4 @@
+<div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">
 			<h1 id="title"><a class="brand" href="{{ site.baseurl }}">{{ site.title }}</a></h1>
@@ -39,6 +40,7 @@
 					</li>
 	{% endif %}
 {% endfor %}
+					<li class="divider-vertical"></li>
 					<li><form class="navbar-search" action="http://google.com/search" method="get">
 {% if site.safe %}
 						<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
@@ -51,3 +53,4 @@
 			</nav><!--/.nav-collapse -->
 		</div>
 	</div>
+</div>
