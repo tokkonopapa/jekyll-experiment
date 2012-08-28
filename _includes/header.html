@@ -21,21 +21,21 @@
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
 {% for node in site.navbar_list %}
-	{% if node.link == page.url or node.type == page.type %}{% assign active = 'active' %}
+	{% if page.url == node.link or page.group == node.name %}{% assign active = 'active' %}
 	{% else %}{% assign active = nil %}{% endif %}
 	{% if node.dropdown %}
 					<li class="dropdown dropdown-container {{ active }}">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.text }}<b class="caret"></b></a>
-						<a class="dropdown-link" href="{{ node.link }}">{{ node.text }}</a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.name }}<b class="caret"></b></a>
+						<a class="dropdown-link" href="{{ node.link }}">{{ node.name }}</a>
 						<ul class="dropdown-menu">
 		{% for sub in node.dropdown %}
-							<li><a href="{{ sub.link }}">{{ sub.text }}</a></li>
+							<li><a href="{{ sub.link }}">{{ sub.name }}</a></li>
 		{% endfor %}
 						</ul>
 					</li>
 	{% else %}
 					<li class="{{ active }}">
-						<a href="{{ node.link }}">{{ node.text }}</a>
+						<a href="{{ node.link }}">{{ node.name }}</a>
 					</li>
 	{% endif %}
 {% endfor %}

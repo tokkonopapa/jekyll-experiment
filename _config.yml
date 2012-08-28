@@ -30,21 +30,20 @@ columns: 2
 date_format: "%B %d, %Y"
 truncate_len: 200
 
-# configuration for navbar.html
+# configuration for header.html
 navbar_list:
-- text: Blog
-  type: blog
+- name: Blog
   link: /index.html
   dropdown: &dropdown
-  - text: Archives
+  - name: Archives
     link: /blog/archives.html
-  - text: Categories
+  - name: Categories
     link: /blog/categories.html
-  - text: Tags
+  - name: Tags
     link: /blog/tags.html
-- text: Project
+- name: Project
   link: /project/index.html
-- text: About
+- name: About
   link: /about.html
 
 # configuration for asides.html
