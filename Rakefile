@@ -9,6 +9,11 @@ CONFIG = {
 
 task :default => :preview
 
+desc 'preview on http://localhost:4000/'
+task :preview do
+  jekyll('--pygments --auto --server')
+end
+
 desc 'Clean up generated site'
 task :clean do
   cleanup
@@ -26,19 +31,6 @@ task :build => :clean do
   puts "## copying _site to #{CONFIG['deploy_dir']}"
 end
 
-def cleanup
-  sh 'rm -rf _site'
-end
-
-def jekyll(opts = '')
-  sh 'jekyll ' + opts
-end
-
-desc 'preview on http://localhost:4000/'
-task :preview do
-  jekyll('--pygments --auto --server')
-end
-
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post, :title do |t, args|
@@ -53,7 +45,7 @@ task :post, :title do |t, args|
   end
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    abort("rake aborted!") unless ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
   
   puts "Creating new post: #{filename}"
@@ -84,7 +76,7 @@ task :page do
   filename = File.join(filename, "index.html") if File.extname(filename) == ""
   title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
   if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    abort("rake aborted!") unless ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
   
   mkdir_p File.dirname(filename)
@@ -119,7 +111,7 @@ end
 desc "Set up _deploy folder and git remote server"
 task :setup_remote, :repo do |t, args|
   if File.exist?("#{CONFIG['deploy_dir']}/.git")
-    abort("rake aborted!") if ask("remote server already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    abort("rake aborted!") unless ask("remote server already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
   if args.repo
     repo_url = args.repo
@@ -143,6 +135,14 @@ end
 
 # git@github.com:tokkono/tokkono.github.com.git
 # https://github.com/tokkono/tokkono.github.com.git
+
+def cleanup
+  sh 'rm -rf _site'
+end
+
+def jekyll(opts = '')
+  sh 'jekyll ' + opts
+end
 
 def ask(message, valid_options)
   if valid_options
