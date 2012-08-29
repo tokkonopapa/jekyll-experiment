@@ -128,6 +128,7 @@ task :setup_remote, :repo do |t, args|
     system "touch .nojekyll"
     system "git add ."
     system "git commit -m \"setup remote\""
+    system "git branch -m #{CONFIG['deploy_branch']}" unless "#{CONFIG['deploy_branch']}" == 'master'
     system "git remote add #{CONFIG['deploy_remote']} #{repo_url}"
   end
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
