@@ -1,9 +1,10 @@
-require "rubygems"
-
 SOURCE = "."
 CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
+  'deploy_dir' => "_deploy",
+  'deploy_remote' => "origin",
+  'deploy_branch' => "master",
 }
 
 task :default => :preview
@@ -15,11 +16,18 @@ end
 
 desc 'Build site with Jekyll'
 task :build => :clean do
+  puts "## building _site ..."
   jekyll('--pygments')
+  if !Dir.exist?("#{CONFIG['deploy_dir']}")
+    abort("remote server is not setup ... rake aborted!")
+  end
+  (Dir["#{CONFIG['deploy_dir']}/*"]).each { |f| rm_rf(f) }
+  system "cp -R _site/* #{CONFIG['deploy_dir']}"
+  puts "## copying _site to #{CONFIG['deploy_dir']}"
 end
 
 def cleanup
-  sh 'rm -rf _site/*'
+  sh 'rm -rf _site'
 end
 
 def jekyll(opts = '')
@@ -28,7 +36,7 @@ end
 
 desc 'preview on http://localhost:4000/'
 task :preview do
-  system("jekyll --pygments --auto --server")
+  jekyll('--pygments --auto --server')
 end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
@@ -57,15 +65,12 @@ task :post, :title do |t, args|
     post.puts "description: \"\""
     post.puts "keywords: \"\""
     post.puts "excerpt: \"\""
-    post.puts "image: "
-    post.puts "thumbnail: "
     post.puts "category: [uncategorized]"
     post.puts "tags: []"
     post.puts "comments: true"
     post.puts "published: true"
     post.puts "---"
-    post.puts ""
-    post.puts "<!--more-->"
+    post.puts "\n<!--more-->"
   end
 end
 
@@ -94,4 +99,61 @@ task :page do
     post.puts "published: true"
     post.puts "---"
   end
+end
+
+desc "deploy to the git server"
+multitask :deploy => :build do
+  puts "## Deploying ..."
+  cd "#{CONFIG['deploy_dir']}" do
+    system "git add ."
+    system "git add -u"
+    puts "\n## Committing: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m '#{message}'"
+    puts "\n## Pushing generated #{CONFIG['deploy_dir']} to git server"
+    system "git push #{CONFIG['deploy_remote']} #{CONFIG['deploy_branch']} --force"
+    puts "\n## Deploy complete"
+  end
+end
+
+desc "Set up _deploy folder and git remote server"
+task :setup_remote, :repo do |t, args|
+  if File.exist?("#{CONFIG['deploy_dir']}/.git")
+    abort("rake aborted!") if ask("remote server already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  if args.repo
+    repo_url = args.repo
+  else
+    repo_url = get_stdin("Enter the read/write url for your repository: ")
+  end
+#  user = repo_url.match(/:([^\/]+)/)[1]
+  
+  rm_rf "#{CONFIG['deploy_dir']}"
+  mkdir "#{CONFIG['deploy_dir']}"
+  cd "#{CONFIG['deploy_dir']}" do
+    system "git init"
+    system "echo 'My page is coming soon &hellip;' > index.html"
+    system "touch .nojekyll"
+    system "git add ."
+    system "git commit -m \"setup remote\""
+    system "git remote add #{CONFIG['deploy_remote']} #{repo_url}"
+  end
+  puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
+end
+
+# git@github.com:tokkono/tokkono.github.com.git
+# https://github.com/tokkono/tokkono.github.com.git
+
+def ask(message, valid_options)
+  if valid_options
+    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+  else
+    answer = get_stdin(message)
+  end
+  answer
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
 end

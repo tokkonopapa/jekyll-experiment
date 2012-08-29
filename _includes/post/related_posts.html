@@ -1,17 +1,11 @@
-					<section id="related-posts" class="well">
+					<nav id="related-posts" class="well">
 						<h3>You might also like</h3>
 						<ul>
-{% for related in site.related_posts limit:5 %}
+{% for post in site.related_posts limit:5 %}
 							<li class="related-post">
-{% if related.image %}
-								<div class="image">
-									<img src="/images/posts/thumbnails/{{ related.image }}">
-								</div>
-{% endif %}
-								<div class="title">
-									<a href="{{ related.url }}" target="_top">{{ related.title }}</a>
-								</div>
+								<span>{{ post.date | date: site.date_format }}</span> - 
+								<a href="{{ post.url }}">{{ post.title }}</a>
 							</li>
 {% endfor %}
 						</ul>
-					</section>
+					</nav>
