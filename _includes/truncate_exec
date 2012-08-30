@@ -3,7 +3,7 @@
 	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
 {% elsif site.safe %}
 	{% if post.content contains '<!--more-->' %}
-		{% capture truncated %}{{ post.content | replace:'more-->','' }}-->{% endcapture %}
+		{% capture truncated %}{{ post.content | remove:'more-->' }}-->{% endcapture %}
 	{% else %}
 		{% assign  _a = site.truncate_len %}
 		{% capture _b %}{{ _a | minus:1 }}{% endcapture %}

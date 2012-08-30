@@ -4,7 +4,7 @@ title: Archives
 group: Blog
 ---
 			<section id="archives">
-				<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+				<h1><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h1>
 {% for post in site.posts  %}
 	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 	{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -17,7 +17,7 @@ group: Blog
 	{% endif %}
 					<li>
 						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
-						<a href="{{ post.url }}">{{ post.title }}</a>
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 					</li>
 	{% if forloop.last %}
 				</ul>

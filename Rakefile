@@ -4,7 +4,7 @@ CONFIG = {
   'post_ext' => "md",
   'deploy_dir' => "_deploy",
   'deploy_remote' => "origin",
-  'deploy_branch' => "master",
+  'deploy_branch' => "gh-pages",
 }
 
 task :default => :preview

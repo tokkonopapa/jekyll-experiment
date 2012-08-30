@@ -4,11 +4,11 @@
 				</header>
 				<ul class="pull-left">
 {% if paginator.previous_page == 1 %}
-					<li class="newer"><a href="/">&larr;&nbsp;Newer Entries</a></li>
+					<li class="newer"><a href="{{ site.baseurl }}/">&larr;&nbsp;Newer Entries</a></li>
 {% elsif paginator.previous_page %}
-					<li class="newer"><a href="/page{{ paginator.previous_page }}">&larr;&nbsp;Newer Entries</a></li>
+					<li class="newer"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr;&nbsp;Newer Entries</a></li>
 {% endif %}{% if paginator.next_page %}
-					<li class="older"><a href="/page{{ paginator.next_page }}">Older Entries&nbsp;&rarr;</a></li>
+					<li class="older"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}">Older Entries&nbsp;&rarr;</a></li>
 {% endif %}
 				</ul>
 			</aside>

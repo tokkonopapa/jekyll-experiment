@@ -2,11 +2,11 @@
 				<ul class="pager">
 {% if page.next.url %}
 					<li class="next pull-left">
-						<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">&laquo;&nbsp;{{ page.next.title | truncatewords: 15 }}</a>
+						<a href="{{ site.baseurl }}{{ page.next.url }}" rel="next" title="{{ page.next.title }}">&laquo;&nbsp;{{ page.next.title | truncatewords: 15 }}</a>
 					</li>
 {% endif %}{% if page.previous.url %}
 					<li class="previous pull-right">
-						<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}&nbsp;&raquo;</a>
+						<a href="{{ site.baseurl }}{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}&nbsp;&raquo;</a>
 					</li>
 {% endif %}
 				</ul>

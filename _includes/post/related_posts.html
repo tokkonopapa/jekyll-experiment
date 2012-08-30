@@ -4,7 +4,7 @@
 {% for post in site.related_posts limit:5 %}
 							<li class="related-post">
 								<span>{{ post.date | date: site.date_format }}</span> - 
-								<a href="{{ post.url }}">{{ post.title }}</a>
+								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 							</li>
 {% endfor %}
 						</ul>
