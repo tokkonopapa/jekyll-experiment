@@ -161,7 +161,7 @@ Structure
 * サイト構築
 	+ Rakefile
 		+ 新規投稿、新規ページ ... done
-		* _site のデプロイ
+		* _site のデプロイ ... done
 	* LESS
 		* CSS のダイエット
 	* .gitignore

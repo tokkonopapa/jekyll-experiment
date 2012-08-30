@@ -6,7 +6,7 @@
 						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 	{% if site.disqus.short_name and site.disqus.comment_count and post.comments %}
 						<br><a href="{{ site.baseurl }}{{ post.url }}#disqus_thread"
-						data-disqus-identifier="{{ post.id }}"
+						data-disqus-identifier="{{ site.baseurl }}{{ post.id }}"
 						class="disqus-comment_count">Comments</a>
 	{% endif %}
 					</p></li>
