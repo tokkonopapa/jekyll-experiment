@@ -27,7 +27,7 @@ task :build => :clean do
     abort("remote server is not setup ... rake aborted!")
   end
   (Dir["#{CONFIG['deploy_dir']}/*"]).each { |f| rm_rf(f) }
-  system "cp -R _site/* #{CONFIG['deploy_dir']}"
+  system "cp -Rp _site/* #{CONFIG['deploy_dir']}"
   puts "## copying _site to #{CONFIG['deploy_dir']}"
 end
 
