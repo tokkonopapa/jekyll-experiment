@@ -1,13 +1,13 @@
 {% if meta == true %}
 	{% for node in page.categories %}
 						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node | cgi_escape }}">{{ node }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
+							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node }}">{{ node }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
 						</li>
 	{% endfor %}
 {% else %}
 	{% for node in site.categories %}
-						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node[0] | cgi_escape }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
+						<li><!-- class="label" --><!--{{ node[0] }}-->
+							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node[0] }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
 						</li>
 	{% endfor %}
 {% endif %}

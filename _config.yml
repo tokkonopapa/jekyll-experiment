@@ -76,7 +76,7 @@ color_theme: Default
 disqus:
     short_name: tokkonopapa #USERNAME
     comment_count: true
-    developer: 0
+    developer: false
 
 google_analytics:
     account: UA-20543951-2 #UA-XXXXX-X
