@@ -2,7 +2,7 @@
 layout: default
 group: Blog
 ---
-{% include truncate_start %}
+{% include libs/truncate_start %}
 {% for post in paginator.posts limit: 1 %}
 			<!-- Featured Article -->
 			<article class="hero-unit">
@@ -22,8 +22,7 @@ group: Blog
 				</footer>
 			</article>
 {% endfor %}
-{% assign m = 0 %}
-{% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
+{% assign m = 0 %}{% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
 {% for post in paginator.posts limit: n offset: 1 %}
 	{% if m == 0 %}
 			<!-- Followed Articles -->
@@ -39,7 +38,7 @@ group: Blog
 						</h5>
 					</hgroup></header>
 					<section>
-						{% include truncate_exec %}
+						{% include libs/truncate_exec %}
 					</section>
 					<footer>
 						<p><a href="{{ site.baseurl }}{{ post.url }}" class="btn">Read this &raquo;</a></p>
@@ -51,5 +50,5 @@ group: Blog
 		{% assign m = 0 %}
 	{% endif %}
 {% endfor %}
-{% include truncate_end %}
+{% include libs/truncate_end %}
 {% include pagenation.html %}
