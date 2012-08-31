@@ -21,10 +21,8 @@
 -->
 			<nav class="nav-collapse collapse">
 				<ul class="nav">
-{% capture pageurl %}{{ page.url | remove:'index.html' }}{% endcapture %}
 {% for node in site.navbar_list %}
-	{% if pageurl == node.link or page.group == node.name %}{% assign active = 'active' %}
-	{% else %}{% assign active = nil %}{% endif %}
+	{% if page.group == node.name %}{% assign active = 'active' %}{% else %}{% assign active = nil %}{% endif %}
 	{% if node.dropdown %}
 					<li class="dropdown dropdown-container {{ active }}">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.name }}<b class="caret"></b></a>

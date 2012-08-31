@@ -11,21 +11,19 @@ exclude: ['Rakefile', 'README.md']
 
 # configuration for url/path
 # `baseurl` being set without '/' at the end as absolute path is recommended.
-#url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
-#baseurl: /Jekyll-Responsive-Bootstrap
-url: http://tokkono.github.com
-baseurl: 
+url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
+baseurl: /Jekyll-Responsive-Bootstrap
+#url: http://tokkono.github.com
+#baseurl: 
 permalink: /blog/:year/:month/:title/
 
-# configuration for blog
+# configuration for site
 title: My Site Title
 description: Jekyll Responsive Bootstrap
 author: USERNAME
 email: USERNAME@example.com
 
-#--------------------------------------------
-# configuration for default.html (type: blog)
-#--------------------------------------------
+# configuration for blog
 lang: ja
 paginate: 3
 columns: 2
@@ -33,7 +31,6 @@ date_format: "%B %d, %Y"
 truncate_len: 200
 
 # configuration for header.html
-# NOTICE: `index.html` should be omitted.
 navbar_list:
 - name: Blog
   link: /
@@ -76,14 +73,14 @@ color_theme: Default
 #   id: YOUR_SITE_ID
 
 disqus:
-#    short_name: tokkonopapa
-    short_name: USERNAME
+    short_name: tokkonopapa
+#    short_name: USERNAME
     comment_count: true
     developer: true
 
 google_analytics:
-#    account: UA-20543951-2
-    account: UA-XXXXX-X
+    account: UA-20543951-2
+#    account: UA-XXXXX-X
 
 google_plus_one:
     size: medium
@@ -95,8 +92,8 @@ facebook:
     locale: ja_JP
 
 twitter:
-#    username: tokkonopapa
-    username: twitterapi
+    username: tokkonopapa
+#    username: twitterapi
     count: 5
     show_replies: false
     show_follower_count: false
