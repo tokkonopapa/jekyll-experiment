@@ -1,11 +1,10 @@
-{% if site.asides.github and site.github %}
 /*
  * GitHub widget
  * http://developer.github.com/v3/repos/
  */
 ;(function($, window, document) {
 	$.fn.showGitHubRepo = function(username, options) {
-		options = $.extend({}, $.fn.showGitHubRepo.options, options);
+		options = $.extend({}, $.fn.showGitHubRepo.defaults, options);
 
 		var getRepos = function(user, opts) {
 			return $.ajax({
@@ -26,12 +25,12 @@
 			var elem = $(this);
 
 			getRepos('tokkonoPapa', options).done(function(args) {
-				putRepos(elem, args.slice(0, 5));
+				putRepos(elem, args.slice(0, {{ site.github.count }}));
 			});
 		});
 	};
 
-	$.fn.showGitHubRepo.options = {
+	$.fn.showGitHubRepo.defaults = {
 		type: 'owner',
 		sort: 'pushed',
 		direction: 'desc'
@@ -414,4 +413,3 @@
   }
 ]
 */
-{% endif %}

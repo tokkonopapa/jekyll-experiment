@@ -3,5 +3,5 @@
 /* Author: tokkonopapa@yahoo.com
  */
  
-{% include script/twitter.js %}
-{% include script/github.js %}
+{% if site.asides.tweets and site.twitter %}{% include script/twitter.js %}{% endif %}
+{% if site.asides.github and site.github  %}{% include script/github.js  %}{% endif %}

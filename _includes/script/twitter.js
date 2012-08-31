@@ -1,10 +1,9 @@
-{% if site.asides.tweets and site.twitter %}
 /*
  * Twitter widget
  */
 ;(function($, window, document) {
 	$.fn.showTweets = function(username, options) {
-		options = $.extend({}, $.fn.showTweets.options, options);
+		options = $.extend({}, $.fn.showTweets.defaults, options);
 
 		var getTweets = function(user, opts) {
 			return $.ajax({
@@ -85,7 +84,7 @@
 		});
 	};
 
-	$.fn.showTweets.options = {
+	$.fn.showTweets.defaults = {
 		count: 5,
 		trim_user: true,
 		include_entities: true,
@@ -100,4 +99,3 @@ $(function () {
 		exclude_replies: {{ site.twitter.show_replies }}
 	});
 });
-{% endif %}
