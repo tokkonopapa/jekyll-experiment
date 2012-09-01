@@ -5,6 +5,7 @@ layout: nil
 <html lang="{{ site.lang }}">
 <head>
 {% include head.html %}
+{% if site.asides.themes %}{% include script.html %}{% endif %}
 </head>
 <body>
 <header>
@@ -24,6 +25,7 @@ layout: nil
 <footer>
 {% include footer.html %}
 </footer>
-{% include script.html %}
+{% unless site.asides.themes %}{% include script.html %}{% endunless %}
+{% include bottom.html %}
 </body>
 </html>

@@ -184,3 +184,16 @@ li.social {
 .icon-tags {
 	background-position: -25px -47px;
 }
+
+/* Project */
+#project-top header h1 {
+	font-size: 3.0em;
+	margin-bottom: 0.7em;
+}
+#myCarousel p {
+	color: #888;
+	text-shadow: 0px 2px 3px #000;
+}
+#myCarousel img {
+	margin: 0 auto;
+}
