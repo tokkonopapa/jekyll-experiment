@@ -100,8 +100,9 @@ twitter:
     follow_button: true
     tweet_button: true
 
-# github:
+github:
 #    username: USERNAME
-#    count: 5
+    username: tokkonoPapa
+    count: 5
 
 hatena: true
