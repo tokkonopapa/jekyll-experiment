@@ -31,7 +31,7 @@
 		return this.each(function() {
 			var elem = $(this);
 
-			getRepos('tokkonoPapa', options).done(function(args) {
+			getRepos(username, options).done(function(args) {
 				putRepos(elem, args.slice(0, {{ site.github.count }}));
 			});
 		});
