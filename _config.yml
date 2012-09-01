@@ -55,6 +55,7 @@ asides:
     recent_posts: true
     archive_tabs: true
     tweets: true
+    github: true
 
 # configuration for asides/recent_posts.html
 recent_posts: 5
@@ -62,7 +63,6 @@ recent_posts: 5
 # configration for bootstrap and color theme
 # Default, Amelia, United, Superhero, Spruce, Spacelab, 
 # Slate, Simplex, Readable, Journal, Cyborg, Cerulean
-#bootstrap: bootstrap-2.0.4
 bootstrap: bootstrap-2.1.0
 color_theme: Default
 

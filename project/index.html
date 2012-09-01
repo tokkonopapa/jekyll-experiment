@@ -3,12 +3,41 @@ layout: page
 group: Project
 title: Well come to my project!
 ---
-			<article>
+			<article class="container">
 				<header>
 					<h1>{{ page.title }}</h1>
 				</header>
 
-				<section>
+				<section class="hero-unit">
+					<div id="myCarousel" class="carousel slide">
+						<!-- Carousel items -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img alt="project 1" src="">
+								<div class="carousel-caption">
+									<h4>Project 1</h4>
+									<p>Here is 1.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img alt="project 2" src="">
+								<div class="carousel-caption">
+									<h4>Project 2</h4>
+									<p>Here is 2.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img alt="project 3" src="">
+								<div class="carousel-caption">
+									<h4>Project 3</h4>
+									<p>Here is 3.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Carousel nav -->
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+					</div>
 				</section>
 
 				<footer>

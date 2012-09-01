@@ -47,7 +47,7 @@ Development Reference
 ### Twitter Bootstrap ###
 * [Twitter Bootstrap - GitHub](http://twitter.github.com/bootstrap/)
 
-#### bootstrap-responsive.css の定義順 ####
+#### bootstrap-responsive.css の定義順 (2.0.4) ####
 
 	@media (max-width: 767px) {...}
 	@media (min-width: 768px) and (max-width: 979px) {...}
@@ -55,6 +55,17 @@ Development Reference
 	@media (max-width: 767px) {...}
 	@media (min-width: 768px) and (max-width: 979px) {...}
 	@media (min-width: 1200px) {...}
+	@media (max-width: 979px) {...}
+	@media (min-width: 980px) {...}
+
+#### bootstrap-responsive.css の定義順 (2.1.0) ####
+
+	@media (min-width: 768px) and (max-width: 979px) {...}
+	@media (max-width: 767px) {...}
+	@media (min-width: 1200px) {...}
+	@media (min-width: 768px) and (max-width: 979px) {...}
+	@media (max-width: 767px) {...}
+	@media (max-width: 480px) {...}
 	@media (max-width: 979px) {...}
 	@media (min-width: 980px) {...}
 
