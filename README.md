@@ -139,7 +139,7 @@ Structure
 	+ Tweets ... done
 	* Twitter ボタン
 	* Google+ ボタン
-	* GitHub リポジトリ
+	+ GitHub リポジトリ ... done
 	+ タグクラウド ... done
 	+ カテゴリーリスト ... done
 + ナビゲーションバー機能
@@ -150,13 +150,13 @@ Structure
 	* 配置 (left, right, bottom)
 	* スマホ対応
 + ページ作成
-	* Home ページ
+	+ Home ページ ... done
 	+ Blog ページ ... done
 	+ Project ページ ... done
 	+ About ページ ... done
 * ブログ機能
 	+ DISQUS ... done
-	* ソーシャルボタン ... done
+	+ ソーシャルボタン ... done
 	+ ページナビ ... done
 	+ ページネーション ... done
 	+ Archives ページ ... done except design
@@ -167,12 +167,12 @@ Structure
 	* シンタックスハイライト
 + page_columns ... done
 	+ n記事ずつレイアウト ... done
-* サイト構成
-	* ブロク、プロジェクトのサブディレクトリ化 ... done
++ サイト構成
+	+ ブロク、プロジェクトのサブディレクトリ化 ... done
 * サイト構築
 	+ Rakefile
 		+ 新規投稿、新規ページ ... done
-		* _site のデプロイ ... done
+		+ _site のデプロイ ... done
 	* LESS
 		* CSS のダイエット
 	* .gitignore
@@ -207,21 +207,21 @@ Disqus
 	  var disqus_title = 'Hello world!'; 
 	</script>
 
-### `disqus_developer` ###
+#### `disqus_developer` ####
 	var disqus_developer = 1; // developer mode is on
 
-### `disqus_shortname` ###
+#### `disqus_shortname` ####
 フォーラムの名称
 
 	var disqus_shortname = 'example';
 
-### `disqus_identifier` ###
+#### `disqus_identifier` ####
 通常はページの URL
 
 	var disqus_identifier = '/december-2010/the-best-day-of-my-life/';
 	var disqus_identifier = '<? php echo $my_identifier; ?>';
 
-### `disqus_url` ###
+#### `disqus_url` ####
 
 	var disqus_url = 'http://example.com/helloworld.html';
 
@@ -230,13 +230,13 @@ Disqus
 異なる URL と解釈されることを防ぐ。URL は変わることがあるので、`disqus_identifier` を指定する
 ことが推奨される。
 
-### `disqus_title`, `disqus_category_id` ###
+#### `disqus_title`, `disqus_category_id` ####
 以下は、Disqus 開設の最初に使われるだけ。「Settings > General」で設定可能。
 
 ### Home › Developers › Universal Code ###
 * [Universal Code](http://help.disqus.com/customer/portal/articles/472097-universal-code)
 
-### Embed code ###
+#### Embed code ####
 
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
@@ -253,7 +253,7 @@ Disqus
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-### Comment count ###
+#### Comment count ####
 
 	<script type="text/javascript">
 	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

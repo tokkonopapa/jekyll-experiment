@@ -1,5 +1,7 @@
 _site/
 _deploy/
-
-.DS_Store*
+.bundle/
+vendor/
+Gemfile.lock
+.DS_Store
 Thumbs.db

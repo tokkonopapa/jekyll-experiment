@@ -4,3 +4,10 @@
    Author: tokkonopapa@yahoo.com
    ========================================================================== */
 {% include css/style.css %}
+{% case site.pygments_color %}
+	{% when 'default'  %}{% include css/pygments-default.css  %}
+	{% when 'emacs'    %}{% include css/pygments-emacs.css    %}
+	{% when 'friendly' %}{% include css/pygments-friendly.css %}
+	{% when 'colorful' %}{% include css/pygments-colorful.css %}
+	{% when 'github'   %}{% include css/pygments-github.css   %}
+{% endcase %}

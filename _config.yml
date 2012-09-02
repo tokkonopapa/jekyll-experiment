@@ -7,7 +7,7 @@ plugins: ./_plugins
 lsi: false
 pygments: true
 markdown: rdiscount
-exclude: ['Rakefile', 'README.md']
+exclude: ['Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # `baseurl` being set without '/' at the end as absolute path is recommended.
@@ -29,6 +29,10 @@ paginate: 3
 columns: 2
 date_format: "%B %d, %Y"
 truncate_len: 200
+
+# configuration for pygments
+# `pygments_color`: default, emacs, friendly, colorful, github
+pygments_color: github
 
 # configuration for header.html
 navbar_list:
