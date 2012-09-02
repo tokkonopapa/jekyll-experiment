@@ -26,7 +26,7 @@ body > footer {
 	padding-right: 20px;
 }
 
-/* navbar */
+/* header.html: navbar */
 .navbar input[type="text"] {
 	border-radius: 14px;
 	margin-bottom: 0;
@@ -36,7 +36,7 @@ body > footer {
 	line-height: 1;
 }
 
-/* dropdown container */
+/* header.html: dropdown container */
 .navbar .nav > li.dropdown-container {
 	position: relative !important;
 }
@@ -52,7 +52,7 @@ body > footer {
 	width: 100%;
 }
 
-/* sidebar */
+/* asides/*.html: sidebar */
 aside h1, aside h2, aside h3 {
 	font-size: 125%;
 	line-height: 1.0em;
@@ -62,18 +62,36 @@ aside p {
 	margin: 0;
 }
 
-/* mini-icon */
+/* asides/*.html: mini-icon */
 #sidebar i {
 	vertical-align: baseline;
 	margin-right: 0.25em;
 }
 
-/* divider */
-#sidebar .nav-list .divider {
+/* asides/*.html: divider */
+#sidebar li.divider {
 	margin: 0.5em 1px;
 }
 
-/* asides/tweets.html, asides/recent_post.html */
+/* asides/themes.html */
+#sidebar-themes .controls {
+	margin-left: 0;
+}
+#sidebar-themes select {
+	width: 100%;
+}
+
+/* asides/archive_tabs.html */
+#sidebar-archives .nav-tabs a {
+	outline: none;
+}
+
+/* asides/recent_post.html */
+#sidebar-recent-posts .disqus-comment_count {
+	font-size: 85%;
+}
+
+/* asides/recent_post.html, asides/tweets.html */
 #sidebar-tweets p,
 #sidebar-recent-posts p {
 	margin: 0.25em 0;
@@ -84,36 +102,7 @@ aside p {
 	padding-right: 0;
 }
 
-/* asides/recent_post.html */
-#sidebar-recent-posts .disqus-comment_count {
-	font-size: 85%;
-}
-
-/* asides/styles.html */
-#sidebar-styles .controls {
-	margin-left: 0;
-}
-#sidebar-styles select {
-	width: 100%;
-}
-
-/* post page */
-#related-posts {
-	padding-top: 9px;
-	padding-bottom: 9px;
-}
-
-/* pager, pagenation */
-#main_pagenation ul,
-#post_pagenation ul {
-	margin-left: 0;
-}
-#main_pagenation li,
-#post_pagenation li {
-	margin-bottom: 0.5em;
-}
-
-/* twitter status link */
+/* asides/tweets.html */
 #tweets li a:last-child:hover {
 	text-decoration: none;
 }
@@ -121,39 +110,17 @@ aside p {
 	font-size: 75%;
 }
 
-/* Archives */
-#sidebar-archives .nav-tabs a {
-	outline: none;
+/* asides/github.html  */
+.icon-octocat {
+	background-image: url("../img/octocat.png");
+	background-position: 0 0;
 }
 
-/* Tags */
-.tag-list {
-	list-style: none;
-	margin-bottom: 0;
-}
-.tag-list li {
-	margin-right: 0.5em;
-	display: inline-block;
-	vertical-align: middle;
-}
-.tag-list li.label {
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	margin-top: 0.25em;
-	margin-bottom: 0.25em;
-}
-.tag-list li.label a {
-	color: inherit;
-}
-.tag-list span {
-	font-size: 75%;
-	vertical-align: super;
-}
-
-/* Post meta data */
+/* post.html: meta data */
 p.meta {
 }
+
+/* post/post_meta.html */
 li.meta i {
 	float: left;
 	width: 16px;
@@ -169,23 +136,62 @@ li.meta li {
 	display: inline-block;
 	vertical-align: middle;
 }
+.icon-tags {
+	background-position: -25px -47px;
+}
 
-/* Social button */
+/* post/post_meta.html,
+   blog/categories.html,
+   blog/tags.html,
+   asides/archive_tabs.html: tag list */
+.tag-list {
+	list-style: none;
+	margin-bottom: 0;
+}
+.tag-list li {
+	margin-right: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+}
+/* libs/list_categories, libs/list_tags */
+.tag-list li.label {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+.tag-list li.label a {
+	color: inherit;
+}
+.tag-list span {
+	font-size: 75%;
+	vertical-align: super;
+}
+
+/* post/related_posts.html */
+#related-posts {
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+/* post/socials.html */
 li.social {
 	float: left;
 	margin: 4px 10px 4px 4px;
 }
 
-/* Icons */
-.icon-octocat {
-	background-image: url("../img/octocat.png");
-	background-position: 0 0;
+/* pagenation.html, post/post_pagenation.html: pagenation */
+#main_pagenation ul,
+#post_pagenation ul {
+	margin-left: 0;
 }
-.icon-tags {
-	background-position: -25px -47px;
+#main_pagenation li,
+#post_pagenation li {
+	margin-bottom: 0.5em;
 }
 
-/* Project */
+/* project/index.html */
 #myProject header h1 {
 	font-size: 3.0em;
 	margin-bottom: 0.7em;
