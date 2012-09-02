@@ -1,0 +1,6 @@
+{% for post in list_pages %}
+					<li>
+						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+					</li>
+{% endfor %}

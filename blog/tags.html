@@ -6,19 +6,15 @@ group: Blog
 			<section id="tags">
 				<h1><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h1>
 				<ul class="tag-list clearfix">
-{% include list_tags.html %}
+{% include libs/list_tags %}
 				</ul>
-{% for node in site.tags %}
-	{% if node[0].first %}{% capture name %}{{ node[0].first }}{% endcapture %}
-	{% else %}{% capture name %}{{ node[0] }}{% endcapture %}{% endif %}
-				<h2 id="ref-{{ name | cgi_escape | remove:'%' }}">{{ node[0] }}</h2>
+{% for tag in site.tags %}
+	{% if tag[0].first %}{% capture name %}{{ tag[0].first }}{% endcapture %}
+	{% else %}{% capture name %}{{ tag[0] }}{% endcapture %}{% endif %}
+				<h2 id="ref-{{ name | cgi_escape | remove:'%' }}">{{ tag[0] }}</h2>
 				<ul>
-	{% for post in node[1] %}
-					<li>
-						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-					</li>
-	{% endfor %}
+	{% assign list_pages = tag[1] %}
+	{% include libs/list_pages %}
 				</ul>
 {% endfor %}
 			</section>

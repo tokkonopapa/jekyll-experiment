@@ -1,14 +1,16 @@
-{% if meta == true %}
+{% if post_meta == true %}
 	{% for node in page.categories %}
-						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node }}">{{ node }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
+		{% if node.first %}{% capture name %}{{ node.first }}{% endcapture %}
+		{% else %}{% capture name %}{{ node }}{% endcapture %}{% endif %}
+						<li><!-- class="label" --><!--page-->
+							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ name | cgi_escape | remove:'%' }}">{{ node }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
 						</li>
 	{% endfor %}
 {% else %}
 	{% for node in site.categories %}
 		{% if node[0].first %}{% capture name %}{{ node[0].first }}{% endcapture %}
 		{% else %}{% capture name %}{{ node[0] }}{% endcapture %}{% endif %}
-						<li><!-- class="label" -->
+						<li><!-- class="label" --><!--site-->
 							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ name | cgi_escape | remove:'%' }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
 						</li>
 	{% endfor %}

@@ -1,4 +1,4 @@
-{% assign meta = true %}
+{% assign post_meta = true %}
 					<div class="well well-small clearfix">
 						<ul class="unstyled">
 							<li class="meta"><i class="icon-user"></i>
@@ -6,14 +6,14 @@
 							</li>
 							<li class="meta"><i class="icon-folder-open"></i>
 								<ul class="tag-list">
-{% include list_categories.html %}
+{% include libs/list_categories %}
 								</ul>
 							</li>
 							<li class="meta"><i class="icon-tags"></i>
 								<ul class="tag-list">
-{% include list_tags.html %}
+{% include libs/list_tags %}
 								</ul>
 							</li>
 						</ul>
 					</div>
-{% assign meta = nul %}
+{% assign post_meta = nul %}
