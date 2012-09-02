@@ -6,8 +6,10 @@
 	{% endfor %}
 {% else %}
 	{% for node in site.tags %}
+		{% if node[0].first %}{% capture name %}{{ node[0].first }}{% endcapture %}
+		{% else %}{% capture name %}{{ node[0] }}{% endcapture %}{% endif %}
 						<li><!-- class="label" -->
-							<a href="{{ site.baseurl }}/blog/tags.html#ref-{{ node[0] }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
+							<a href="{{ site.baseurl }}/blog/tags.html#ref-{{ name | cgi_escape | remove:'%' }}">{{ node[0] }}</a>&nbsp;<span>({{ node[1].size }})</span>
 						</li>
 	{% endfor %}
 {% endif %}

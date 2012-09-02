@@ -8,13 +8,15 @@ group: Blog
 				<ul class="tag-list clearfix">
 {% include list_tags.html %}
 				</ul>
-{% for tag in site.tags %}
-				<h2 id="ref-{{ tag[0] }}">{{ tag[0] }}</h2>
+{% for node in site.tags %}
+	{% if node[0].first %}{% capture name %}{{ node[0].first }}{% endcapture %}
+	{% else %}{% capture name %}{{ node[0] }}{% endcapture %}{% endif %}
+				<h2 id="ref-{{ name | cgi_escape | remove:'%' }}">{{ node[0] }}</h2>
 				<ul>
-	{% for node in tag[1] %}
+	{% for post in node[1] %}
 					<li>
-						<time datetime="{{ node.date | date_to_xmlschema }}">{{ node.date | date: site.date_format }}</time>
-						<a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 					</li>
 	{% endfor %}
 				</ul>

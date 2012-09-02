@@ -7,7 +7,7 @@ keywords: "jekyll, liquid, GitHub, ruby"
 excerpt: "Jekyllとliquidを使った本格的なブログの作り方を解説します。"
 image: 
 thumbnail: 
-category: [web technology]
+category: [ブログ]
 tags: [jekyll, liquid]
 comments: true
 published: true
