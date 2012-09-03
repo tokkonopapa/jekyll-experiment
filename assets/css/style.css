@@ -5,9 +5,22 @@
    ========================================================================== */
 {% include css/style.css %}
 {% case site.pygments_color %}
-	{% when 'default'  %}{% include css/pygments-default.css  %}
-	{% when 'emacs'    %}{% include css/pygments-emacs.css    %}
-	{% when 'friendly' %}{% include css/pygments-friendly.css %}
-	{% when 'colorful' %}{% include css/pygments-colorful.css %}
-	{% when 'github'   %}{% include css/pygments-github.css   %}
+	{% when 'autumn'   %}{% include css/pygments/autumn.css   %}
+	{% when 'borland'  %}{% include css/pygments/borland.css  %}
+	{% when 'bw'       %}{% include css/pygments/bw.css       %}
+	{% when 'colorful' %}{% include css/pygments/colorful.css %}
+	{% when 'default'  %}{% include css/pygments/default.css  %}
+	{% when 'emacs'    %}{% include css/pygments/emacs.css    %}
+	{% when 'friendly' %}{% include css/pygments/friendly.css %}
+	{% when 'fruity'   %}{% include css/pygments/fruity.css   %}
+	{% when 'github'   %}{% include css/pygments/github.css   %}
+	{% when 'manni'    %}{% include css/pygments/manni.css    %}
+	{% when 'monokai'  %}{% include css/pygments/monokai.css  %}
+	{% when 'murphy'   %}{% include css/pygments/murphy.css   %}
+	{% when 'native'   %}{% include css/pygments/native.css   %}
+	{% when 'pastie'   %}{% include css/pygments/pastie.css   %}
+	{% when 'perldoc'  %}{% include css/pygments/perldoc.css  %}
+	{% when 'tango'    %}{% include css/pygments/tango.css    %}
+	{% when 'trac'     %}{% include css/pygments/trac.css     %}
+	{% when 'vs'       %}{% include css/pygments/vs.css       %}
 {% endcase %}

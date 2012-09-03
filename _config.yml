@@ -31,7 +31,10 @@ date_format: "%B %d, %Y"
 truncate_len: 200
 
 # configuration for pygments
-# `pygments_color`: default, emacs, friendly, colorful, github
+# `pygments_color`:
+# autumn, borland, bw, colorful, default, emacs, friendly, fruity,
+# github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
+
 pygments_color: github
 
 # configuration for header.html
