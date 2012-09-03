@@ -30,13 +30,6 @@ columns: 2
 date_format: "%B %d, %Y"
 truncate_len: 200
 
-# configuration for pygments
-# `pygments_color`:
-# autumn, borland, bw, colorful, default, emacs, friendly, fruity,
-# github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
-
-pygments_color: github
-
 # configuration for header.html
 navbar_list:
 - name: Blog
@@ -73,6 +66,12 @@ recent_posts: 5
 bootstrap: bootstrap-2.1.0
 color_theme: Default
 
+# configuration for pygments
+# `pygments_color`:
+# autumn, borland, bw, colorful, default, emacs, friendly, fruity,
+# github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
+pygments_color: github
+
 #-----------------------------------------------
 # configuration for socials, uncomment to enable
 #-----------------------------------------------
@@ -80,9 +79,10 @@ color_theme: Default
 #   id: YOUR_SITE_ID
 
 disqus:
-    short_name: USERNAME
+#    short_name: USERNAME
+    short_name: tokkonopapa
     comment_count: true
-    developer: true
+    developer_mode: true
 
 google_analytics:
     account: UA-20543951-2
