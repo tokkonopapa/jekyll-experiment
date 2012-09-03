@@ -10,7 +10,7 @@ markdown: rdiscount
 exclude: ['Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
-# `baseurl` being set without '/' at the end as absolute path is recommended.
+# `baseurl` being set as absolute path without '/' at the end is recommended.
 url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
 baseurl: /Jekyll-Responsive-Bootstrap
 #url: http://tokkono.github.com
@@ -77,8 +77,7 @@ color_theme: Default
 #   id: YOUR_SITE_ID
 
 disqus:
-    short_name: tokkonopapa
-#    short_name: USERNAME
+    short_name: USERNAME
     comment_count: true
     developer: true
 
@@ -96,13 +95,11 @@ facebook:
     locale: ja_JP
 
 twitter:
-    username: tokkonopapa
-#    username: twitterapi
+    username: twitterapi
     count: 5
-    show_replies: false
+    exclude_replies: true
+    show_screen_name: true
     show_follower_count: false
-    follow_button: true
-    tweet_button: true
 
 github:
 #    username: USERNAME

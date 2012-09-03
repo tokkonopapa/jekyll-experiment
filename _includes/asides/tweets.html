@@ -1,4 +1,11 @@
 			<section id="sidebar-tweets" class="well">
 				<h1><i class="icon-globe"></i>My Tweets</h1>
+				<a href="https://twitter.com/{{ site.twitter.username }}"
+					class="twitter-follow-button"
+					data-dnt="true"
+					data-lang="{{ site.lang }}"
+					data-show-count="{{ site.twitter.show_follower_count }}"
+					data-show-screen-name="{{ site.twitter.show_screen_name }}"
+				>Follow @{{ site.twitter.username }}</a>
 				<ul id="tweets" class="nav nav-list"><li><p>Reading twitter timeline...</p></li></ul>
 			</section>

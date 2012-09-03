@@ -96,6 +96,6 @@
 $(function () {
 	$('#tweets').showTweets('{{ site.twitter.username }}', {
 		count: {{ site.twitter.count }},
-		exclude_replies: {{ site.twitter.show_replies }}
+		exclude_replies: {{ site.twitter.exclude_replies }}
 	});
 });

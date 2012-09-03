@@ -137,7 +137,7 @@ Structure
 	+ テーマカラー変更スクリプト ... done
 	+ 最新記事 ... done
 	+ Tweets ... done
-	* Twitter ボタン
+	+ Follow ボタン ... done
 	* Google+ ボタン
 	+ GitHub リポジトリ ... done
 	+ タグクラウド ... done
@@ -164,7 +164,7 @@ Structure
 	+ Tags ページ ... done except design
 	+ About ページ ... done except design
 	+ 日付のフォーマット化 ... done
-	* シンタックスハイライト
+	+ シンタックスハイライト ... done
 + page_columns ... done
 	+ n記事ずつレイアウト ... done
 + サイト構成
@@ -175,10 +175,10 @@ Structure
 		+ _site のデプロイ ... done
 	* LESS
 		* CSS のダイエット
-	* .gitignore
+	+ .gitignore ... done
 * 画像機能
 	* フィーチャー画像、サムネイル画像
-	* レスポンシブ画像
+	+ レスポンシブ画像 ... checked
 * サンプルデザイン
 * ドキュメント作成
 
