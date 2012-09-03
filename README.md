@@ -5,6 +5,64 @@ Still under construction...
 
 This software will work out of the box, without any fancy installation.
 
+### Functions ###
+
++ more ... done
++ _config.yml ... almost done
+	+ ブログページ設定 ... done
++ セマンティック HTML ... almost done
+* サイドバーパーツ
+	+ 検索機能 ... done
+	+ テーマカラー変更スクリプト ... done
+	+ 最新記事 ... done
+	+ Tweets ... done
+	+ Follow ボタン ... done
+	* Google+ ボタン
+	+ GitHub リポジトリ ... done
+	+ タグクラウド ... done
+	+ カテゴリーリスト ... done
+* ナビゲーションバー機能
+	+ サブページ表示 (Archives, Categories, Tags) ... done
+	+ 定義のテンプレート化 ... done
+	* 折り畳み機能の On/Off
+* サイドバー機能
+	* 配置 (left, right, bottom)
+	* スマホ折り畳み
++ ページ作成
+	+ Home ページ ... done
+	+ Blog ページ ... done
+	+ Project ページ ... done
+	+ About ページ ... done
++ ブログ機能
+	+ DISQUS ... done
+	+ ソーシャルボタン ... done
+	+ ページナビ ... done
+	+ ページネーション ... done
+	+ Archives ページ ... done
+	+ Categories ページ ... done
+	+ Tags ページ ... done
+	+ About ページ ... done
+	+ 日付のフォーマット化 ... done
+	+ シンタックスハイライト ... done
++ page_columns ... done
+	+ n記事ずつレイアウト ... done
++ サイト構成
+	+ ブロク、プロジェクトのサブディレクトリ化 ... done
+* サイト構築
+	+ Rakefile
+		+ 新規投稿、新規ページ ... done
+		* デプロイ
+			+ GitHub Pages ... done
+			* Bitbucket
+			* Heroku
+	* LESS
+		* CSS のダイエット
+	+ .gitignore ... done
+* 画像機能
+	+ レスポンシブ画像 ... checked
+	* フィーチャー画像、サムネイル画像
+* ドキュメント作成
+
 Development Reference
 ---------------------
 ### jekyll ###
@@ -125,62 +183,6 @@ Structure
 	├── atom.xml
 	├── rss.xml
 	└── sitemap.xml
-
-### Functions ###
-
-+ more ... done
-+ _config.yml ... almost done
-	+ ブログページ設定 ... done
-+ セマンティック HTML ... almost done
-* サイドバーパーツ
-	+ 検索機能 ... done
-	+ テーマカラー変更スクリプト ... done
-	+ 最新記事 ... done
-	+ Tweets ... done
-	+ Follow ボタン ... done
-	* Google+ ボタン
-	+ GitHub リポジトリ ... done
-	+ タグクラウド ... done
-	+ カテゴリーリスト ... done
-+ ナビゲーションバー機能
-	+ サブカテゴリ化 (Archives, Categories, Tags) ... done
-	+ 定義のテンプレート化 ... done
-	* 折り畳み機能の On/Off
-* サイドバー機能
-	* 配置 (left, right, bottom)
-	* スマホ対応
-+ ページ作成
-	+ Home ページ ... done
-	+ Blog ページ ... done
-	+ Project ページ ... done
-	+ About ページ ... done
-* ブログ機能
-	+ DISQUS ... done
-	+ ソーシャルボタン ... done
-	+ ページナビ ... done
-	+ ページネーション ... done
-	+ Archives ページ ... done except design
-	+ Categories ページ ... done except design
-	+ Tags ページ ... done except design
-	+ About ページ ... done except design
-	+ 日付のフォーマット化 ... done
-	+ シンタックスハイライト ... done
-+ page_columns ... done
-	+ n記事ずつレイアウト ... done
-+ サイト構成
-	+ ブロク、プロジェクトのサブディレクトリ化 ... done
-* サイト構築
-	+ Rakefile
-		+ 新規投稿、新規ページ ... done
-		+ _site のデプロイ ... done
-	* LESS
-		* CSS のダイエット
-	+ .gitignore ... done
-* 画像機能
-	* フィーチャー画像、サムネイル画像
-	+ レスポンシブ画像 ... checked
-* サンプルデザイン
-* ドキュメント作成
 
 Disqus
 ------
