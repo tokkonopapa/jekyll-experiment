@@ -11,10 +11,8 @@ exclude: ['Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # `baseurl` being set as absolute path without '/' at the end is recommended.
-#url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
-#baseurl: /Jekyll-Responsive-Bootstrap
-url: http://tokkono.github.com
-baseurl: 
+url: http://USERNAME.github.com
+baseurl: /
 permalink: /blog/:year/:month/:title/
 
 # configuration for site
@@ -85,8 +83,8 @@ disqus:
     developer_mode: true
 
 google_analytics:
-#    account: UA-20543951-2
-    account: UA-XXXXX-X
+    account: UA-20543951-2
+#    account: UA-XXXXX-X
 
 google_plus_one:
     size: medium
