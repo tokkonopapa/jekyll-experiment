@@ -4,16 +4,20 @@
 							<li class="meta"><i class="icon-user"></i>
 								<ul><li>{{ site.author }}</li></ul>
 							</li>
+{% if page.categories.first %}
 							<li class="meta"><i class="icon-folder-open"></i>
 								<ul class="tag-list">
-{% include libs/list_categories %}
+	{% include libs/list_categories %}
 								</ul>
 							</li>
+{% endif %}
+{% if page.categories.first %}
 							<li class="meta"><i class="icon-tags"></i>
 								<ul class="tag-list">
-{% include libs/list_tags %}
+	{% include libs/list_tags %}
 								</ul>
 							</li>
+{% endif %}
 						</ul>
 					</div>
 {% assign post_meta = nil %}
