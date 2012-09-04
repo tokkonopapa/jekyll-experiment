@@ -7,14 +7,12 @@ plugins: ./_plugins
 lsi: false
 pygments: true
 markdown: rdiscount
-exclude: ['Rakefile', 'README.md', 'vender']
+exclude: ['Gemfile', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # `baseurl` being set as absolute path without '/' at the end is recommended.
-url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
-baseurl: /Jekyll-Responsive-Bootstrap
-#url: http://tokkono.github.com
-#baseurl: 
+url: http://tokkono.github.com
+baseurl: 
 permalink: /blog/:year/:month/:title/
 
 # configuration for site
@@ -25,8 +23,8 @@ email: USERNAME@example.com
 
 # configuration for blog
 lang: ja
-paginate: 3
-columns: 2
+paginate: 7
+columns: 3
 date_format: "%B %d, %Y"
 truncate_len: 200
 
@@ -58,7 +56,7 @@ asides:
     recent_posts: true
     archive_tabs: true
     tweets: true
-    github: true
+    github: false
 
 # configration for bootstrap and color theme
 # Default, Amelia, United, Superhero, Spruce, Spacelab, 
@@ -79,13 +77,11 @@ pygments_color: github
 #   id: YOUR_SITE_ID
 
 disqus:
-#    short_name: USERNAME
-    short_name: tokkonopapa
+    short_name: USERNAME
     comment_count: true
     developer_mode: true
 
-google_analytics:
-    account: UA-20543951-2
+#google_analytics:
 #    account: UA-XXXXX-X
 
 google_plus_one:
@@ -104,9 +100,8 @@ twitter:
     show_screen_name: true
     show_follower_count: false
 
-github:
+#github:
 #    username: USERNAME
-    username: tokkonoPapa
-    count: 5
+#    count: 5
 
-hatena: true
+#hatena: true

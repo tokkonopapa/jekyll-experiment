@@ -44,6 +44,7 @@ This software will work out of the box, without any fancy installation.
 	+ About ページ ... done
 	+ 日付のフォーマット化 ... done
 	+ シンタックスハイライト ... done
+		* スクロールバーの設定
 + page_columns ... done
 	+ n記事ずつレイアウト ... done
 + サイト構成
