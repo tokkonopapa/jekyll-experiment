@@ -12,7 +12,7 @@ exclude: ['Rakefile', 'README.md', 'vender']
 # configuration for url/path
 # `baseurl` being set as absolute path without '/' at the end is recommended.
 url: http://USERNAME.github.com
-baseurl: /
+baseurl: 
 permalink: /blog/:year/:month/:title/
 
 # configuration for site
