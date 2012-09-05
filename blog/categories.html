@@ -9,7 +9,7 @@ group: Blog
 {% include libs/list_categories %}
 				</ul>
 {% for category in site.categories %}
-				<h2 id="ref-{{ category[0] | join | cgi_escape | remove:'%' }}">{{ category[0] | join:' - ' }}</h2>
+				<h2 id="ref-{{ category[0] | join | cgi_escape | remove:'%' }}">{{ category[0] | join:' - ' | escape }}</h2>
 				<ul>
 	{% assign list_pages = category[1] %}
 	{% include libs/list_pages %}

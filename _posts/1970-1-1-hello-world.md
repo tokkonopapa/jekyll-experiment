@@ -4,7 +4,7 @@ title: Hello World!
 excerpt:
 image:
 category: [movie, star & wars]
-tags: [cast, js/css]
+tags: [cast's, js/css]
 comments: true
 ---
 

@@ -1,13 +1,13 @@
 {% if post_meta == true %}
 	{% for node in page.categories %}
 						<li><!-- class="label" --><!--page-->
-							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node | join | cgi_escape | remove:'%' }}">{{ node | join:' - ' }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
+							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node | join | cgi_escape | remove:'%' }}">{{ node | join:' - ' | escape }}</a>&nbsp;<span>({{ site.categories[node].size }})</span>
 						</li>
 	{% endfor %}
 {% else %}
 	{% for node in site.categories %}
 						<li><!-- class="label" --><!--site-->
-							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node[0] | join | cgi_escape | remove:'%' }}">{{ node[0] | join:' - ' }}</a>&nbsp;<span>({{ node[1].size }})</span>
+							<a href="{{ site.baseurl }}/blog/categories.html#ref-{{ node[0] | join | cgi_escape | remove:'%' }}">{{ node[0] | join:' - ' | escape }}</a>&nbsp;<span>({{ node[1].size }})</span>
 						</li>
 	{% endfor %}
 {% endif %}
