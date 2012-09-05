@@ -7,12 +7,15 @@ plugins: ./_plugins
 lsi: false
 pygments: true
 markdown: rdiscount
-exclude: ['Gemfile', 'Rakefile', 'README.md', 'vender']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # `baseurl` being set as absolute path without '/' at the end is recommended.
-url: http://tokkono.github.com
+url: http://USERNAME.github.com
 baseurl: 
+
+# configuration for permalink
+# `permalink`: none, pretty or /blog/:categories/:title.html
 permalink: /blog/:year/:month/:title/
 
 # configuration for site
@@ -73,7 +76,7 @@ pygments_color: github
 #-----------------------------------------------
 # configuration for socials, uncomment to enable
 #-----------------------------------------------
-# feedburner:
+#feedburner:
 #   id: YOUR_SITE_ID
 
 disqus:
