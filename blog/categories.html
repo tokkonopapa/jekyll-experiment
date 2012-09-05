@@ -9,9 +9,7 @@ group: Blog
 {% include libs/list_categories %}
 				</ul>
 {% for category in site.categories %}
-	{% if category[0].first %}{% capture name %}{{ category[0].first }}{% endcapture %}
-	{% else %}{% capture name %}{{ category[0] }}{% endcapture %}{% endif %}
-				<h2 id="ref-{{ name | cgi_escape | remove:'%' }}">{{ category[0] }}</h2>
+				<h2 id="ref-{{ category[0] | join | cgi_escape | remove:'%' }}">{{ category[0] | join:' - ' }}</h2>
 				<ul>
 	{% assign list_pages = category[1] %}
 	{% include libs/list_pages %}
