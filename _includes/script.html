@@ -11,7 +11,7 @@
  * Apply specified stylesheet through cookie
  */
 function chgstyle (type){
-	$.cookie('style', type, {expires: 3, path: '{{ site.baseurl }}'});
+	$.cookie('style', type, {expires: 3, path: '{{ site.baseurl }}/'});
 	$('#chgstyle').attr({href: '{{ site.baseurl }}/assets/{{ site.bootstrap }}/css/' + type + '/bootstrap.min.css'});
 }
 
