@@ -59,7 +59,7 @@ asides:
     recent_posts: true
     archive_tabs: true
     tweets: true
-    github: false
+    github: true
 
 # configration for bootstrap and color theme
 # Default, Amelia, United, Superhero, Spruce, Spacelab, 
@@ -103,8 +103,8 @@ twitter:
     show_screen_name: true
     show_follower_count: false
 
-#github:
-#    username: USERNAME
-#    count: 5
+github:
+    username: tokkono
+    count: 5
 
-#hatena: true
+hatena: true
