@@ -1,11 +1,11 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">
-			<a class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse">
+			<button class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-			</a>
+			</button>
 			<form class="navbar-search pull-right" action="http://google.com/search" method="get">
 {% if site.safe %}
 				<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">

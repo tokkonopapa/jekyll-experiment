@@ -34,7 +34,9 @@ body > footer {
 	top: 0.5em;
 	left: 20px;
 }
-#title a, #title a:hover, #title a:visited {
+#title a,
+#title a:hover,
+#title a:visited {
 	text-decoration: none;
 }
 
@@ -44,7 +46,7 @@ body {
 }
 .navbar-fixed-top {
 	margin-bottom: 20px;
-	position: relative;
+	position: static;
 }
 .navbar-fixed-top .navbar-inner {
 	padding: 0;
@@ -62,9 +64,6 @@ body {
 }
 .navbar .visible-phone {
 	margin-bottom: 5px;
-}
-.navbar-search {
-	margin-left: 20px;
 }
 
 /* header.html: dropdown container */
@@ -108,8 +107,12 @@ aside ul {
 }
 
 /* asides/search.html */
-#sidebar-search input {
+#sidebar-search input,
+#sidebar-search input:focus {
 	border-radius: 3px;
+	padding: 4px 16px 4px 6px;
+	vertical-align: top !important;
+	position: static !important;
 }
 
 /* asides/themes.html */
