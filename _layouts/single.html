@@ -8,9 +8,13 @@ layout: nil
 {% if site.asides.themes %}{% include script.html %}{% endif %}
 </head>
 <body>
-<header>
+<header id="header">
 {% include header.html %}
 </header>
+
+<nav id="navbar">
+{% include navbar.html %}
+</nav>
 
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -22,7 +26,7 @@ layout: nil
 
 <hr>
 
-<footer>
+<footer id="footer">
 {% include footer.html %}
 </footer>
 {% unless site.asides.themes %}{% include script.html %}{% endunless %}

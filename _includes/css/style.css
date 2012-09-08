@@ -15,25 +15,57 @@
 form {
 	margin: 0;
 }
-input.search-query {
-	border-radius: 3px;
-}
-.well h1, .well h2, .well h3 {
-	margin-top: 0;
-}
 body > footer {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+.well h1, .well h2, .well h3 {
+	margin-top: 0;
+}
 
-/* header.html: navbar */
-.navbar input[type="text"] {
-	border-radius: 14px;
-	margin-bottom: 0;
+/* title of the site */
+#header {
+	height: 6em;
 }
 #title {
-	margin: 0;
 	line-height: 1;
+	font-weight: normal;
+	font-size: 1.8em;
+	position: absolute;
+	top: 0.8em;
+	left: 20px;
+}
+#title a, #title a:hover, #title a:visited {
+	text-decoration: none;
+}
+
+/* header.html: navbar */
+body {
+	padding-top: 0;
+}
+.navbar-fixed-top {
+	margin-bottom: 20px;
+	position: relative;
+}
+.navbar-fixed-top .navbar-inner {
+	padding: 0;
+	box-shadow: none;
+	border-top: 1px solid #d4d4d4;
+	border-bottom: 1px solid #d4d4d4;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+	box-shadow: none;
+}
+.navbar .btn-navbar {
+	margin-bottom: 5px;
+}
+.navbar .visible-phone {
+	margin-bottom: 5px;
+}
+.navbar-search {
+	margin-left: 20px;
 }
 
 /* header.html: dropdown container */
@@ -71,6 +103,11 @@ aside p {
 /* asides/*.html: divider */
 #sidebar li.divider {
 	margin: 0.5em 1px;
+}
+
+/* asides/search.html */
+#sidebar-search input {
+	border-radius: 3px;
 }
 
 /* asides/themes.html */
