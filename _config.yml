@@ -4,17 +4,15 @@ safe: false
 source: .
 destination: ./_site
 plugins: ./_plugins
-lsi: false
+lsi: true
 pygments: true
 markdown: rdiscount
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # `baseurl` being set as absolute path without '/' at the end is recommended.
-url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
-baseurl: /Jekyll-Responsive-Bootstrap
-#url: http://USERNAME.github.com
-#baseurl: 
+url: http://tokkono.github.com
+baseurl: 
 
 # configuration for permalink
 # `permalink`: none, pretty or /blog/:categories/:title.html
@@ -61,7 +59,7 @@ asides:
     recent_posts: true
     archive_tabs: true
     tweets: true
-    github: true
+    github: false
 
 # configration for bootstrap and color theme
 # Default, Amelia, United, Superhero, Spruce, Spacelab, 
@@ -79,17 +77,15 @@ pygments_color: github
 # configuration for 3rd party script
 #-----------------------------------
 disqus:
-#    short_name: USERNAME
-    short_name: tokkonopapa
+    short_name: USERNAME
     comment_count: true
     developer_mode: true
 
 #feedburner:
 #    id: YOUR_SITE_ID
 
-google_analytics:
+#google_analytics:
 #    account: UA-XXXXX-X
-    account: UA-20543951-2
 
 google_plus_one:
     size: medium
@@ -107,9 +103,8 @@ twitter:
     show_screen_name: true
     show_follower_count: false
 
-github:
+#github:
 #    username: USERNAME
-    username: tokkonoPapa
-    count: 5
+#    count: 5
 
-hatena: true
+#hatena: true

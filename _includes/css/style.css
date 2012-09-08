@@ -24,15 +24,10 @@ body > footer {
 }
 
 /* title of the site */
-#header {
-	height: 6em;
-}
 #title {
 	font-weight: normal;
 	font-size: 1.8em;
-	position: absolute;
-	top: 0.5em;
-	left: 20px;
+	margin: 1em 20px;
 }
 #title a,
 #title a:hover,

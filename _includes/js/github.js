@@ -4,7 +4,7 @@
  */
 ;(function($, window, document) {
 	$.fn.showGitHubRepo = function(username, options) {
-		options = $.extend({}, $.fn.showGitHubRepo.defaults, options);
+		options = $.extend({}, $.fn.showGitHubRepo.options, options);
 
 		var getRepos = function(user, opts) {
 			return $.ajax({
@@ -37,7 +37,7 @@
 		});
 	};
 
-	$.fn.showGitHubRepo.defaults = {
+	$.fn.showGitHubRepo.options = {
 		type: 'owner',
 		sort: 'pushed',
 		direction: 'desc'

@@ -3,7 +3,7 @@
  */
 ;(function($, window, document) {
 	$.fn.showTweets = function(username, options) {
-		options = $.extend({}, $.fn.showTweets.defaults, options);
+		options = $.extend({}, $.fn.showTweets.options, options);
 
 		var getTweets = function(user, opts) {
 			return $.ajax({
@@ -84,7 +84,7 @@
 		});
 	};
 
-	$.fn.showTweets.defaults = {
+	$.fn.showTweets.options = {
 		count: 5,
 		trim_user: true,
 		include_entities: true,
