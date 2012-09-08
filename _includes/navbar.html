@@ -1,0 +1,42 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<form class="navbar-search pull-right" action="http://google.com/search" method="get">
+{% if site.safe %}
+				<input type="hidden" name="q" value="site:{{ site.url | remove_first:'http://' }}">
+{% else %}
+				<input type="hidden" name="q" value="site:{{ site.url | domain_name }}">
+{% endif %}
+				<input type="text" name="q" class="input-medium search-query" placeholder="Search">
+			</form>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+{% for node in site.navbar_list %}
+	{% if node.name == page.group %}{% assign active = 'active' %}
+	{% else %}{% assign active = nil %}{% endif %}
+	{% if node.dropdown %}
+					<li class="dropdown dropdown-container {{ active }}">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ node.name }}<b class="caret"></b></a>
+						<a class="dropdown-link" href="{{ site.baseurl }}{{ node.link }}">{{ node.name }}</a>
+						<ul class="dropdown-menu">
+		{% for sub in node.dropdown %}
+							<li><a href="{{ site.baseurl }}{{ sub.link }}">{{ sub.name }}</a></li>
+		{% endfor %}
+						</ul>
+					</li>
+	{% else %}
+					<li class="{{ active }}">
+						<a href="{{ site.baseurl }}{{ node.link }}">{{ node.name }}</a>
+					</li>
+	{% endif %}
+{% endfor %}
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
