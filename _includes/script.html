@@ -10,24 +10,30 @@
 /*
  * Apply specified stylesheet through cookie
  */
-function chgstyle (type){
-	$.cookie('style', type, {expires: 3, path: '{{ site.baseurl }}/'});
-	$('#chgstyle').attr({href: '{{ site.baseurl }}/assets/{{ site.bootstrap }}/css/' + type + '/bootstrap.min.css'});
+function chgstyle(type) {
+	$.cookie('style', type, {
+		expires: 3,
+		path: '/Jekyll-Responsive-Bootstrap/'
+	});
+	$('#chgstyle').attr({
+		href: '/Jekyll-Responsive-Bootstrap/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
+	});
 }
 
-(function () {
+(function() {
 	var type = $.cookie('style');
 	if (type) {
 		$('#style-select').val(type);
-		$("#chgstyle").attr({href: '{{ site.baseurl }}/assets/{{ site.bootstrap }}/css/' + type + '/bootstrap.min.css'});
+		$("#chgstyle").attr({
+			href: '/Jekyll-Responsive-Bootstrap/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
+		});
 	}
 })();
 
-$(function (){
-	$('#style-select').change(function () {
+$(function() {
+	$('#style-select').change(function() {
 		chgstyle($(this).val());
 	});
-
 	var type = $.cookie('style');
 	if (type) {
 		$('#style-select').val(type);

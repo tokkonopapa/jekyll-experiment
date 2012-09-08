@@ -24,14 +24,28 @@ body > footer {
 }
 
 /* title of the site */
-#title {
-	font-weight: normal;
-	font-size: 1.8em;
-	margin: 1em 20px;
+#header {
+	padding: 0.6em 0;
 }
-#title a,
-#title a:hover,
-#title a:visited {
+@media (min-width: 768px) {
+	#header {
+		padding-left: 20px;
+	}
+}
+#header h1 {
+	margin: 0;
+	font-size: 1.75em;
+	font-weight: normal;
+}
+#header h2 {
+	margin: 0.5em 16px;
+	line-height: 1;
+	font-size: 1.1em;
+	font-weight: lighter;
+}
+#header a,
+#header a:hover,
+#header a:visited {
 	text-decoration: none;
 }
 
