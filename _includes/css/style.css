@@ -1,5 +1,5 @@
 /* Adjust Original Styles */
-@media (max-width: 760px) {
+@media (max-width: 767px) {
 	.hero-unit {
 		padding: 19px;
 	}
@@ -25,7 +25,7 @@ body > footer {
 
 /* title of the site */
 #header {
-	padding: 0.6em 0;
+	padding: 0.5em 0;
 }
 @media (min-width: 768px) {
 	#header {
@@ -39,7 +39,7 @@ body > footer {
 }
 #header h2 {
 	margin: 0.5em 16px;
-	line-height: 1;
+	line-height: 0.5;
 	font-size: 1.1em;
 	font-weight: lighter;
 }
@@ -59,9 +59,9 @@ body {
 }
 .navbar-fixed-top .navbar-inner {
 	padding: 0;
-	box-shadow: none;
 	border-top: 1px solid #d4d4d4;
 	border-bottom: 1px solid #d4d4d4;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 }
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
@@ -156,12 +156,6 @@ aside ul {
 	font-size: 75%;
 }
 
-/* asides/github.html  */
-.icon-octocat {
-	background-image: url("../img/octocat.png");
-	background-position: 0 0;
-}
-
 /* post.html: meta data */
 p.meta {
 }
@@ -177,7 +171,7 @@ li.meta ul {
 	margin-left: 0;
 	margin-right: 1.25em;
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
 	li.meta ul {
 		float: left;
 	}
@@ -239,6 +233,20 @@ li.social {
 #main_pagenation li,
 #post_pagenation li {
 	margin-bottom: 0.5em;
+}
+
+/* Icons */
+.icon-octocat {
+	background-image: url("../img/icons.png");
+	background-position: 0 0;
+}
+.icon-twitter {
+	background-image: url("../img/icons.png");
+	background-position: 0 -14px;
+}
+.icon-rss {
+	background-image: url("../img/icons.png");
+	background-position: 0 -28px;
 }
 
 /* project/index.html */

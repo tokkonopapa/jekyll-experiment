@@ -3,8 +3,8 @@ layout: post
 title: Hello World!
 excerpt:
 image:
-category: [movie, star & wars]
-tags: [cast's, js/css]
+category: [Ruby, jekyll & hide]
+tags: [web's, js/css]
 comments: true
 ---
 

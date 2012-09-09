@@ -4,7 +4,7 @@ safe: false
 source: .
 destination: ./_site
 plugins: ./_plugins
-lsi: false
+lsi: true
 pygments: true
 markdown: rdiscount
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
@@ -21,8 +21,8 @@ baseurl: /Jekyll-Responsive-Bootstrap
 permalink: /blog/:year/:month/:title/
 
 # configuration for site
-title: My Site Title
-description: Jekyll Responsive Bootstrap
+title: The Code Folio
+description: A personal log of buggy code
 author: USERNAME
 email: USERNAME@example.com
 
