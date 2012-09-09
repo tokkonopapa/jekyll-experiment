@@ -22,7 +22,7 @@ permalink: /blog/:year/:month/:title/
 
 # configuration for site
 title: The Code Folio
-description: A personal log of buggy code
+description: A personal log of life coding.
 author: USERNAME
 email: USERNAME@example.com
 

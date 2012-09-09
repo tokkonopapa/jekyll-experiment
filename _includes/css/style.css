@@ -38,10 +38,11 @@ body > footer {
 	font-weight: normal;
 }
 #header h2 {
-	margin: 0.5em 16px;
-	line-height: 0.5;
-	font-size: 1.1em;
-	font-weight: lighter;
+	color: #ccc;
+	margin: 0 16px;
+	line-height: 1.0;
+	font-size: 1.0em;
+	font-weight: normal;
 }
 #header a,
 #header a:hover,
@@ -242,7 +243,7 @@ li.social {
 }
 .icon-twitter {
 	background-image: url("../img/icons.png");
-	background-position: 0 -14px;
+	background-position: 0 -15px;
 }
 .icon-rss {
 	background-image: url("../img/icons.png");
