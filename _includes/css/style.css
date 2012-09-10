@@ -92,7 +92,7 @@ body {
 	width: 100%;
 }
 
-/* asides/*.html: sidebar */
+/* asides: sidebar */
 aside h1, aside h2, aside h3 {
 	font-size: 125%;
 	line-height: 1.0em;
@@ -105,13 +105,13 @@ aside ul {
 	padding: 0 !important;
 }
 
-/* asides/*.html: mini-icon */
+/* asides: mini-icon */
 #sidebar i {
 	vertical-align: baseline;
 	margin-right: 0.25em;
 }
 
-/* asides/*.html: divider */
+/* asides: divider */
 #sidebar li.divider {
 	margin: 0.5em 1px;
 }
@@ -226,7 +226,7 @@ li.social {
 	margin: 4px 10px 4px 4px;
 }
 
-/* pagenation.html, post/post_pagenation.html: pagenation */
+/* pagenation.html, post/post_pagenation.html */
 #main_pagenation ul,
 #post_pagenation ul {
 	margin-left: 0;
@@ -237,16 +237,18 @@ li.social {
 }
 
 /* Icons */
-.icon-octocat {
+.icon-octocat,
+.icon-twitter,
+.icon-rss {
 	background-image: url("../img/icons.png");
+}
+.icon-octocat {
 	background-position: 0 0;
 }
 .icon-twitter {
-	background-image: url("../img/icons.png");
 	background-position: 0 -15px;
 }
 .icon-rss {
-	background-image: url("../img/icons.png");
 	background-position: 0 -28px;
 }
 
