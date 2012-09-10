@@ -10,9 +10,9 @@ markdown: rdiscount
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
-# `baseurl` being set as absolute path without '/' at the end is recommended.
-url: http://tokkonopapa.github.com/Jekyll-Responsive-Bootstrap
-baseurl: /Jekyll-Responsive-Bootstrap
+# Being set as absolute path without '/' at the end is recommended.
+url: http://tokkonopapa.github.com/jekyll-etude
+baseurl: /jekyll-etude
 #url: http://USERNAME.github.com
 #baseurl: 
 

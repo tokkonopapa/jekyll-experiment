@@ -13,10 +13,10 @@
 function chgstyle(type) {
 	$.cookie('style', type, {
 		expires: 3,
-		path: '/Jekyll-Responsive-Bootstrap/'
+		path: '{{ site.baseurl }}/'
 	});
 	$('#chgstyle').attr({
-		href: '/Jekyll-Responsive-Bootstrap/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
+		href: '{{ site.baseurl }}/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
 	});
 }
 
@@ -25,7 +25,7 @@ function chgstyle(type) {
 	if (type) {
 		$('#style-select').val(type);
 		$("#chgstyle").attr({
-			href: '/Jekyll-Responsive-Bootstrap/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
+			href: '{{ site.baseurl }}/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
 		});
 	}
 })();
