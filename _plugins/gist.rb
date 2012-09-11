@@ -1,14 +1,20 @@
-# {% gist 1577100 %}
+# {% gist 1577100 file: tag_cloud.rb %}
+# <script src="https://gist.github.com/1577100.js?file=tag_cloud.rb"></script>
 
 module Jekyll
   class Gist < Liquid::Tag
-    def initialize(tag_name, num, tokens)
+    def initialize(tag_name, args, tokens)
       super
-      @num = num.rstrip
+      @file = ''
+      if args =~ /(file:\s*([\w\.-]+))/
+        @file = "?file=" + $2
+        args = args.sub($1, '')
+      end
+      @num = args.gsub(/\D/, '')
     end
 
     def render(context)
-      "<script src='https://gist.github.com/" + @num + ".js'></script>"
+      "<script src='https://gist.github.com/" + @num+ ".js" + @file + "'></script>"
     end
   end
 end
