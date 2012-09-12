@@ -775,10 +775,10 @@
 }
 
 @media (max-width: 767px) {
-  body {
+/*body {
     padding-right: 20px;
     padding-left: 20px;
-  }
+  }*/
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     margin-right: -20px;
@@ -901,9 +901,9 @@
 }
 
 @media (max-width: 767px) {
-  body {
+/*body {
     padding-top: 0;
-  }
+  }*/
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: static;
