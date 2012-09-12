@@ -1,5 +1,11 @@
-# {% gist 1577100 file: tag_cloud.rb %}
-# <script src="https://gist.github.com/1577100.js?file=tag_cloud.rb"></script>
+# This is a jekyll plugin sample just for explaining how to parse & render.
+# You should use http://brandontilley.com/2011/01/30/gist-tag-for-jekyll.html
+# instead of this sample plugin.
+#
+# Usage:
+#    {% gist 1577100 file: tag_cloud.rb %}
+# Result:
+#    <script src="https://gist.github.com/1577100.js?file=tag_cloud.rb"></script>
 
 module Jekyll
   class Gist < Liquid::Tag

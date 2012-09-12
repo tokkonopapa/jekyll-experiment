@@ -19,6 +19,9 @@ body > footer {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+i {
+	background-image: none !important;
+}
 .well h1, .well h2, .well h3 {
 	margin-top: 0;
 }
@@ -107,8 +110,8 @@ aside ul {
 
 /* asides: mini-icon */
 #sidebar i {
+	margin-right: 0.5em;
 	vertical-align: baseline;
-	margin-right: 0.25em;
 }
 
 /* asides: divider */
@@ -164,9 +167,8 @@ p.meta {
 /* post/post_meta.html */
 li.meta i {
 	float: left;
-	width: 16px;
 	margin-top: 0.25em;
-	margin-right: 0.5em;
+	margin-right: 0.25em;
 }
 li.meta ul {
 	margin-left: 0;
@@ -180,9 +182,6 @@ li.meta ul {
 li.meta li {
 	display: inline-block;
 	vertical-align: middle;
-}
-.icon-tags {
-	background-position: -25px -47px;
 }
 
 /* post/post_meta.html,
@@ -234,22 +233,6 @@ li.social {
 #main_pagenation li,
 #post_pagenation li {
 	margin-bottom: 0.5em;
-}
-
-/* Icons */
-.icon-octocat,
-.icon-twitter,
-.icon-rss {
-	background-image: url("../img/icons.png");
-}
-.icon-octocat {
-	background-position: 0 0;
-}
-.icon-twitter {
-	background-position: 0 -15px;
-}
-.icon-rss {
-	background-position: 0 -28px;
 }
 
 /* project/index.html */

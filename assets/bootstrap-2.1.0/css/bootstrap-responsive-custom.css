@@ -900,7 +900,7 @@
   }
 }
 
-@media (max-width: 979px) {
+@media (max-width: 767px) {
   body {
     padding-top: 0;
   }
@@ -934,9 +934,6 @@
     padding-right: 10px;
     padding-left: 10px;
   }
-}
-
-@media (max-width: 767px) {
   .nav-collapse {
     clear: both;
   }
@@ -1039,5 +1036,8 @@
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
+  }
+  .navbar .btn-navbar {
+    display: none;
   }
 }

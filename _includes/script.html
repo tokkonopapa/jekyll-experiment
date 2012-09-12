@@ -3,40 +3,35 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="{{ site.baseurl }}/assets/{{ site.bootstrap }}/js/bootstrap.min.js"></script>
 {% if site.asides.themes %}
 <script src="{{ site.baseurl }}/assets/js/libs/jquery.cookie.js"></script>
 <script>
 /*
  * Apply specified stylesheet through cookie
  */
-function chgstyle(type) {
-	$.cookie('style', type, {
+function chgtheme(type) {
+	$.cookie('theme', type, {
 		expires: 3,
 		path: '{{ site.baseurl }}/'
 	});
-	$('#chgstyle').attr({
-		href: '{{ site.baseurl }}/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
-	});
+	$('#bootstrap-theme').attr({ href: type });
 }
 
 (function() {
-	var type = $.cookie('style');
+	var type = $.cookie('theme');
 	if (type) {
-		$('#style-select').val(type);
-		$("#chgstyle").attr({
-			href: '{{ site.baseurl }}/assets/bootstrap-2.1.0/css/' + type + '/bootstrap.min.css'
-		});
+		$('#theme-select').val(type);
+		$("#bootstrap-theme").attr({ href: type });
 	}
 })();
 
 $(function() {
-	$('#style-select').change(function() {
-		chgstyle($(this).val());
+	$('#theme-select').change(function() {
+		chgtheme($(this).val());
 	});
-	var type = $.cookie('style');
+	var type = $.cookie('theme');
 	if (type) {
-		$('#style-select').val(type);
+		$('#theme-select').val(type);
 	}
 });
 </script>
