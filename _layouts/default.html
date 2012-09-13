@@ -2,7 +2,10 @@
 layout: nil
 ---
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="{{ site.lang }}"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="{{ site.lang }}"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="{{ site.lang }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ site.lang }}"> <!--<![endif]-->
 <head>
 {% include head.html %}
 {% if site.asides.themes %}{% include script.html %}{% endif %}
