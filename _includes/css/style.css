@@ -1,5 +1,5 @@
 /* Adjust Original Styles */
-@media (max-width: 767px) {
+@media (max-width: {{ site.responsive_bp | minus:1 }}px) {
 	.hero-unit {
 		padding: 19px;
 	}
@@ -28,7 +28,12 @@ i {
 
 /* title of the site */
 #header {
-	padding: 0.5em 0 0.5em 20px;
+	height: 80px;
+}
+#header hgroup {
+	position: absolute;
+	top: 10px;
+	left: 20px;
 }
 #header h1 {
 	margin: 0;
@@ -51,7 +56,6 @@ i {
 /* header.html: navbar */
 body {
 	padding-top: 0;
-	padding-bottom: 20px;
 }
 .navbar-fixed-top {
 	margin-bottom: 20px;
@@ -142,10 +146,10 @@ li.meta ul {
 	margin-left: 0;
 	margin-right: 1.25em;
 }
-@media (min-width: 768px) {
-	li.meta ul {
+@media (min-width: {{ site.responsive_bp }}px) {
+/*	li.meta ul {
 		float: left;
-	}
+	}*/
 }
 li.meta li {
 	display: inline-block;
@@ -191,7 +195,7 @@ li.meta li {
 /* post/socials.html */
 li.social {
 	float: left;
-	margin: 4px 10px 4px 4px;
+	margin: 5px 3px;
 }
 
 /* pagenation.html, post/post_pagenation.html */

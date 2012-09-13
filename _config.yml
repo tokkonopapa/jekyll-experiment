@@ -66,16 +66,19 @@ asides:
 # configration for bootstrap and color theme
 # Default, Amelia, Cerulean, Cyborg, Journal, Readable, 
 # Simplex, Slate, Spacelab, Spruce, Superhero, United
-bootstrap: bootstrap-2.1.0
+responsive_bp: 768
+bootstrap: bootstrap-2.1.1
 bootstrap_ver: 2.1.1
 bootswatch_ver: 2.1.0
-color_theme: Default
 
 # configuration for pygments
 # `pygments_color`:
 # autumn, borland, bw, colorful, default, emacs, friendly, fruity,
 # github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
 pygments_color: github
+
+# configuration for jQuery
+jquery_ver: 1.7.2
 
 #-----------------------------------
 # configuration for 3rd party script
