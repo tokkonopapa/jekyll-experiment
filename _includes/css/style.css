@@ -12,12 +12,16 @@
 	margin-bottom: 0.125em;
 }
 
-form {
-	margin: 0;
+body {
+	padding-top: 0;
+	padding-bottom: 20px;
 }
 body > footer {
 	padding-left: 20px;
 	padding-right: 20px;
+}
+form {
+	margin: 0;
 }
 i {
 	background-image: none !important;
@@ -54,9 +58,6 @@ i {
 }
 
 /* header.html: navbar */
-body {
-	padding-top: 0;
-}
 .navbar-fixed-top {
 	margin-bottom: 20px;
 	position: static;
@@ -75,20 +76,23 @@ body {
 .navbar .btn-navbar {
 	margin-bottom: 5px;
 }
+.lt-ie9 .collapse {
+	overflow: visible; /* removed from 2.1.1, but still IE need this */
+}
 
 /* header.html: dropdown container */
 .navbar .nav > li.dropdown-container {
 	position: relative !important;
 }
-.navbar .nav > li.dropdown-container a.dropdown-link {
+.navbar .nav > li.dropdown-container .dropdown-link {
 	position: absolute !important;
 	top: 0;
 	left: 0;
 }
-.navbar .nav > li.dropdown-container a .caret {
-	margin-left: 1.25em;
+.navbar .nav > li.dropdown-container .caret {
+	margin-left: 1.5em;
 }
-.navbar .in .nav > li.dropdown-container a.dropdown-link {
+.navbar .in .nav > li.dropdown-container .dropdown-link {
 	width: 100%;
 }
 
@@ -106,6 +110,23 @@ body {
 }
 #sidebar li.divider {
 	margin: 0.5em 1px;
+}
+
+/* asides/search.html */
+#sidebar-search .btn {
+	line-height: 20px;
+	border-radius: 0 3px 3px 0;
+	position: relative;
+	z-index: 2;
+}
+#sidebar-search input,
+#sidebar-search input:focus {
+	padding-right: 3.5em;
+	position: relative;
+	z-index: 1;
+}
+.lt-ie9 #sidebar-search input {
+	min-height: 20px;
 }
 
 /* asides/archive_tabs.html */
