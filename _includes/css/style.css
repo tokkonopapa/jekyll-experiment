@@ -153,28 +153,23 @@ i {
 	font-size: 75%;
 }
 
-/* post.html: meta data */
-p.meta {
-}
-
 /* post/post_meta.html */
-li.meta > span {
-	float: left;
-	margin-top: 0.1em;
-	margin-right: 0.25em;
+#post-meta ul,
+#post-meta li {
+	margin: 0;
+	display: inline;
+	list-style: none outside none;
 }
-li.meta ul {
-	margin-left: 0;
-	margin-right: 1.25em;
+#post-meta li {
+	margin-right: 0.5em;
 }
-@media (min-width: {{ site.responsive_bp }}px) {
-/*	li.meta ul {
-		float: left;
-	}*/
+#post-meta .meta {
+	margin-left: 9px;
 }
-li.meta li {
-	display: inline-block;
-	vertical-align: middle;
+@media (max-width: {{ site.responsive_bp | minus:1 }}px) {
+	#post-meta .meta {
+		display: block;
+	}
 }
 
 /* post/post_meta.html,
@@ -216,7 +211,7 @@ li.meta li {
 /* post/socials.html */
 li.social {
 	float: left;
-	margin: 5px 3px;
+	margin: 6px 12px;
 }
 
 /* pagenation.html, post/post_pagenation.html */

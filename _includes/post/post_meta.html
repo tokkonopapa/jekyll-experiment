@@ -1,23 +1,23 @@
 {% assign post_meta = true %}
-					<div class="well well-small clearfix">
-						<ul class="unstyled">
+					<section id="post-meta" class="well well-small">
+						<ul>
 							<li id="meta-user" class="meta"><span class="mini-icon"></span>
-								<ul><li>{{ site.author }}</li></ul>
+								<ul class="unstyled"><li>{{ site.author }}</li></ul>
 							</li>
 {% if page.categories.first %}
 							<li id="meta-category" class="meta"><span class="mini-icon"></span>
-								<ul class="tag-list">
+								<ul class="tag-list unstyled">
 	{% include libs/list_categories %}
 								</ul>
 							</li>
 {% endif %}
 {% if page.categories.first %}
 							<li id="meta-tags" class="meta"><span class="mini-icon"></span>
-								<ul class="tag-list">
+								<ul class="tag-list unstyled">
 	{% include libs/list_tags %}
 								</ul>
 							</li>
 {% endif %}
 						</ul>
-					</div>
+					</section>
 {% assign post_meta = nil %}
