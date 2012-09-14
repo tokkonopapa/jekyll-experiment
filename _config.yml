@@ -64,12 +64,10 @@ asides:
     github: true
 
 # configration for bootstrap and color theme
-# Default, Amelia, Cerulean, Cyborg, Journal, Readable, 
-# Simplex, Slate, Spacelab, Spruce, Superhero, United
 responsive_bp: 768
-bootstrap: bootstrap-2.1.1
-bootstrap_ver: 2.1.1
-bootswatch_ver: 2.1.0
+bootstrap: bootstrap-2.1.1 # in /assets
+cdn_bootstrap_ver: 2.1.1
+cdn_bootswatch_ver: 2.1.0
 
 # configuration for pygments
 # `pygments_color`:
