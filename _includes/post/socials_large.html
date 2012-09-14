@@ -9,15 +9,8 @@
 									data-hatena-bookmark-url="{{ site.url }}{{ page.url }}">
 								</a>
 							</li>
-{% endif %}{% if site.google_plus_one %}
-							<!-- Google plusone -->
-							<li class="social" style="height: 60px">
-								<div class="g-plusone"
-									data-size="tall"
-									data-href="{{ site.url }}{{ page.url }}">
-								</div>
-							</li>
-{% endif %}{% if site.twitter %}
+{% endif %}
+{% if site.twitter %}
 							<!-- Twitter -->
 							<li class="social" style="height: 60px">
 								<a href="https://twitter.com/share"
@@ -29,7 +22,17 @@
 									data-count="vertical">
 								</a>
 							</li>
-{% endif %}{% if site.facebook %}
+{% endif %}
+{% if site.google_plus_one %}
+							<!-- Google plusone -->
+							<li class="social" style="height: 60px">
+								<div class="g-plusone"
+									data-size="tall"
+									data-href="{{ site.url }}{{ page.url }}">
+								</div>
+							</li>
+{% endif %}
+{% if site.facebook %}
 							<!-- Facebook -->
 							<li class="social" style="height: 60px">
 	{% if site.facebook.xfbml %}

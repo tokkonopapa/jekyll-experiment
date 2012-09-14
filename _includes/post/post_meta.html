@@ -1,19 +1,19 @@
 {% assign post_meta = true %}
 					<section id="post-meta" class="well well-small">
 						<ul>
-							<li id="meta-user" class="meta"><span class="mini-icon"></span>
-								<ul class="unstyled"><li>{{ site.author }}</li></ul>
+							<li id="meta-user" class="mini-icon"><span class="meta">Author:</span>
+								<ul><li>{{ site.author }}</li></ul>
 							</li>
 {% if page.categories.first %}
-							<li id="meta-category" class="meta"><span class="mini-icon"></span>
-								<ul class="tag-list unstyled">
+							<li id="meta-category" class="mini-icon"><span class="meta">Category:</span>
+								<ul class="tag-list">
 	{% include libs/list_categories %}
 								</ul>
 							</li>
 {% endif %}
 {% if page.categories.first %}
-							<li id="meta-tags" class="meta"><span class="mini-icon"></span>
-								<ul class="tag-list unstyled">
+							<li id="meta-tags" class="mini-icon"><span class="meta">Tags:</span>
+								<ul class="tag-list">
 	{% include libs/list_tags %}
 								</ul>
 							</li>

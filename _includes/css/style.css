@@ -163,12 +163,13 @@ i {
 #post-meta li {
 	margin-right: 0.5em;
 }
-#post-meta .meta {
+#post-meta .mini-icon {
 	margin-left: 9px;
+	display: block;
 }
 @media (max-width: {{ site.responsive_bp | minus:1 }}px) {
 	#post-meta .meta {
-		display: block;
+		display: none;
 	}
 }
 
@@ -237,9 +238,9 @@ li.social {
 #sidebar-recent-posts .mini-icon:before { content: "\f016"; } /* icon-file */
 #sidebar-github       .mini-icon:before { content: "\f09b"; } /* icon-github */
 #sidebar-tweets       .mini-icon:before { content: "\f099"; } /* icon-twitter */
-#meta-user            .mini-icon:before { content: "\f007"; } /* icon-user */
-#meta-category        .mini-icon:before { content: "\f07c"; } /* icon-folder-open */
-#meta-tags            .mini-icon:before { content: "\f02c"; } /* icon-tags */
+#meta-user.mini-icon:before             { content: "\f007"; } /* icon-user */
+#meta-category.mini-icon:before         { content: "\f07c"; } /* icon-folder-open */
+#meta-tags.mini-icon:before             { content: "\f02c"; } /* icon-tags */
 
 /* project/index.html */
 #myProject header h1 {
