@@ -42,12 +42,12 @@ i {
 #header h1 {
 	margin: 0;
 	font-size: 1.75em;
-	font-weight: normal;
+	font-weight: bold;
 }
 #header h2 {
 	color: #ccc;
 	margin: 0 0 4px 16px;
-	line-height: 1.0;
+	line-height: 0.8;
 	font-size: 1.0em;
 	font-weight: normal;
 }
