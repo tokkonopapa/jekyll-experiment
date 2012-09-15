@@ -120,7 +120,7 @@ task :setup_remote, :repo do |t, args|
     repo_url = get_stdin("Enter the read/write url for your repository: ")
   end
 
-  abort("rake aborted!") unless ask("Create #{CONFIG['deploy_branch']} on " + repo_url + ". Continu?", ['y', 'n']) == 'y'
+  abort("rake aborted!") unless ask("Create #{CONFIG['deploy_branch']} on " + repo_url + ".\nContinu?", ['y', 'n']) == 'y'
 
   rm_rf "#{CONFIG['deploy_dir']}"
   mkdir "#{CONFIG['deploy_dir']}"

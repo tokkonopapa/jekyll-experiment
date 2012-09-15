@@ -11,10 +11,9 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # Being set as absolute path without '/' at the end is recommended.
+#url: http://USERNAME.github.com
 url: http://tokkonopapa.bitbucket.org
 baseurl: 
-#url: http://USERNAME.github.com
-#baseurl: 
 
 # configuration for permalink
 # `permalink`: none, pretty or /blog/:categories/:title.html
@@ -65,9 +64,9 @@ asides:
 
 # configration for bootstrap and color theme
 responsive_bp: 768
-bootstrap: bootstrap-2.1.1 # in /assets
-cdn_bootstrap_ver: 2.1.1
-cdn_bootswatch_ver: 2.1.0
+bootstrap_custom: bootstrap-2.1.1 # in /assets
+bootstrap_cdn_ver: 2.1.1
+bootswatch_cdn_ver: 2.1.0
 
 # configuration for pygments
 # `pygments_color`:
