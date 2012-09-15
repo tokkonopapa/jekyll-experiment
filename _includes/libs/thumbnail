@@ -1,0 +1,3 @@
+{% if post.thumbnail and post.thumbnail != '' %}
+					<div class="thumbnail"><img alt="{{ post.title }}" src="{{ post.thumbnail }}"></div>
+{% endif %}

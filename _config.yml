@@ -27,7 +27,7 @@ email: USERNAME@example.com
 
 # configuration for blog
 lang: ja
-paginate: 7
+paginate: 4
 columns: 3
 date_format: "%B %d, %Y"
 truncate_len: 200

@@ -16,6 +16,7 @@ title: Blog
 					</h4>
 				</hgroup></header>
 				<section>
+					{% include libs/thumbnail %}
 					{% include libs/truncate_exec %}
 				</section>
 				<footer>
@@ -23,21 +24,26 @@ title: Blog
 				</footer>
 			</article>
 {% endfor %}
-{% assign m = 0 %}{% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
+{% assign m = 0 %}
+{% capture M %}{{ site.columns }}{% endcapture %}
+{% capture n %}{{ site.paginate | minus: 1 }}{% endcapture %}
 {% for post in paginator.posts limit: n offset: 1 %}
 	{% if m == 0 %}
 			<!-- Followed Articles -->
 			<div class="row-fluid">
 	{% endif %}
 				<article class="span{{ 12 | divided_by: site.columns }}">
-					<header><hgroup>
-						<h2>
-							<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-						</h2>
-						<h5>
-							<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
-						</h5>
-					</hgroup></header>
+					<header>
+						{% include libs/thumbnail %}
+						<hgroup>
+							<h2>
+								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+							</h2>
+							<h5>
+								<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
+							</h5>
+						</hgroup>
+					</header>
 					<section>
 						{% include libs/truncate_exec %}
 					</section>
@@ -46,7 +52,7 @@ title: Blog
 					</footer>
 				</article><!--/span-->
 	{% capture m %}{{ m | plus: 1 }}{% endcapture %}
-	{% if m == site.columns or forloop.last %}
+	{% if m == M or forloop.last %}
 			</div><!--/row-fluid-->
 		{% assign m = 0 %}
 	{% endif %}

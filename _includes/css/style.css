@@ -242,6 +242,13 @@ li.social {
 #meta-category.mini-icon:before         { content: "\f07c"; } /* icon-folder-open */
 #meta-tags.mini-icon:before             { content: "\f02c"; } /* icon-tags */
 
+.highlight {
+	border-radius: 4px;
+}
+.highlight pre {
+	background-color: inherit !important;
+}
+
 /* project/index.html */
 #myProject header h1 {
 	font-size: 3.0em;

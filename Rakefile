@@ -58,6 +58,7 @@ task :post, :title do |t, args|
     post.puts "description: \"\""
     post.puts "keywords: \"\""
     post.puts "excerpt: \"\""
+    post.puts "thumbnail: \"\""
     post.puts "category: [uncategorized]"
     post.puts "tags: []"
     post.puts "comments: true"
