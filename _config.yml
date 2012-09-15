@@ -11,8 +11,8 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
 # Being set as absolute path without '/' at the end is recommended.
-url: http://tokkonopapa.github.com/jekyll-experiment
-baseurl: /jekyll-experiment
+url: http://tokkonopapa.bitbucket.org
+baseurl: 
 #url: http://USERNAME.github.com
 #baseurl: 
 

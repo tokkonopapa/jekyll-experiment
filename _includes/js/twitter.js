@@ -78,9 +78,14 @@
 		return this.each(function() {
 			var elem = $(this);
 
-			getTweets(username, options).done(function(args) {
-				putTweets(elem, args.slice(0, n));
-			});
+			getTweets(username, options).then(
+				function(args) {
+					putTweets(elem, args.slice(0, n));
+				},
+				function(args) {
+					elem.empty().append('<p>' + args.statusText + '</p>');
+				}
+			);
 		});
 	};
 

@@ -6,12 +6,15 @@
 	$.fn.showGitHubRepo = function(username, options) {
 		options = $.extend({}, $.fn.showGitHubRepo.options, options);
 
-		var getRepos = function(user, opts) {
+		var getRepos = function(user, opts, callback) {
 			return $.ajax({
 				url: 'https://api.github.com' + '/users/' + user + '/repos',
 				type: 'GET',
 				data: opts,
-				dataType: 'json'
+				dataType: 'jsonp',
+				success: function(results) {
+					callback(results.data);
+				}
 			});
 		};
 
@@ -31,9 +34,14 @@
 		return this.each(function() {
 			var elem = $(this);
 
-			getRepos(username, options).done(function(args) {
-				putRepos(elem, args.slice(0, {{ site.github.count }}));
-			});
+			getRepos(username, options,
+				function(args) {
+					putRepos(elem, args.slice(0, {{ site.github.count }}));
+				},
+				function(args) {
+					elem.empty().append('<p>' + args.statusText + '</p>');
+				}
+			);
 		});
 	};
 

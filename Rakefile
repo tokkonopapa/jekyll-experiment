@@ -4,7 +4,8 @@ CONFIG = {
   'post_ext' => "md",
   'deploy_dir' => "_deploy",
   'deploy_remote' => "origin",
-  'deploy_branch' => "gh-pages",
+  'deploy_branch' => "master",
+#  'deploy_branch' => "gh-pages",
 }
 
 task :default => :preview
@@ -118,8 +119,9 @@ task :setup_remote, :repo do |t, args|
   else
     repo_url = get_stdin("Enter the read/write url for your repository: ")
   end
-#  user = repo_url.match(/:([^\/]+)/)[1]
-  
+
+  abort("rake aborted!") unless ask("Create #{CONFIG['deploy_branch']} on " + repo_url + ". Continu?", ['y', 'n']) == 'y'
+
   rm_rf "#{CONFIG['deploy_dir']}"
   mkdir "#{CONFIG['deploy_dir']}"
   cd "#{CONFIG['deploy_dir']}" do
