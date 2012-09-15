@@ -10,9 +10,9 @@ markdown: rdiscount
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # configuration for url/path
-# Being set as absolute path without '/' at the end is recommended.
-#url: http://USERNAME.github.com
-url: http://tokkonopapa.bitbucket.org
+# NOTICE: url/path without '/' at the end.
+# `baseurl`: Being set as absolute path is recommended.
+url: http://USERNAME.github.com
 baseurl: 
 
 # configuration for permalink
@@ -35,7 +35,7 @@ truncate_len: 200
 # configuration for asides/recent_posts.html
 recent_posts: 5
 
-# configuration for header.html
+# configuration for navbar.html
 navbar_list:
 - name: Blog
   link: /
@@ -60,7 +60,7 @@ asides:
     recent_posts: true
     archive_tabs: true
     tweets: true
-    github: true
+    github: false
 
 # configration for bootstrap and color theme
 responsive_bp: 768
@@ -81,17 +81,15 @@ jquery_ver: 1.7.2
 # configuration for 3rd party script
 #-----------------------------------
 disqus:
-#    short_name: USERNAME
-    short_name: tokkonopapa
+    short_name: USERNAME
     comment_count: true
     developer_mode: true
 
 #feedburner:
 #    id: YOUR_SITE_ID
 
-google_analytics:
+#google_analytics:
 #    account: UA-XXXXX-X
-    account: UA-20543951-2
 
 google_plus_one:
     size: medium
@@ -109,9 +107,8 @@ twitter:
     show_screen_name: true
     show_follower_count: false
 
-github:
+#github:
 #    username: USERNAME
-    username: tokkonoPapa
-    count: 5
+#    count: 5
 
-hatena: true
+#hatena: true
