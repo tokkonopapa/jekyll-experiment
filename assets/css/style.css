@@ -4,7 +4,7 @@
    Author: tokkonopapa@yahoo.com
    ========================================================================== */
 {% include css/style.css %}
-{% case site.pygments_color %}
+{% case site.pygments_style %}
 	{% when 'autumn'   %}{% include css/pygments/autumn.css   %}
 	{% when 'borland'  %}{% include css/pygments/borland.css  %}
 	{% when 'bw'       %}{% include css/pygments/bw.css       %}

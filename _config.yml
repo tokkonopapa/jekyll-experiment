@@ -1,4 +1,4 @@
-# general jekyll configuration
+# Configuration for jekyll
 # NOTICE: GitHub forces to set `safe: true` in order to prohibit using plugins.
 safe: false
 source: .
@@ -9,33 +9,37 @@ pygments: true
 markdown: rdiscount
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
-# configuration for url/path
-# NOTICE: url/path without '/' at the end.
-# `baseurl`: Being set as absolute path is recommended.
+# Configuration for url/path
+# NOTICE:
+# * `baseurl`: Being set as absolute path is recommended.
+# * No need '/' at the end of url/path.
+# * Project page:
+#   url: http://USERNAME.github.com/REPOSITORY
+#   baseurl: /REPOSITORY
 url: http://USERNAME.github.com
 baseurl: 
 
-# configuration for permalink
+# Configuration for permalink
 # `permalink`: none, pretty or /blog/:categories/:title.html
 permalink: /blog/:year/:month/:title/
 
-# configuration for site
+# Configuration for site
 title: The Code Folio
 description: A personal log of life coding.
 author: USERNAME
 email: USERNAME@example.com
 
-# configuration for blog
+# Configuration for blog
 lang: ja
 paginate: 4
 columns: 3
 date_format: "%B %d, %Y"
 truncate_len: 200
 
-# configuration for asides/recent_posts.html
+# Configuration for asides/recent_posts.html
 recent_posts: 5
 
-# configuration for navbar.html
+# Configuration for navbar.html
 navbar_list:
 - name: Blog
   link: /
@@ -51,7 +55,7 @@ navbar_list:
 - name: About
   link: /about.html
 
-# configration for bootstrap and color theme
+# Configuration for bootstrap and color theme
 # `bootstrap`:
 # custom, original, amelia, cerulean, cyborg, journal,
 # readable, simplex, slate, spacelab, spruce, superhero, united
@@ -59,11 +63,11 @@ bootstrap: custom
 bootstrap_ver: 2.1.1
 bootswatch_ver: 2.1.0
 
-# configration for responsive break point when using 'custom'.
+# Configuration for responsive break point when using 'custom'.
 responsive_bp: 768
 
-# configuration for asides.html
-# CAUTION: `themes` should be false to put the 'script.html` at the bottom.
+# Configuration for asides.html
+# CAUTION: `themes` should be false to put the script.html at the bottom.
 asides:
     about: true
     search: true
@@ -73,17 +77,17 @@ asides:
     tweets: true
     github: false
 
-# configuration for pygments
-# `pygments_color`:
+# Configuration for pygments
+# `pygments_style`:
 # autumn, borland, bw, colorful, default, emacs, friendly, fruity,
 # github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
-pygments_color: github
+pygments_style: github
 
-# configuration for jQuery
+# Configuration for jQuery
 jquery_ver: 1.7.2
 
 #-----------------------------------
-# configuration for 3rd party script
+# Configuration for 3rd party script
 #-----------------------------------
 disqus:
     short_name: USERNAME
