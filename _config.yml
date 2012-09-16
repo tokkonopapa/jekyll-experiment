@@ -51,6 +51,17 @@ navbar_list:
 - name: About
   link: /about.html
 
+# configration for bootstrap and color theme
+# `bootstrap`:
+# custom, original, amelia, cerulean, cyborg, journal,
+# readable, simplex, slate, spacelab, spruce, superhero, united
+bootstrap: custom
+bootstrap_ver: 2.1.1
+bootswatch_ver: 2.1.0
+
+# configration for responsive break point when using 'custom'.
+responsive_bp: 768
+
 # configuration for asides.html
 # CAUTION: `themes` should be false to put the 'script.html` at the bottom.
 asides:
@@ -61,12 +72,6 @@ asides:
     archive_tabs: true
     tweets: true
     github: false
-
-# configration for bootstrap and color theme
-responsive_bp: 768
-bootstrap_custom: bootstrap-2.1.1 # in /assets
-bootstrap_cdn_ver: 2.1.1
-bootswatch_cdn_ver: 2.1.0
 
 # configuration for pygments
 # `pygments_color`:

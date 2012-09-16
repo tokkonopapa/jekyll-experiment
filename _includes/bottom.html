@@ -1,4 +1,8 @@
-<script src="{{ site.baseurl }}/assets/{{ site.bootstrap_custom }}/js/bootstrap.custom.js"></script>
+{% if site.bootstrap == 'custom' %}
+<script src="{{ site.baseurl }}/assets/bootstrap-{{ site.bootstrap_ver }}/js/bootstrap.custom.js"></script>
+{% else %}
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/{{ site.bootstrap_ver }}/js/bootstrap.min.js"></script>
+{% endif %}
 <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 {% if site.facebook.xfbml %}<div id="fb-root"></div>{% endif %}
 <script>
