@@ -1,4 +1,4 @@
-# This is a jekyll plugin sample just for explaining how to parse & render.
+# This is a sample of jekyll plugin just for explaining how to parse & render.
 # You should use http://brandontilley.com/2011/01/30/gist-tag-for-jekyll.html
 # instead of this sample plugin.
 #
