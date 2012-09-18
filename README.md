@@ -7,7 +7,8 @@ Fork this repository.
 From **Admin** > **Options** > **Settings**, rename the repository to 
 `USERNAME.github.com` for your [GitHub pages](http://pages.github.com/).
 
-After ten minutes, you can find a sample page at `http://USERNAME.github.com`.
+After ten minutes, you can find a sample page at `http://USERNAME.github.com`
+(like [this](http://tokkono.github.com/)).
 
 ### Step.3
 Login to [Prose.io](http://prose.io/). 
@@ -30,9 +31,7 @@ Publish your article. Save and Commit. Then you can see your article at
 ## References
 * [Blogging with Jekyll Tutorial | Jekyll-Bootstrap](http://jekyllbootstrap.com/)  
 	You can find an awesome tutorial about blogging with jekyll.
-
 * [Home - mojombo/jekyll Wiki](https://github.com/mojombo/jekyll/wiki)
-
 * [Home - Shopify/liquid Wiki](https://github.com/Shopify/liquid/wiki)
 
 ## Want to customize ?
