@@ -36,6 +36,8 @@
 				.replace(/(^|\W)#(\w+)/g, '$1<a href="http://search.twitter.com/search?q=%23$2">#$2</a>');
 		};
 
+		// This pretty word is from Sky Slavin.
+		// (https://github.com/nakedslavin/prettyDate)
 		var say = {
 			just_now: "now",
 			minute_ago: "1m",
@@ -48,12 +50,21 @@
 			weeks_ago: "w"
 		};
 
+		/*
+		 * JavaScript Pretty Date
+		 * Original is copyrighted (c) 2011 by John Resig (ejohn.org)
+		 * (http://ejohn.org/blog/javascript-pretty-date/)
+		 * Timezone correction by Zach Leatherman (zachleat.com)
+		 * (https://github.com/zachleat/Humane-Dates)
+		 */
 		var prettyDate = function(now, time) {
 			if (typeof now.getTime !== "function") {
 				return "&infin;";
 			}
 
-			var diff = (now.getTime() - (new Date(time || "")).getTime()) / 1000,
+			var date = new Date(time || ""),
+				diff = (now.getTime() - date.getTime()
+					 + (now.getTimezoneOffset() - date.getTimezoneOffset()) * 60000) / 1000,
 				day_diff = Math.round(diff / 86400);
 
 			if (isNaN(day_diff) || day_diff < 0 || day_diff >= 31) {
