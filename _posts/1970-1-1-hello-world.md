@@ -2,7 +2,7 @@
 layout: post
 title: Hello World!
 excerpt:
-categories: [Ruby, jekyll & hide]
+category: [Ruby, jekyll & hide]
 tags: [web's, js/css]
 comments: true
 ---
