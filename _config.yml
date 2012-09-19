@@ -84,7 +84,7 @@ asides:
 pygments_style: github
 
 # Configuration for jQuery
-jquery_ver: 1.8.1
+jquery_ver: 1.7.2
 
 #-----------------------------------
 # Configuration for 3rd party script
