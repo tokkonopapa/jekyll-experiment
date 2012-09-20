@@ -2,8 +2,8 @@
 layout: post
 title: Hello World!
 excerpt:
-category: [Ruby, jekyll & hide]
-tags: [web's, js/css]
+category: [Ruby, jekyll/hide]
+tags: [web's, js & css]
 comments: true
 ---
 
