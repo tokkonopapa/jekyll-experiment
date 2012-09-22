@@ -19,6 +19,7 @@ CONFIG = {
     'deploy_dir' => "_heroku",
     'deploy_remote' => "heroku",
     'deploy_branch' => "master",
+    'buildpack' => "https://github.com/pearkes/heroku-buildpack-static",
   }
 }
 
@@ -92,6 +93,9 @@ task :page do
   end
 end
 
+#-------------------------------
+# Build & Deploy for GitHub type
+#-------------------------------
 desc "Clean up generated site"
 task :clean do
   cleanup
@@ -102,14 +106,15 @@ task :build => :clean do
   build_site(CONFIG['type_github'])
 end
 
-desc "Deploy to the GitHub or Bitbucket"
+desc "Deploy to GitHub or Bitbucket"
 multitask :deploy => :build do
   deploy_site(CONFIG['type_github'])
 end
 
 desc "Set up _deploy folder and git remote server"
 task :setup_remote, :repo do |t, args|
-  if File.exist?("#{CONFIG['deploy_dir']}/.git")
+  config = CONFIG['type_github']
+  if File.exist?("#{config['deploy_dir']}/.git")
     abort("rake aborted!") unless ask("remote server already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
   if args.repo
@@ -118,20 +123,64 @@ task :setup_remote, :repo do |t, args|
     repo_url = get_stdin("Enter the read/write url for your repository: ")
   end
 
-  abort("rake aborted!") unless ask("Create #{CONFIG['deploy_branch']} on " + repo_url + ".\nContinu?", ['y', 'n']) == 'y'
+  abort("rake aborted!") unless ask("Create #{config['deploy_branch']} on " + repo_url + ".\nContinu?", ['y', 'n']) == 'y'
 
-  rm_rf "#{CONFIG['deploy_dir']}"
-  mkdir "#{CONFIG['deploy_dir']}"
-  cd "#{CONFIG['deploy_dir']}" do
+  rm_rf "#{config['deploy_dir']}"
+  mkdir "#{config['deploy_dir']}"
+  cd "#{config['deploy_dir']}" do
     system "git init"
     system "echo 'My page is coming soon &hellip;' > index.html"
     system "touch .nojekyll"
     system "git add ."
     system "git commit -m \"setup remote\""
-    system "git branch -m #{CONFIG['deploy_branch']}" unless "#{CONFIG['deploy_branch']}" == 'master'
-    system "git remote add #{CONFIG['deploy_remote']} #{repo_url}"
+    system "git branch -m #{config['deploy_branch']}" unless "#{config['deploy_branch']}" == 'master'
+    system "git remote add #{config['deploy_remote']} #{repo_url}"
   end
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
+end
+
+#-------------------------------
+# Build & Deploy for Heroku type
+#-------------------------------
+desc "Build site for Heroku"
+task :build_heroku => :clean do
+  build_site(CONFIG['type_heroku'])
+end
+
+desc "Deploy app to Heroku"
+multitask :heroku => :build_heroku do
+  deploy_site(CONFIG['type_heroku'])
+end
+
+desc "Set up _heroku folder and create app with buildpack"
+task :setup_heroku, :app do |t, args|
+  config = CONFIG['type_heroku']
+  if File.exist?("#{config['deploy_dir']}/.git")
+    abort("rake aborted!") unless ask("remote server already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
+  end
+  if args.app
+    app_name = args.app
+  else
+    app_name = get_stdin("Enter the app name: ")
+  end
+
+  abort("rake aborted!") unless ask("Create #{config['deploy_branch']} for " + app_name + ".\nContinu?", ['y', 'n']) == 'y'
+
+  rm_rf "#{config['deploy_dir']}"
+  mkdir "#{config['deploy_dir']}"
+  cd "#{config['deploy_dir']}" do
+    system "git init"
+    system "heroku create #{app_name} --stack cedar --buildpack #{config['buildpack']}"
+  end
+  puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
+end
+
+#-------------------------------
+# Build & Deploy common function
+#-------------------------------
+def cleanup
+  puts "## cleanup _site ..."
+  sh 'rm -rf _site'
 end
 
 def build_site(args)
@@ -157,11 +206,6 @@ def deploy_site(args)
     system "git push #{args['deploy_remote']} #{args['deploy_branch']} --force"
     puts "\n## Deploy complete"
   end
-end
-
-def cleanup
-  puts "## cleanup _site ..."
-  sh 'rm -rf _site'
 end
 
 def jekyll(opts = '')
