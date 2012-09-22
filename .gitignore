@@ -1,5 +1,6 @@
 _site/
 _deploy/
+_heroku/
 .bundle/
 vendor/
 Gemfile.lock

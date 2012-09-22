@@ -6,34 +6,27 @@ CONFIG = {
 # Setup for GitHub Pages.
 # If you deploy to a 'gh-pages' branch on GitHub,
 # use automatic Project Page generator at first.
-  'deploy_dir' => "_deploy",
-  'deploy_remote' => "origin",
-  'deploy_branch' => "master",
-# 'deploy_branch' => "gh-pages",
+  'type_github' => {
+    'deploy_dir' => "_deploy",
+    'deploy_remote' => "origin",
+    'deploy_branch' => "master",
+#   'deploy_branch' => "gh-pages",
+  },
+
+# Setup for Heroku.
+# Buildpack: https://github.com/pearkes/heroku-buildpack-static
+  'type_heroku' => {
+    'deploy_dir' => "_heroku",
+    'deploy_remote' => "heroku",
+    'deploy_branch' => "master",
+  }
 }
 
 task :default => :preview
 
-desc 'preview on http://localhost:4000/'
+desc "preview on http://localhost:4000/"
 task :preview do
   jekyll('--pygments --auto --server')
-end
-
-desc 'Clean up generated site'
-task :clean do
-  cleanup
-end
-
-desc 'Build site with Jekyll'
-task :build => :clean do
-  puts "## building _site ..."
-  jekyll('--pygments')
-  if !Dir.exist?("#{CONFIG['deploy_dir']}")
-    abort("remote server is not setup ... rake aborted!")
-  end
-  (Dir["#{CONFIG['deploy_dir']}/*"]).each { |f| rm_rf(f) }
-  system "cp -Rp _site/* #{CONFIG['deploy_dir']}"
-  puts "## copying _site to #{CONFIG['deploy_dir']}"
 end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
@@ -99,19 +92,19 @@ task :page do
   end
 end
 
-desc "deploy to the git server"
+desc "Clean up generated site"
+task :clean do
+  cleanup
+end
+
+desc "Build site with Jekyll"
+task :build => :clean do
+  build_site(CONFIG['type_github'])
+end
+
+desc "Deploy to the GitHub or Bitbucket"
 multitask :deploy => :build do
-  puts "## Deploying ..."
-  cd "#{CONFIG['deploy_dir']}" do
-    system "git add ."
-    system "git add -u"
-    puts "\n## Committing: Site updated at #{Time.now.utc}"
-    message = "Site updated at #{Time.now.utc}"
-    system "git commit -m '#{message}'"
-    puts "\n## Pushing generated #{CONFIG['deploy_dir']} to git server"
-    system "git push #{CONFIG['deploy_remote']} #{CONFIG['deploy_branch']} --force"
-    puts "\n## Deploy complete"
-  end
+  deploy_site(CONFIG['type_github'])
 end
 
 desc "Set up _deploy folder and git remote server"
@@ -141,7 +134,33 @@ task :setup_remote, :repo do |t, args|
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
 end
 
+def build_site(args)
+  puts "## building _site ..."
+  jekyll('--pygments')
+  if !Dir.exist?("#{args['deploy_dir']}")
+    abort("you should setup remote server ... rake aborted!")
+  end
+  (Dir["#{args['deploy_dir']}/*"]).each { |f| rm_rf(f) }
+  system "cp -Rp _site/* #{args['deploy_dir']}"
+  puts "## copying _site to #{args['deploy_dir']}"
+end
+
+def deploy_site(args)
+  puts "## Deploying ..."
+  cd "#{args['deploy_dir']}" do
+    system "git add ."
+    system "git add -u"
+    puts "\n## Committing: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m '#{message}'"
+    puts "\n## Pushing generated #{args['deploy_dir']} to git server"
+    system "git push #{args['deploy_remote']} #{args['deploy_branch']} --force"
+    puts "\n## Deploy complete"
+  end
+end
+
 def cleanup
+  puts "## cleanup _site ..."
   sh 'rm -rf _site'
 end
 
