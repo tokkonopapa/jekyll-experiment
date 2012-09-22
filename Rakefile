@@ -2,10 +2,14 @@ SOURCE = "."
 CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
+
+# Setup for GitHub Pages.
+# If you deploy to a 'gh-pages' branch on GitHub,
+# use automatic Project Page generator at first.
   'deploy_dir' => "_deploy",
   'deploy_remote' => "origin",
   'deploy_branch' => "master",
-#  'deploy_branch' => "gh-pages",
+# 'deploy_branch' => "gh-pages",
 }
 
 task :default => :preview
@@ -136,9 +140,6 @@ task :setup_remote, :repo do |t, args|
   end
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
 end
-
-# git@github.com:tokkono/tokkono.github.com.git
-# https://github.com/tokkono/tokkono.github.com.git
 
 def cleanup
   sh 'rm -rf _site'
