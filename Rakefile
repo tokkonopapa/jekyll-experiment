@@ -120,7 +120,7 @@ task :setup_remote, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
-    repo_url = get_stdin("Enter the read/write url for your repository: ")
+    repo_url = get_stdin("Enter your repository uri for read/write: ")
   end
 
   abort("rake aborted!") unless ask("Create #{config['deploy_branch']} on " + repo_url + ".\nContinu?", ['y', 'n']) == 'y'
@@ -161,7 +161,7 @@ task :setup_heroku, :app do |t, args|
   if args.app
     app_name = args.app
   else
-    app_name = get_stdin("Enter the app name: ")
+    app_name = get_stdin("Enter new app name (if blank, Heroku makes it fancy!): ")
   end
 
   abort("rake aborted!") unless ask("Create #{config['deploy_branch']} for " + app_name + ".\nContinu?", ['y', 'n']) == 'y'
