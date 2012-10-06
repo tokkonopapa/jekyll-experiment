@@ -115,6 +115,7 @@ twitter:
     exclude_replies: true
     show_screen_name: true
     show_follower_count: false
+#    widget_id: 243046062967885824
 
 #github:
 #    username: USERNAME
