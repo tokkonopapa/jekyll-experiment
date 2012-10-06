@@ -146,6 +146,9 @@ i {
 }
 
 /* asides/tweets.html */
+#tweets {
+	margin-bottom: 1em;
+}
 #tweets li a:last-child:hover {
 	text-decoration: none;
 }
