@@ -96,6 +96,14 @@ i {
 	width: 100%;
 }
 
+/* post.html */
+.post {
+}
+.post .meta {
+}
+.post .content {
+}
+
 /* asides: sidebar */
 #sidebar h3 {
 	font-size: 125%;

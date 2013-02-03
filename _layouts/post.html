@@ -11,9 +11,9 @@ group: Blog
 						<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
 					</p>
 				</header>
-				<section>
+				<div class="content">
 {{ content }}
-				</section>
+				</div>
 				<footer>
 {% include post/post_meta.html %}
 {% include post/socials_large.html %}
