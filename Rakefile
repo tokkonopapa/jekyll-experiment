@@ -27,7 +27,8 @@ task :default => :preview
 
 desc "preview on http://localhost:4000/"
 task :preview do
-  jekyll('--pygments --auto --server')
+#  jekyll('--pygments --auto --server')
+  jekyll('--auto --server')
 end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
@@ -185,7 +186,8 @@ end
 
 def build_site(args)
   puts "## building _site ..."
-  jekyll('--pygments')
+#  jekyll('--pygments')
+  jekyll()
   if !Dir.exist?("#{args['deploy_dir']}")
     abort("you should setup remote server ... rake aborted!")
   end
