@@ -1,3 +1,6 @@
+#----------------------------------------------------------------------
+# Configuration
+#----------------------------------------------------------------------
 SOURCE = "."
 CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
@@ -6,6 +9,7 @@ CONFIG = {
 # Setup for GitHub Pages.
 # If you deploy to a 'gh-pages' branch on GitHub,
 # use automatic Project Page generator at first.
+# See https://help.github.com/articles/creating-pages-with-the-automatic-generator
   'type_github' => {
     'deploy_dir' => "_deploy",
     'deploy_remote' => "origin",
@@ -25,13 +29,20 @@ CONFIG = {
 
 task :default => :preview
 
+#----------------------------------------------------------------------
+# Preview a blog.
+# @usage: rake preview
+#----------------------------------------------------------------------
 desc "preview on http://localhost:4000/"
 task :preview do
-#  jekyll('--pygments --auto --server')
+# jekyll('--pygments --auto --server')
   jekyll('--auto --server')
 end
 
-# Usage: rake post title="A Title" [date="2012-02-09"]
+#----------------------------------------------------------------------
+# Create a new post.
+# @usage: rake post title="A Title" [date="2012-02-09"]
+#----------------------------------------------------------------------
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post, :title do |t, args|
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
@@ -47,7 +58,7 @@ task :post, :title do |t, args|
   if File.exist?(filename)
     abort("rake aborted!") unless ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
-  
+
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -67,9 +78,13 @@ task :post, :title do |t, args|
   end
 end
 
-# Usage: rake page name="about.html"
+#----------------------------------------------------------------------
+# Create a new page.
+# @usage: rake page name="about.html"
 # You can also specify a sub-directory path.
-# If you don't specify a file extention we create an index.html at the path specified
+# If you don't specify a file extention we create an index.html
+# at the path specified
+#----------------------------------------------------------------------
 desc "Create a new page."
 task :page do
   name = ENV["name"] || "new-page.md"
@@ -79,7 +94,7 @@ task :page do
   if File.exist?(filename)
     abort("rake aborted!") unless ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'y'
   end
-  
+
   mkdir_p File.dirname(filename)
   puts "Creating new page: #{filename}"
   open(filename, 'w') do |post|
@@ -94,14 +109,19 @@ task :page do
   end
 end
 
-#-------------------------------
-# Build & Deploy for GitHub type
-#-------------------------------
+#----------------------------------------------------------------------
+# Clean a blog.
+# @usage: rake clean
+#----------------------------------------------------------------------
 desc "Clean up generated site"
 task :clean do
   cleanup
 end
 
+#----------------------------------------------------------------------
+# Build & Deploy for GitHub type
+# @usage: rake build / rake deploy
+#----------------------------------------------------------------------
 desc "Build site with Jekyll"
 task :build => :clean do
   build_site(CONFIG['type_github'])
@@ -112,6 +132,10 @@ multitask :deploy => :build do
   deploy_site(CONFIG['type_github'])
 end
 
+#----------------------------------------------------------------------
+# Setup git remote server.
+# @usage: rake setup_remote [repository-name]
+#----------------------------------------------------------------------
 desc "Set up _deploy folder and git remote server"
 task :setup_remote, :repo do |t, args|
   config = CONFIG['type_github']
@@ -140,9 +164,10 @@ task :setup_remote, :repo do |t, args|
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
 end
 
-#-------------------------------
+#----------------------------------------------------------------------
 # Build & Deploy for Heroku type
-#-------------------------------
+# @usage: rake build_heroku / rake heroku
+#----------------------------------------------------------------------
 desc "Build site for Heroku"
 task :build_heroku => :clean do
   build_site(CONFIG['type_heroku'])
@@ -153,6 +178,10 @@ multitask :heroku => :build_heroku do
   deploy_site(CONFIG['type_heroku'])
 end
 
+#----------------------------------------------------------------------
+# Setup heroku server.
+# @usage: rake heroku [app-name]
+#----------------------------------------------------------------------
 desc "Set up _heroku folder and create app with buildpack"
 task :setup_heroku, :app do |t, args|
   config = CONFIG['type_heroku']
@@ -176,9 +205,9 @@ task :setup_heroku, :app do |t, args|
   puts "\n---\n## Now you can deploy to remote server with `rake deploy` ##"
 end
 
-#-------------------------------
+#----------------------------------------------------------------------
 # Build & Deploy common function
-#-------------------------------
+#----------------------------------------------------------------------
 def cleanup
   puts "## cleanup _site ..."
   sh 'rm -rf _site'
@@ -186,7 +215,7 @@ end
 
 def build_site(args)
   puts "## building _site ..."
-#  jekyll('--pygments')
+# jekyll('--pygments')
   jekyll()
   if !Dir.exist?("#{args['deploy_dir']}")
     abort("you should setup remote server ... rake aborted!")
