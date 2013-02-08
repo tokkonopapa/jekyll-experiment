@@ -15,10 +15,10 @@ title: Blog
 						<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
 					</h4>
 				</hgroup></header>
-				<section>
+				<div class="content">
 					{% include libs/thumbnail %}
 					{% include libs/truncate_exec %}
-				</section>
+				</div>
 				<footer>
 					<p><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
 				</footer>
@@ -44,9 +44,9 @@ title: Blog
 							</h5>
 						</hgroup>
 					</header>
-					<section>
+					<div class="content">
 						{% include libs/truncate_exec %}
-					</section>
+					</div>
 					<footer>
 						<p><a href="{{ site.baseurl }}{{ post.url }}" class="btn">Read this &raquo;</a></p>
 					</footer>
