@@ -48,5 +48,15 @@
 	{% endif %}
 							</li>
 {% endif %}
+{% if site.pocket %}
+							<!-- Pocket -->
+							<li class="social" style="height: 60px">
+								<a href="https://getpocket.com/save" class="pocket-btn" data-lang="ja"
+									data-save-url="{{ site.url }}{{ page.url }}"
+									data-pocket-count="vertical" 
+									data-pocket-align="left"
+								>Pocket</a>
+							</li>
+{% endif %}
 						</ul>
 					</section>

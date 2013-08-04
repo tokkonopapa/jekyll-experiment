@@ -33,6 +33,9 @@
 {% endif %}{% if site.hatena %}
 	// Hatena
 	add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
+{% endif %}{% if site.pocket %}
+	// Pocket
+	add('https://widgets.getpocket.com/v1/j/btn.js?v=1');
 {% endif %}
 }(window, document, 'script'));
 </script>
