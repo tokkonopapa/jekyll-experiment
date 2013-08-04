@@ -88,12 +88,13 @@ i {
 	position: absolute !important;
 	top: 0;
 	left: 0;
+	z-index: 1;
 }
 .navbar .nav > li.dropdown-container .caret {
 	margin-left: 1.5em;
 }
-.navbar .in .nav > li.dropdown-container .dropdown-link {
-	width: 100%;
+.navbar .nav > li.dropdown-container .dropdown-link + .dropdown-toggle {
+	z-index: 0;
 }
 
 /* post.html */

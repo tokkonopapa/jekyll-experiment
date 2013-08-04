@@ -1,3 +1,11 @@
 ---
 ---
 {% include bootstrap-2.3.2/css/bootstrap-responsive.css %}
+/*
+@media (min-width: {{ site.responsive_bp }}px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+*/
