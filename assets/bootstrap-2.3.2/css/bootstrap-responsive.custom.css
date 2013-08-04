@@ -1,6 +1,6 @@
 ---
 ---
-{% include bootstrap-2.3.2/css/bootstrap-responsive.css %}
+{% include bootstrap-2.3.2/css/bootstrap-responsive.min.css %}
 /*
 @media (min-width: {{ site.responsive_bp }}px) {
   .nav-collapse.collapse {
