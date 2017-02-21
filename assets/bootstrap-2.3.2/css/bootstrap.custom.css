@@ -54,7 +54,7 @@ html {
 }
 
 #header {
-	padding-bottom: 70px;
+	height: 70px;
 }
 
 a:focus {
