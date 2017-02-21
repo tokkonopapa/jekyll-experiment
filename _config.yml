@@ -5,8 +5,7 @@ source: .
 destination: ./_site
 plugins: ./_plugins
 lsi: true
-pygments: true
-markdown: rdiscount
+# pygments: true
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 
 # Configuration for url/path
@@ -16,7 +15,7 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vender']
 # * Project page:
 #   url: http://USERNAME.github.com/REPOSITORY
 #   baseurl: /REPOSITORY
-url: http://USERNAME.github.com
+url: http://dariuspruss.github.com
 baseurl: 
 
 # Configuration for permalink
@@ -30,7 +29,7 @@ author: USERNAME
 email: USERNAME@example.com
 
 # Configuration for blog
-lang: ja
+lang: en
 paginate: 4
 columns: 3
 date_format: "%B %d, %Y"
@@ -43,13 +42,6 @@ recent_posts: 5
 navbar_list:
 - name: Blog
   link: /
-  dropdown: &dropdown
-  - name: Archives
-    link: /blog/archives.html
-  - name: Categories
-    link: /blog/categories.html
-  - name: Tags
-    link: /blog/tags.html
 - name: Project
   link: /project/
 - name: About
@@ -81,7 +73,7 @@ asides:
 # `pygments_style`:
 # autumn, borland, bw, colorful, default, emacs, friendly, fruity,
 # github, manni, monokai, murphy, native, pastie, perldoc, tango, trac, vs
-pygments_style: github
+# pygments_style: github
 
 # Configuration for jQuery
 jquery_ver: 1.10.2
