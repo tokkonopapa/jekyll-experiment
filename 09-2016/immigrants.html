@@ -1,0 +1,104 @@
+<html>
+  <head>
+ <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700|Noto+Serif:400,400i,700' rel='stylesheet'/>
+		
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+google.load('visualization', '1', {
+				'packages': ['corechart']
+				});
+				google.setOnLoadCallback(drawChart);
+
+				function drawChart() {
+				// The URL of the spreadsheet to source data from.
+
+var bardata = google.visualization.arrayToDataTable([
+['Year', 'Number of Unauthorized Immigrants'],
+[1995, 2.9],
+[2000, 4.5],
+[2005, 6.3],
+[2007, 6.9],
+[2009, 6.4],
+[2011, 6.2],
+[2014, 5.6],
+      ]);
+	  
+	  
+				var baroptions = {
+				'title': 'Unauthorized Mexican Immigrants in the US',
+				colors: ['#F4511E'],
+				backgroundColor: '#FAFAFA',
+						bar: {
+						groupWidth: "69%",
+				
+						},
+hAxis: {
+				format: '#',
+				gridlines: {
+				color: '#fafafa',
+				count: 7
+				},
+				baselineColor: '#212121',
+				textStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 16
+				},
+				titleTextStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 16
+				}
+				},
+vAxis: {
+				title: 'Immigrants, in millions',
+				gridlines: {
+				count: 5
+				},
+				baselineColor: '#212121',
+				textStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 14
+				},
+				titleTextStyle: {
+				color: '#212121'
+				}
+				},
+titleTextStyle: {
+				color: '#212121',
+				fontName: 'Noto Serif',
+				fontSize: 24
+				},
+				tooltip: {
+				trigger: 'selection',
+				textStyle: {
+				color: '#212121'
+				},
+				},
+				dataOpacity: 1,
+          legend: { position: 'none' },
+				};
+
+  // Create and draw the visualization.
+    var chart = new google.visualization.LineChart(document.getElementById('visualization'));
+    google.visualization.events.addListener(chart, 'ready', allReady); // ADD LISTENER
+    chart.draw(bardata, baroptions);
+}
+
+function allReady() {
+    var e = document.getElementById('visualization');
+    // svg elements don't have inner/outerHTML properties, so use the parents
+    alert(e.getElementsByTagName('svg')[0].outerHTML);
+}
+
+google.setOnLoadCallback(drawChart);
+
+    </script>
+  </head>
+
+  <body>
+<div id="visualization" style="height: 400px; width: 900px"></div>
+
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+  <head>
+ <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700|Noto+Serif:400,400i,700' rel='stylesheet'/>
+ <style>
+       #bar_div text {
+        font-family: 'Noto Sans' !important;
+</style>
+		
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+google.load('visualization', '1', {
+				'packages': ['corechart']
+				});
+				google.setOnLoadCallback(drawChart);
+
+				function drawChart() {
+				// The URL of the spreadsheet to source data from.
+
+var bardata = google.visualization.arrayToDataTable([
+['Congress', 'Enacted Laws', { role: 'style' }],
+['Jan 1979 - Dec 1980', 736,'#212121'],
+['Jan 1981 - Dec 1982', 529,'#212121'],
+['Jan 1983 - Oct 1984', 677, '#212121'],
+['Jan 1985 - Oct 1986', 687, '#212121'],
+['Jan 1987 - Oct 1988', 761, '#212121'],
+['Jan 1989 - Oct 1990', 665, '#212121'],
+['Jan 1991 - Oct 1992', 610, '#212121'],
+['Jan 1993 - Dec 1994', 473, '#212121'],
+['Jan 1995 - Oct 1996', 337, '#212121'],
+['Jan 1997 - Dec 1998', 404, '#212121'],
+['Jan 1999 - Dec 2000', 604, '#212121'],
+['Jan 2001 - Nov 2002', 383, '#212121'],
+['Jan 2003 - Dec 2004', 504, '#212121'],
+['Jan 2005 - Dec 2006', 483, '#212121'],
+['Jan 2007 - Jan 2009', 483, '#212121'],
+['Jan 2009 - Dec 2010', 385, '#212121'],
+['Jan 2011 - Jan 2013', 284, '#00897B'],
+['Jan 2013 - Jan 2015', 296, '#00897B'],
+['Jan 2015 - present', 219, '#00897B'],
+      ]);
+
+
+				var baroptions = {
+				'title': 'Congressional Productivity',
+				backgroundColor: '#FAFAFA',
+						bar: {
+						groupWidth: "69%",
+				
+						},
+hAxis: {
+				title: 'Enacted Laws',
+    viewWindow: {
+        min: 0,
+        max: 800
+    },
+				gridlines: {
+				color: '#212121',
+				count: 5
+				},
+				baselineColor: '#212121',
+				textStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 16
+				},
+				titleTextStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 16
+				}
+				},
+				vAxis: {
+				gridlines: {
+				count: 0
+				},
+				baselineColor: '#212121',
+				textStyle: {
+				color: '#212121',
+				fontName: 'Noto Sans',
+				fontSize: 14
+				},
+				titleTextStyle: {
+				color: '#212121'
+				}
+				},
+titleTextStyle: {
+				color: '#212121',
+				fontName: 'Noto Serif',
+				fontSize: 24
+				},
+				tooltip: {
+				trigger: 'selection',
+				textStyle: {
+				color: '#212121'
+				},
+				},
+				dataOpacity: 1,
+          legend: { position: 'none' },
+				};
+
+  // Create and draw the visualization.
+    var chart = new google.visualization.BarChart(document.getElementById('visualization'));
+    google.visualization.events.addListener(chart, 'ready', allReady); // ADD LISTENER
+    chart.draw(bardata, baroptions);
+}
+
+function allReady() {
+    var e = document.getElementById('visualization');
+    // svg elements don't have inner/outerHTML properties, so use the parents
+    alert(e.getElementsByTagName('svg')[0].outerHTML);
+}
+
+google.setOnLoadCallback(drawChart);
+
+    </script>
+  </head>
+
+  <body>
+<div id="visualization" style="height: 400px; width: 900px"></div>
+
+  </body>
+</html>
