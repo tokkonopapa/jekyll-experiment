@@ -3112,14 +3112,14 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	min-height: 55px;
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: #013435;
+	background-color: #66BB84;
 	background-image: -moz-linear-gradient(top, #013435, #013435);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#013435), to(#013435));
 	background-image: -webkit-linear-gradient(top, #013435, #013435);
 	background-image: -o-linear-gradient(top, #013435, #013435);
 	background-image: linear-gradient(to bottom, #013435, #013435);
 	background-repeat: repeat-x;
-	border: 1px solid #011b1c;
+	border: 1px solid #66BB84;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
