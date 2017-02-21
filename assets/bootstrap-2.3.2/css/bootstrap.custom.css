@@ -4533,7 +4533,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-weight: normal!important
 }
 .page-header {
-	padding-bottom: 5px;
+	padding-bottom: 60px;
 	border-bottom: 0
 }
 .page-header h1 {
