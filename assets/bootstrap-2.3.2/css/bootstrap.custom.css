@@ -68,7 +68,7 @@ html {
 }
 
 a:focus {
-	outline: thin dotted #333;
+	outline: thin dotted #212121;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px
 }
@@ -688,10 +688,10 @@ a.text-success:hover, a.text-success:focus {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 10.5px 0;
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-weight: normal;
 	line-height: 21px;
-	color: #333;
+	color: #212121;
 	text-rendering: optimizelegibility
 }
 
@@ -901,7 +901,7 @@ code, pre {
 	padding: 0 3px 2px;
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	font-size: 13px;
-	color: #333;
+	color: #212121;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px
@@ -968,7 +968,7 @@ legend {
 	margin-bottom: 21px;
 	font-size: 22.5px;
 	line-height: 42px;
-	color: #333;
+	color: #212121;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5
 }
@@ -1064,7 +1064,7 @@ select[multiple], select[size] {
 }
 
 select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
-	outline: thin dotted #333;
+	outline: thin dotted #212121;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px
 }
@@ -2774,7 +2774,7 @@ button.close {
 	*margin-left: .3em;
 	font-size: 15px;
 	line-height: 21px;
-	color: #333;
+	color: #212121;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	vertical-align: middle;
@@ -2804,7 +2804,7 @@ button.close {
 }
 
 .btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-	color: #333;
+	color: #212121;
 	background-color: #e6e6e6;
 	*background-color: #d9d9d9
 }
@@ -2818,7 +2818,7 @@ button.close {
 }
 
 .btn:hover, .btn:focus {
-	color: #333;
+	color: #212121;
 	text-decoration: none;
 	background-position: 0 -15px;
 	-webkit-transition: background-position .1s linear;
@@ -2828,7 +2828,7 @@ button.close {
 }
 
 .btn:focus {
-	outline: thin dotted #333;
+	outline: thin dotted #212121;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px
 }
@@ -3120,7 +3120,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .btn-link[disabled]:hover, .btn-link[disabled]:focus {
-	color: #333;
+	color: #212121;
 	text-decoration: none
 }
 
@@ -4200,16 +4200,16 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav>li>a {
-	color: #333;
+	color: #212121;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
 }
 
 .navbar-inverse .brand:hover, .navbar-inverse .nav>li>a:hover, .navbar-inverse .brand:focus, .navbar-inverse .nav>li>a:focus {
-	color: #333
+	color: #212121
 }
 
 .navbar-inverse .brand {
-	color: #333
+	color: #212121
 }
 
 .navbar-inverse .navbar-text {
@@ -4217,21 +4217,21 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .nav>li>a:focus, .navbar-inverse .nav>li>a:hover {
-	color: #333;
+	color: #212121;
 	background-color: #cbcbcb
 }
 
 .navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:hover, .navbar-inverse .nav .active>a:focus {
-	color: #333;
+	color: #212121;
 	background-color: #cbcbcb
 }
 
 .navbar-inverse .navbar-link {
-	color: #333
+	color: #212121
 }
 
 .navbar-inverse .navbar-link:hover, .navbar-inverse .navbar-link:focus {
-	color: #333
+	color: #212121
 }
 
 .navbar-inverse .divider-vertical {
@@ -4240,23 +4240,23 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .nav li.dropdown.open>.dropdown-toggle, .navbar-inverse .nav li.dropdown.active>.dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active>.dropdown-toggle {
-	color: #333;
+	color: #212121;
 	background-color: #cbcbcb
 }
 
 .navbar-inverse .nav li.dropdown>a:hover .caret, .navbar-inverse .nav li.dropdown>a:focus .caret {
-	border-top-color: #333;
-	border-bottom-color: #333
+	border-top-color: #212121;
+	border-bottom-color: #212121
 }
 
 .navbar-inverse .nav li.dropdown>.dropdown-toggle .caret {
-	border-top-color: #333;
-	border-bottom-color: #333
+	border-top-color: #212121;
+	border-bottom-color: #212121
 }
 
 .navbar-inverse .nav li.dropdown.open>.dropdown-toggle .caret, .navbar-inverse .nav li.dropdown.active>.dropdown-toggle .caret, .navbar-inverse .nav li.dropdown.open.active>.dropdown-toggle .caret {
-	border-top-color: #333;
-	border-bottom-color: #333
+	border-top-color: #212121;
+	border-bottom-color: #212121
 }
 
 .navbar-inverse .navbar-search .search-query {
@@ -4286,7 +4286,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .navbar-search .search-query:focus, .navbar-inverse .navbar-search .search-query.focused {
 	padding: 5px 15px;
-	color: #333;
+	color: #212121;
 	text-shadow: 0 1px 0 #fff;
 	background-color: #fff;
 	border: 0;
@@ -5039,7 +5039,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 .label-inverse, .badge-inverse {
-	background-color: #333
+	background-color: #212121
 }
 
 .label-inverse[href], .badge-inverse[href] {
@@ -5409,7 +5409,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	bottom: 0;
 	left: 0;
 	padding: 15px;
-	background: #333;
+	background: #212121;
 	background: rgba(0, 0, 0, 0.75)
 }
 
@@ -5444,7 +5444,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 	font-size: 60px;
 	line-height: 1;
 	letter-spacing: -1px;
-	color: #333
+	color: #212121
 }
 
 .hero-unit li {
@@ -5477,7 +5477,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	color: #333
+	color: #212121
 }
 
 .muted {
@@ -5502,11 +5502,11 @@ hr {
 }
 
 blockquote {
-	border-left: 2px solid #333
+	border-left: 2px solid #212121
 }
 
 blockquote.pull-right {
-	border-right: 2px solid #333
+	border-right: 2px solid #212121
 }
 
 blockquote small {
@@ -5522,7 +5522,7 @@ blockquote small {
 
 .navbar .brand {
 	padding: 18px 20px 16px;
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-size: 26px;
 	font-weight: normal
 }
@@ -5533,7 +5533,7 @@ blockquote small {
 
 .navbar .nav>li>a {
 	padding: 20px 20px 14px;
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-size: 20px;
 	font-weight: normal;
 	text-shadow: none
@@ -5547,7 +5547,7 @@ blockquote small {
 
 .navbar .navbar-text {
 	margin: 19px 20px 0;
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-size: 20px;
 	font-weight: normal;
 	line-height: inherit
@@ -5578,7 +5578,7 @@ blockquote small {
 }
 
 .navbar .dropdown-menu li>a {
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-weight: normal
 }
 
@@ -5595,7 +5595,7 @@ blockquote small {
 }
 
 .navbar-inverse .dropdown-menu li>a {
-	color: #333
+	color: #212121
 }
 
 .navbar-inverse .dropdown-menu li>a:hover {
@@ -5635,7 +5635,7 @@ div.subnav {
 
 div.subnav .nav>li>a {
 	padding: 12px 12px 10px;
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-weight: normal;
 	color: #fff;
 	background-color: transparent;
@@ -5656,7 +5656,7 @@ div.subnav.subnav-fixed {
 }
 
 .nav .nav-header {
-	color: #333
+	color: #212121
 }
 
 .nav .disabled>a, .nav .disabled>a:hover {
@@ -5816,7 +5816,7 @@ div.subnav.subnav-fixed {
 }
 
 .btn {
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-weight: normal;
 	text-shadow: none
 }
@@ -5849,14 +5849,14 @@ div.subnav.subnav-fixed {
 }
 
 legend {
-	font-family: 'Crete Round', serif;
+	font-family: 'Rufina', serif;
 	font-weight: normal;
-	color: #333;
+	color: #212121;
 	border-bottom: 0
 }
 
 label, .help-block, input[type="file"] {
-	color: #333
+	color: #212121
 }
 
 input, textarea, select {
