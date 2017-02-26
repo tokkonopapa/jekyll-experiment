@@ -200,12 +200,12 @@ body {
 }
 
 a {
-	color: #028d79;
+	color: #5FAD7A;
 	text-decoration: none
 }
 
 a:hover, a:focus {
-	color: #028d79;
+	color: #5FAD7A;
 	text-decoration: underline
 }
 
@@ -3105,7 +3105,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .btn-link {
-	color: #028d79;
+	color: #5FAD7A;
 	cursor: pointer;
 	border-color: transparent;
 	-webkit-border-radius: 0;
@@ -3114,7 +3114,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .btn-link:hover, .btn-link:focus {
-	color: #028d79;
+	color: #5FAD7A;
 	text-decoration: underline;
 	background-color: transparent
 }
@@ -3488,7 +3488,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus {
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-	background-color: #028d79
+	background-color: #5FAD7A
 }
 
 .nav-list [class^="icon-"], .nav-list [class*=" icon-"] {
@@ -3572,7 +3572,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
 	color: #fff;
-	background-color: #028d79
+	background-color: #5FAD7A
 }
 
 .nav-stacked>li {
@@ -3639,13 +3639,13 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .nav .dropdown-toggle .caret {
 	margin-top: 6px;
-	border-top-color: #028d79;
-	border-bottom-color: #028d79
+	border-top-color: #5FAD7A;
+	border-bottom-color: #5FAD7A
 }
 
 .nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .caret {
-	border-top-color: #028d79;
-	border-bottom-color: #028d79
+	border-top-color: #5FAD7A;
+	border-bottom-color: #5FAD7A
 }
 
 .nav-tabs .dropdown-toggle .caret {
@@ -4915,7 +4915,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 a.thumbnail:hover, a.thumbnail:focus {
-	border-color: #028d79;
+	border-color: #5FAD7A;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 	-moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25)
@@ -5660,7 +5660,7 @@ div.subnav.subnav-fixed {
 
 .nav .disabled>a, .nav .disabled>a:hover {
 	color: #fff;
-	background-color: #028d79
+	background-color: #5FAD7A
 }
 
 .nav-tabs {
@@ -5796,7 +5796,7 @@ div.subnav.subnav-fixed {
 
 .pagination ul>.disabled>a, .pagination ul>.disabled>a:hover, .pagination ul>.disabled>span, .pagination ul>.disabled>span:hover {
 	color: #fff;
-	background-color: #028d79
+	background-color: #5FAD7A
 }
 
 .pager li>a, .pager li>span {
@@ -5811,7 +5811,7 @@ div.subnav.subnav-fixed {
 
 .pager .disabled a, .pager .disabled a:hover {
 	color: #fff;
-	background-color: #028d79
+	background-color: #5FAD7A
 }
 
 .btn {
