@@ -1697,9 +1697,9 @@ table {
 	border-collapse: separate;
 	*border-collapse: collapse;
 	border-left: 0;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .table-bordered th, .table-bordered td {
@@ -1711,27 +1711,27 @@ table {
 }
 
 .table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child {
-	-webkit-border-top-left-radius: 4px;
-	border-top-left-radius: 4px;
-	-moz-border-radius-topleft: 4px
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-moz-border-radius-topleft: 2px
 }
 
 .table-bordered thead:first-child tr:first-child>th:last-child, .table-bordered tbody:first-child tr:first-child>td:last-child, .table-bordered tbody:first-child tr:first-child>th:last-child {
-	-webkit-border-top-right-radius: 4px;
-	border-top-right-radius: 4px;
-	-moz-border-radius-topright: 4px
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+	-moz-border-radius-topright: 2px
 }
 
 .table-bordered thead:last-child tr:last-child>th:first-child, .table-bordered tbody:last-child tr:last-child>td:first-child, .table-bordered tbody:last-child tr:last-child>th:first-child, .table-bordered tfoot:last-child tr:last-child>td:first-child, .table-bordered tfoot:last-child tr:last-child>th:first-child {
-	-webkit-border-bottom-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	-moz-border-radius-bottomleft: 4px
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px
 }
 
 .table-bordered thead:last-child tr:last-child>th:last-child, .table-bordered tbody:last-child tr:last-child>td:last-child, .table-bordered tbody:last-child tr:last-child>th:last-child, .table-bordered tfoot:last-child tr:last-child>td:last-child, .table-bordered tfoot:last-child tr:last-child>th:last-child {
-	-webkit-border-bottom-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	-moz-border-radius-bottomright: 4px
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-radius-bottomright: 2px
 }
 
 .table-bordered tfoot+tbody:last-child tr:last-child td:first-child {
@@ -1747,15 +1747,15 @@ table {
 }
 
 .table-bordered caption+thead tr:first-child th:first-child, .table-bordered caption+tbody tr:first-child td:first-child, .table-bordered colgroup+thead tr:first-child th:first-child, .table-bordered colgroup+tbody tr:first-child td:first-child {
-	-webkit-border-top-left-radius: 4px;
-	border-top-left-radius: 4px;
-	-moz-border-radius-topleft: 4px
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-moz-border-radius-topleft: 2px
 }
 
 .table-bordered caption+thead tr:first-child th:last-child, .table-bordered caption+tbody tr:first-child td:last-child, .table-bordered colgroup+thead tr:first-child th:last-child, .table-bordered colgroup+tbody tr:first-child td:last-child {
-	-webkit-border-top-right-radius: 4px;
-	border-top-right-radius: 4px;
-	-moz-border-radius-topright: 4px
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+	-moz-border-radius-topright: 2px
 }
 
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
@@ -2495,14 +2495,14 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 	padding: 5px 0;
 	margin: 2px 0 0;
 	list-style: none;
-	background-color: #002425;
+	background-color: #FFCA28;
 	border: 1px solid #ccc;
 	border: 1px solid transparent;
 	*border-right-width: 2px;
 	*border-bottom-width: 2px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -2686,9 +2686,9 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 	margin-bottom: 20px;
 	background-color: #ddd;
 	border: 1px solid #cbcbcb;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
@@ -2701,16 +2701,16 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 
 .well-large {
 	padding: 24px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .well-small {
 	padding: 9px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .fade {
@@ -2792,9 +2792,9 @@ button.close {
 	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	border-bottom-color: #bfbfbf;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
 	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
 	*zoom: 1;
@@ -2854,9 +2854,9 @@ button.close {
 .btn-large {
 	padding: 11px 19px;
 	font-size: 18.75px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .btn-large [class^="icon-"], .btn-large [class*=" icon-"] {
@@ -2866,9 +2866,9 @@ button.close {
 .btn-small {
 	padding: 2px 10px;
 	font-size: 12.75px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .btn-small [class^="icon-"], .btn-small [class*=" icon-"] {
@@ -2882,9 +2882,9 @@ button.close {
 .btn-mini {
 	padding: 0 6px;
 	font-size: 11.25px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .btn-block {
@@ -3182,40 +3182,40 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .btn-group>.btn:first-child {
 	margin-left: 0;
-	-webkit-border-bottom-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	-webkit-border-top-left-radius: 4px;
-	border-top-left-radius: 4px;
-	-moz-border-radius-bottomleft: 4px;
-	-moz-border-radius-topleft: 4px
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	-moz-border-radius-topleft: 2px
 }
 
 .btn-group>.btn:last-child, .btn-group>.dropdown-toggle {
-	-webkit-border-top-right-radius: 4px;
-	border-top-right-radius: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	-moz-border-radius-bottomright: 4px
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px
 }
 
 .btn-group>.btn.large:first-child {
 	margin-left: 0;
-	-webkit-border-bottom-left-radius: 6px;
-	border-bottom-left-radius: 6px;
-	-webkit-border-top-left-radius: 6px;
-	border-top-left-radius: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	-moz-border-radius-topleft: 6px
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	-moz-border-radius-topleft: 2px
 }
 
 .btn-group>.btn.large:last-child, .btn-group>.large.dropdown-toggle {
-	-webkit-border-top-right-radius: 6px;
-	border-top-right-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-	-moz-border-radius-topright: 6px;
-	-moz-border-radius-bottomright: 6px
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px
 }
 
 .btn-group>.btn:hover, .btn-group>.btn:focus, .btn-group>.btn:active, .btn-group>.btn.active {
@@ -3368,9 +3368,9 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	background-color: #f26522;
 	border: 1px solid #f13614;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px
 }
 
 .alert, .alert h4 {
@@ -3819,9 +3819,9 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	background-image: -o-linear-gradient(top, #013435, #013435);
 	background-image: linear-gradient(to bottom, #013435, #013435);
 	background-repeat: repeat-x;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff013435', endColorstr='#ff013435', GradientType=0);
 	*zoom: 1;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -3943,9 +3943,9 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 1;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px
 }
 
 .navbar-static-top {
@@ -4039,13 +4039,13 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
 	color: #fff;
 	text-decoration: none;
-	background-color: #002425
+	background-color: #FFCA28
 }
 
 .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
 	color: #fff;
 	text-decoration: none;
-	background-color: #002425;
+	background-color: #FFCA28;
 	-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 	box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125)
@@ -4121,7 +4121,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	left: 10px;
 	display: inline-block;
 	border-right: 6px solid transparent;
-	border-bottom: 6px solid #002425;
+	border-bottom: 6px solid #FFCA28;
 	border-left: 6px solid transparent;
 	content: ''
 }
@@ -4137,7 +4137,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .navbar-fixed-bottom .nav>li>.dropdown-menu:after {
 	top: auto;
 	bottom: -6px;
-	border-top: 6px solid #002425;
+	border-top: 6px solid #FFCA28;
 	border-bottom: 0
 }
 
@@ -4148,7 +4148,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
 	color: #fff;
-	background-color: #002425
+	background-color: #FFCA28
 }
 
 .navbar .nav li.dropdown>.dropdown-toggle .caret {
@@ -5527,7 +5527,7 @@ blockquote small {
 }
 
 .navbar .brand:hover {
-	background-color: #002425
+	background-color: #FFCA28
 }
 
 .navbar .nav>li>a {
@@ -5612,7 +5612,7 @@ blockquote small {
 		color: #fff
 	}
 	.navbar .nav-collapse .nav li>a:hover {
-		background-color: #002425
+		background-color: #FFCA28
 	}
 	.navbar-inverse .nav-collapse .nav li>a:hover {
 		background-color: rgba(0, 0, 0, 0.06)!important
@@ -5641,7 +5641,7 @@ div.subnav .nav>li>a {
 
 div.subnav .nav>li>a:hover, div.subnav .nav>.active>a, div.subnav .nav>.active>a:hover, div.subnav .dropdown.open .dropdown-toggle, div.subnav .dropdown.open.active .dropdown-toggle:hover {
 	color: #fff;
-	background-color: #002425;
+	background-color: #FFCA28;
 	border-color: transparent;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
