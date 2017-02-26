@@ -193,7 +193,7 @@ textarea {
 body {
 	margin: 0;
 	font-family: 'Nunito Sans', Arial, sans-serif;
-	font-size: 18px18px;
+	font-size: 18px;
 	line-height: 21px;
 	color: #555;
 	background-color: #fff
@@ -5533,7 +5533,7 @@ blockquote small {
 .navbar .nav>li>a {
 	padding: 20px 20px 14px;
 	font-family: 'Nunito Sans', Arial, sans-serif;
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: normal;
 	text-shadow: none
 }
@@ -5547,7 +5547,7 @@ blockquote small {
 .navbar .navbar-text {
 	margin: 19px 20px 0;
 	font-family: 'Nunito Sans', Arial, sans-serif;
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: normal;
 	line-height: inherit
 }
@@ -5571,9 +5571,7 @@ blockquote small {
 
 .navbar .navbar-search .search-query {
 	line-height: normal;
-	color: #fff;
-	background-color: rgba(255, 255, 255, 0.4);
-	border-color: transparent
+	color: #212121;
 }
 
 .navbar .dropdown-menu li>a {
