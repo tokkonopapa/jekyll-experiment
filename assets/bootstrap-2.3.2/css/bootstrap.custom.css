@@ -192,7 +192,7 @@ textarea {
 
 body {
 	margin: 0;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	font-size: 15px;
 	line-height: 21px;
 	color: #555;
@@ -688,7 +688,7 @@ a.text-success:hover, a.text-success:focus {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 10.5px 0;
-	font-family: 'Rufina', serif;
+	font-family: 'Rufina', Georgia, serif;
 	font-weight: normal;
 	line-height: 21px;
 	color: #212121;
@@ -985,7 +985,7 @@ label, input, button, select, textarea {
 }
 
 input, button, select, textarea {
-	font-family: Georgia, "Times New Roman", Times, serif
+	font-family: 'Nunito Sans', Arial, sans-serif;
 }
 
 label {
@@ -5476,7 +5476,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	color: #212121
 }
 
@@ -5522,7 +5522,7 @@ blockquote small {
 
 .navbar .brand {
 	padding: 18px 20px 16px;
-	font-family: 'Rufina', serif;
+	font-family: 'Nunito Sans', Arial, sans-serif; 
 	font-size: 26px;
 	font-weight: normal
 }
@@ -5533,7 +5533,7 @@ blockquote small {
 
 .navbar .nav>li>a {
 	padding: 20px 20px 14px;
-	font-family: 'Rufina', serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	font-size: 20px;
 	font-weight: normal;
 	text-shadow: none
@@ -5547,7 +5547,7 @@ blockquote small {
 
 .navbar .navbar-text {
 	margin: 19px 20px 0;
-	font-family: 'Rufina', serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	font-size: 20px;
 	font-weight: normal;
 	line-height: inherit
@@ -5578,7 +5578,7 @@ blockquote small {
 }
 
 .navbar .dropdown-menu li>a {
-	font-family: 'Rufina', serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	font-weight: normal
 }
 
@@ -5635,7 +5635,7 @@ div.subnav {
 
 div.subnav .nav>li>a {
 	padding: 12px 12px 10px;
-	font-family: 'Rufina', serif;
+	font-family: 'Rufina', Georgia, serif;
 	font-weight: normal;
 	color: #fff;
 	background-color: transparent;
@@ -5816,7 +5816,7 @@ div.subnav.subnav-fixed {
 }
 
 .btn {
-	font-family: 'Rufina', serif;
+	font-family: 'Rufina', Georgia, serif;
 	font-weight: normal;
 	text-shadow: none
 }
@@ -5849,7 +5849,7 @@ div.subnav.subnav-fixed {
 }
 
 legend {
-	font-family: 'Rufina', serif;
+	font-family: 'Rufina', Georgia, serif;
 	font-weight: normal;
 	color: #212121;
 	border-bottom: 0
@@ -5913,7 +5913,7 @@ input, textarea, select {
 }
 
 .alert-heading {
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Nunito Sans', Arial, sans-serif;
 	color: inherit
 }
 
