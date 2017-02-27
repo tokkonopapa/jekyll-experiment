@@ -11,8 +11,7 @@
 */
 
 
-@media (max-width: 979px)
-bootstrap-respo…e.custom.css:1
-.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+@media (max-width: 979px) .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner
+ {
     padding: 0px;
 }
