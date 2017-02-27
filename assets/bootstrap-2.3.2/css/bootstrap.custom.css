@@ -2726,6 +2726,7 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 }
 
 .collapse {
+	background: #5FAD7A;
 	position: relative;
 	height: 0;
 	overflow: hidden;
