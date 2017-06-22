@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World!
+title: Hello!
 excerpt:
 category: [Ruby, jekyll/hyde]
 tags: [web's, js & css]
