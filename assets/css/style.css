@@ -1,8 +1,6 @@
----
----
 /* ===== Primary Styles ========================================================
    Author: tokkonopapa@yahoo.com
-   ========================================================================== */
+   ========================================================================== 
 {% include css/style.css %}
 {% case site.pygments_style %}
 	{% when 'autumn'   %}{% include css/pygments/autumn.css   %}
@@ -24,3 +22,5 @@
 	{% when 'trac'     %}{% include css/pygments/trac.css     %}
 	{% when 'vs'       %}{% include css/pygments/vs.css       %}
 {% endcase %}
+
+*/
